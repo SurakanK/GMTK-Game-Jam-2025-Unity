@@ -7,7 +7,6 @@ public class CharacterStateMachine : StateMachine
     public enum PlayerStateType
     {
         Idle,
-        Move,
         Attack,
         Dead,
         Dash,

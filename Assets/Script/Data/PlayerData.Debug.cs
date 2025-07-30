@@ -19,6 +19,9 @@ partial class PlayerData
         for (int i = 0; i < playerDebug.itemsStartData.Count; i++)
         {
             PlayerItemStartData data = playerDebug.itemsStartData[i];
+            ItemData item = data.itemData.Clone();
+            item.amount = data.amount;
+            owner.Inventory.IncreaseItem(owner, item);
         }
     }
 }

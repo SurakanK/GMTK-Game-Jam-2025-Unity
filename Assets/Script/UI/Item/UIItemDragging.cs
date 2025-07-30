@@ -32,13 +32,6 @@ public class UIItemDragging : UIBaseItem, IBeginDragHandler, IDragHandler, IEndD
 
     }
 
-    private void OnEventDragging(bool isDragging, SlotType slotType)
-    {
-        if (_isDragging)
-            return;
-        gameObject.SetActive(!isDragging);
-    }
-
     public void Initialized(InventoryItemData data, int index)
     {
         Data = data;

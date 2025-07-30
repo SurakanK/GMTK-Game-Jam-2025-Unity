@@ -8,14 +8,6 @@ public class CharacterAttackState : CharacterBaseState
     {
         base.OnActive();
 
-        // no equip weapons
-        if (Equipment.WeaponSlotLeft == null)
-        {
-            ChangeDefaultState();
-            return;
-        }
-
-        BaseCharacter.Rigidbody2d.velocity = Vector2.zero;
     }
 
     public override void Update()
@@ -33,7 +25,6 @@ public class CharacterAttackState : CharacterBaseState
     private void OnAnimAttackTriggerEvent()
     {
         BaseCharacter.AnimAttackTriggerEvent -= OnAnimAttackTriggerEvent;
-        Weapon.Attack();
     }
 
     private void OnFinishedEvent()

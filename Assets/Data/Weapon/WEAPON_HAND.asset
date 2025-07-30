@@ -24,12 +24,10 @@ MonoBehaviour:
   min: 1
   max: 1
   amount: 0
-  stackAmount: 1
+  stack: 1
   softCurrency: 0
   hardCurrency: 0
-  slotType: 2
   spriteId: 
-  animActing: 1
   stats:
     maxHealth: 0
     maxStamina: 0
@@ -62,3 +60,6 @@ MonoBehaviour:
     isCanRespawn: 0
   abilityData: []
   isAoeDamage: 0
+  dropTable:
+    abilityDropTables: []
+    statsDropTables: []

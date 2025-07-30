@@ -17,7 +17,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &5798534447357544145
 RectTransform:
   m_ObjectHideFlags: 0
@@ -35,8 +35,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: -6}
-  m_SizeDelta: {x: -20, y: 35}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: -12, y: 25}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!222 &5880067103522869123
 CanvasRenderer:
@@ -93,15 +93,15 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 22
+  m_fontSize: 15
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
   m_fontSizeMin: 10
-  m_fontSizeMax: 22
+  m_fontSizeMax: 15
   m_fontStyle: 0
   m_HorizontalAlignment: 4
-  m_VerticalAlignment: 256
+  m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
   m_wordSpacing: 0
@@ -355,6 +355,7 @@ MonoBehaviour:
   textEnchantLevel: {fileID: 0}
   textRarity: {fileID: 0}
   uiTier: {fileID: 0}
+  uiSlotItem: {fileID: 0}
   slotIndex: 0
 --- !u!1 &2961460889028963791
 GameObject:
@@ -436,7 +437,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 120, y: 120}
+  m_SizeDelta: {x: 80, y: 80}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &8658550567400169644
 CanvasRenderer:
@@ -475,6 +476,7 @@ MonoBehaviour:
   textEnchantLevel: {fileID: 0}
   textRarity: {fileID: 0}
   uiTier: {fileID: 3821425648811346332}
+  slotType: 0
   uiItemDrag: {fileID: 3580231680050667248}
   uiItemDrop: {fileID: 8920746210104801710}
 --- !u!1 &4083021674740217678
@@ -494,7 +496,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &66374281528630271
 RectTransform:
   m_ObjectHideFlags: 0
@@ -512,8 +514,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 2.5}
-  m_SizeDelta: {x: -30, y: -35}
+  m_AnchoredPosition: {x: 0, y: 2.5000033}
+  m_SizeDelta: {x: -10, y: -14.999993}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &81488334207386134
 CanvasRenderer:
@@ -570,7 +572,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &8961355719132854374
 RectTransform:
   m_ObjectHideFlags: 0
@@ -588,8 +590,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: 0, y: 10}
-  m_SizeDelta: {x: -20, y: 35}
+  m_AnchoredPosition: {x: 0, y: 6.08}
+  m_SizeDelta: {x: -12, y: 25}
   m_Pivot: {x: 0.5, y: 0}
 --- !u!222 &7157732425840833402
 CanvasRenderer:
@@ -646,12 +648,12 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 22
+  m_fontSize: 15
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
   m_fontSizeMin: 10
-  m_fontSizeMax: 22
+  m_fontSizeMax: 15
   m_fontStyle: 0
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 1024
@@ -795,10 +797,8 @@ MonoBehaviour:
   textEnchantLevel: {fileID: 0}
   textRarity: {fileID: 0}
   uiTier: {fileID: 0}
-  inventoryItemData:
-    itemId: 
-    amount: 0
-    slot: 0
+  uiSlotItem: {fileID: 0}
+  slotIndex: -1
 --- !u!1 &5709882845027801525
 GameObject:
   m_ObjectHideFlags: 0

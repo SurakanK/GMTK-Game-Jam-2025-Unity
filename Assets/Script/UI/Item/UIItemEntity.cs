@@ -2,9 +2,6 @@ using UnityEngine;
 
 public class UIItemEntity : UISelection<InventoryItemData>
 {
-    [Header("Setting")]
-    public SlotType slotType;
-
     [Header("DragDrop Componemt")]
     public UIItemDragging uiItemDrag;
     public UIItemDropping uiItemDrop;
@@ -16,7 +13,7 @@ public class UIItemEntity : UISelection<InventoryItemData>
 
         SetImage(ItemData.icon);
         SetName(ItemData.title.name.text);
-        SetAmount(Data.amount, ItemData.stackAmount);
+        SetAmount(Data.amount, ItemData.stack);
 
         if (uiItemDrag != null)
             uiItemDrag.Initialized(Data, Index);

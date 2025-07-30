@@ -22,6 +22,9 @@ public class GameInstance : MonoBehaviour
 
     private void Awake()
     {
+        if (gameDataBase != null)
+            gameDataBase.RegisterGameData(this);
+
         if (_instance != null)
         {
             Destroy(gameObject);
@@ -30,26 +33,16 @@ public class GameInstance : MonoBehaviour
         DontDestroyOnLoad(gameObject);
     }
 
-    void Start()
-    {
-        if (gameDataBase != null)
-        {
-            gameDataBase.RegisterGameData(this);
-        }
-    }
-
     [Header("Gameplay Rule")]
     public BaseGameRule gameRule;
 
     [Header("Game DataBase")]
     public GameDataBase gameDataBase;
 
-    [Header("Spawn Data")]
-    public GameSpawnData gameSpawnData;
-
     internal Dictionary<string, BaseBuff> buffs = new();
     internal Dictionary<string, BaseWeapon> weapons = new();
     internal Dictionary<string, ItemData> currency = new();
+    internal Dictionary<string, ItemData> items = new();
     internal Dictionary<string, AbilityData> abilities = new();
 
     private Dictionary<string, ItemData> _allItems;
@@ -66,7 +59,11 @@ public class GameInstance : MonoBehaviour
                     _allItems[pair.Key] = pair.Value;
 
                 // Add weapons
-                 foreach (var pair in weapons)
+                foreach (var pair in weapons)
+                    _allItems[pair.Key] = pair.Value;
+                
+                // Add item
+                foreach (var pair in items)
                     _allItems[pair.Key] = pair.Value;
             }
             return _allItems;

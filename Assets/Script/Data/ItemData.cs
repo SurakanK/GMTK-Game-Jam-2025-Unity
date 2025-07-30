@@ -12,13 +12,12 @@ public class ItemData : BaseObject
 
     [Header("Data")]
     public int amount = 0;
-    public int stackAmount = int.MaxValue;
+    public int stack = int.MaxValue;
 
     [Header("Setting Currency")]
     public int softCurrency;
     public int hardCurrency;
 
-    public  SlotType slotType = SlotType.None;
     public InventoryItemData inventoryItemData
     {
         get
@@ -27,7 +26,6 @@ public class ItemData : BaseObject
             {
                 objectId = ObjectId,
                 itemId = DataId,
-                slotType = slotType,
                 amount = 1,
             };
         }

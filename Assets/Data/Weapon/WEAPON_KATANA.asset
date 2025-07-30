@@ -19,17 +19,15 @@ MonoBehaviour:
     description:
       text: 
       localKey: 
-  icon: {fileID: 21300000, guid: 404afdbf3c55348048b856c2c4a4d403, type: 3}
+  icon: {fileID: 21300000, guid: 928e288a2690d4fd99390dce406f3608, type: 3}
   prefab: {fileID: 2439427857757576274, guid: 4392561b289ba46d4bfffead2e512e55, type: 3}
   min: 1
   max: 1
   amount: 0
-  stackAmount: 1
+  stack: 1
   softCurrency: 0
   hardCurrency: 0
-  slotType: 2
   spriteId: Katana
-  animActing: 1
   stats:
     maxHealth: 0
     maxStamina: 0
@@ -62,6 +60,6 @@ MonoBehaviour:
     isCanRespawn: 0
   abilityData: []
   isAoeDamage: 1
-  abilityDropTables:
-  - weight: 0
-    ability: {fileID: 11400000, guid: 8537d96c411c540058922f1587c801eb, type: 2}
+  dropTable:
+    abilityDropTables: []
+    statsDropTables: []

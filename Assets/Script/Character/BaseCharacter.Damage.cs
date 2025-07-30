@@ -36,8 +36,6 @@ public partial class BaseCharacter
 
     private void ReciveDamageAoE(float damage)
     {
-        if (!Equipment.WeaponSlotLeft.isAoeDamage)
-            return;
         Enemy.ReciveDamage(this, damage);
     }
 

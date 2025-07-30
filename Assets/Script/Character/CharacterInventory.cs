@@ -7,11 +7,52 @@ using UnityEngine;
 [RequireComponent(typeof(BaseCharacter))]
 public class CharacterInventory : MonoBehaviour
 {
-    public List<InventoryItemData> nonEquipItem = new();
-    public BaseWeapon weaponSlotLeft;
-    public ItemData weaponSlotRight;
-    public ItemData helmetSlot;
-    public ItemData armorSlot;
-    public ItemData ringSlotLeft;
-    public ItemData ringSlotRight;
+    private List<InventoryItemData> _nonEquipItem = new();
+    public List<InventoryItemData> nonEquipItem
+    {
+        get { return _nonEquipItem; }
+        set { _nonEquipItem = value; }
+    }
+
+    public void IncreaseItem(BaseCharacter owner, ItemData data)
+    {
+        Debug.Log($"{data.DataId} {data.amount} {data.stack}");
+
+        List<InventoryItemData> inventory = nonEquipItem;
+        if (data.amount <= 0)
+            return;
+
+        if (data.stack <= 0)
+            data.stack = 1;
+
+        for (int i = 0; i < inventory.Count && data.amount > 0; i++)
+        {
+            InventoryItemData item = inventory[i];
+            if (item.itemId != data.DataId || item.amount >= data.stack)
+                continue;
+
+            int space = data.stack - item.amount;
+            int toAdd = Math.Min(space, data.amount);
+            item.amount += toAdd;
+            data.amount -= toAdd;
+            InventoryItemData itemUpdate = inventory[i] = item;
+            owner.EventNonEquipItemChanged?.Invoke(itemUpdate);
+        }
+
+        while (data.amount > 0)
+        {
+            int toAdd = Math.Min(data.stack, data.amount);
+            data.amount -= toAdd;
+
+            InventoryItemData newItem = new InventoryItemData
+            {
+                objectId = Guid.NewGuid().ToString("N"),
+                itemId = data.DataId,
+                amount = toAdd,
+                slotIndex = inventory.Count
+            };
+            inventory.Add(newItem);
+            owner.EventNonEquipItemChanged?.Invoke(newItem);
+        }
+    }
 }

@@ -15,34 +15,13 @@ public class CharacterData : BaseObject
     [Header("Buff")]
     public List<BaseBuff> defaultBuff;
 
-    [Header("EquipItem")]
-    public BaseWeapon weapon;
-
     public void Apply(BaseCharacter owner)
     {
         // Apply Stats
         stats.Apply(owner);
 
-        // Equip Weapon
-        InitializeWeapon(owner);
-
         // Apply buff
         ApplyBuff(owner);
-    }
-
-    private void InitializeWeapon(BaseCharacter owner)
-    {
-        if (owner.Equipment)
-        {
-            if (weapon)
-            {
-                if (WeaponExtensions.TryGetWeapon(owner, weapon.DataId, out BaseWeapon baseWeapon))
-                {
-                    owner.Stats += baseWeapon.Stats;
-                    owner.Equipment.EquipWeapon(baseWeapon);
-                }
-            }
-        }
     }
 
     private void ApplyBuff(BaseCharacter owner)

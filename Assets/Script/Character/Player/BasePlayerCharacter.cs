@@ -1,6 +1,4 @@
 using Cinemachine;
-using Cysharp.Threading.Tasks;
-using UnityEngine;
 
 public class BasePlayerCharacter : BaseCharacter
 {
@@ -14,19 +12,16 @@ public class BasePlayerCharacter : BaseCharacter
         Initialize();
         SetCameraOwner();
         IdleState();
-    
+
+        GamePlayerCharacter.PlayerCharacter = this;
+        GamePlayerCharacter.Inventory = Inventory;
+        UIGameplayController.Instance.InitializedUI();
+
         // Initialize debug
         if (defaultData is PlayerData playerData)
             playerData.InitializedDebug(this);
     }
 
-    private void InitializeOwner()
-    {
-        GamePlayerCharacter.PlayerCharacter = this;
-        GamePlayerCharacter.Inventory = Inventory;
-        UIGameplayController.Instance.InitializedUIOwner();
-    }
-   
     private void SetCameraOwner()
     {
         var virtualCameras = FindAnyObjectByType<CinemachineVirtualCamera>();
@@ -40,11 +35,6 @@ public class BasePlayerCharacter : BaseCharacter
     public void IdleState()
     {
         ChangeState(GetStateInstance(PlayerStateType.Idle));
-    }
-
-    public void MoveState()
-    {
-        ChangeState(GetStateInstance(PlayerStateType.Move));
     }
 
     public void DashState()

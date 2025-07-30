@@ -19,17 +19,15 @@ MonoBehaviour:
     description:
       text: 
       localKey: 
-  icon: {fileID: 21300000, guid: e33d014a646ef44a8b301a004c1c908f, type: 3}
+  icon: {fileID: 21300000, guid: 3ce063528c43e4d7fa475f76dda5a02a, type: 3}
   prefab: {fileID: 2439427857757576274, guid: 640c77bb7b57c463dbecb9470726252d, type: 3}
   min: 1
   max: 1
   amount: 0
-  stackAmount: 1
+  stack: 1
   softCurrency: 0
   hardCurrency: 0
-  slotType: 2
   spriteId: Axe
-  animActing: 1
   stats:
     maxHealth: 0
     maxStamina: 0
@@ -61,39 +59,12 @@ MonoBehaviour:
     evasionRate: 0
     isCanRespawn: 0
   abilityData:
-  - {fileID: 11400000, guid: 61fa2014c735c4c7f8b35c5389147bbf, type: 2}
+  - {fileID: 0}
   isAoeDamage: 0
   dropTable:
     abilityDropTables:
     - weight: 0
       ability: {fileID: 0}
     statsDropTables:
-    - maxHealth: 0
-      maxStamina: 0
-      moveSpeed: 0
-      physicalDamage:
-        min: 0
-        max: 0
-      fireDamage:
-        min: 0
-        max: 0
-      coldDamage:
-        min: 0
-        max: 0
-      lightningDamage:
-        min: 0
-        max: 0
-      elementalDamage:
-        min: 0
-        max: 0
-      physicalDefens: 0
-      fireDefens: 0
-      coldDefens: 0
-      lightningDefens: 0
-      elementalDefens: 0
-      atkRate: 0
-      atkArea: 0
-      criticalRate: 0
-      accuracyRate: 0
-      evasionRate: 0
-      isCanRespawn: 0
+    - weight: 0
+      ability: {fileID: 0}

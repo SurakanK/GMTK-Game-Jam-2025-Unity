@@ -6,7 +6,6 @@ public struct InventoryItemData
     public string itemId;
     public int amount;
     public int slotIndex;
-    public SlotType slotType;
 
     public bool TryGetItemData(out ItemData itemData)
     {

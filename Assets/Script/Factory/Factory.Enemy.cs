@@ -8,7 +8,7 @@ public partial class Factory
 
     private void InitializedEnemy()
     {
-        enemySpawn.AddRange(_gameSpawnData.enemysSpawnData);
+
     }
 
     private void UpdateEnemySpawn()

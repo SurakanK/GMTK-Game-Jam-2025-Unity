@@ -19,11 +19,11 @@ MonoBehaviour:
     description:
       text: 
       localKey: 
-  icon: {fileID: 21300000, guid: e08779e51d9bdc145b00a8fdc4ebbf9b, type: 3}
+  icon: {fileID: 21300000, guid: 8f9f94a3d00094c07932ecbfe9941d72, type: 3}
   prefab: {fileID: 1640920446015832548, guid: c4a4524cc75374cd68aea2aa5791df76, type: 3}
   min: 1
   max: 3
   amount: 0
-  stackAmount: 20
+  stack: 50
   softCurrency: 0
   hardCurrency: 0

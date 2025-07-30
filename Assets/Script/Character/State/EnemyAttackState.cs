@@ -34,7 +34,7 @@ public class EnemyAttackState : CharacterBaseState
 
     private void OnAnimAttackTriggerEvent()
     {
-        Weapon.Attack();
+
     }
 
     private void OnFinishedEvent()

@@ -66,7 +66,6 @@ public static class WeaponExtensions
         if (GameInstance.Instance.weapons.TryGetValue(itemId, out BaseWeapon baseWeapon))
         {
             weapon = baseWeapon.Clone();
-            weapon.slotType = SlotType.WeaponLeftHand;
             weapon.amount = 1;
             weapon.SetOwner(owner);
         }

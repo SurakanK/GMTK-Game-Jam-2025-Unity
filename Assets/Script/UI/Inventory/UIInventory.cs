@@ -52,7 +52,7 @@ public class UIInventory : UIBase
 
         CacheList.Generate(GamePlayerCharacter.Inventory.nonEquipItem, (i, data, ui) =>
         {
-            ui.slotType = SlotType.Inventory;
+          
         }, NoItemData);
 
         if (CacheList.Caches.Count > 0)

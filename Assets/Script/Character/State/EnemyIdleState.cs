@@ -12,7 +12,6 @@ public class EnemyIdleState : CharacterBaseState
     public override void Update()
     {
         base.Update();
-        BaseCharacter.Rigidbody2d.velocity = Vector2.zero;
     }
 
     public override void OnEnded()

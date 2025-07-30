@@ -5,11 +5,8 @@ using UnityEngine;
 public abstract class CharacterBaseState : IState
 {
     protected readonly BaseCharacter BaseCharacter;
-    protected CharacterEquipment Equipment => BaseCharacter.Equipment;
-    protected Vector2 Direction => BaseCharacter.direction;
     protected BaseCharacter Target => BaseCharacter.Target;
     protected StatsData Stats => BaseCharacter.Stats;
-    protected BaseWeapon Weapon => BaseCharacter.Equipment.WeaponSlotLeft;
 
     protected CharacterBaseState(BaseCharacter baseCharacter)
     {
@@ -44,10 +41,7 @@ public abstract class CharacterBaseState : IState
     {
         if (BaseCharacter.IsCharacter())
         {
-            if (Direction != Vector2.zero)
-                ChangeState(GetStateInstance(PlayerStateType.Move));
-            else
-                ChangeState(GetStateInstance(PlayerStateType.Idle));
+            ChangeState(GetStateInstance(PlayerStateType.Idle));
         }
         else if (BaseCharacter.IsEnemy())
         {

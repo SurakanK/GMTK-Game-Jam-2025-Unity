@@ -14,7 +14,6 @@ public class RangedWeapon : BaseWeapon
     {
         if (!IsRangedWeapon())
             return;
-        Owner.SpawnBullet();
     }
 
     public override BaseWeapon Clone()

@@ -31,7 +31,7 @@ public class UIItemSlotEquipEntity : UIItemEntity
 
         SetImage(ItemData.icon);
         SetName(ItemData.title.name.text);
-        SetAmount(Data.amount, ItemData.stackAmount);
+        SetAmount(Data.amount, ItemData.stack);
 
         if (uiItemDrag != null)
             uiItemDrag.Initialized(Data, Index);
