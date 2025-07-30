@@ -1,0 +1,71 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: efbc134341f8642648dbfd3fb9ffeb14, type: 3}
+  m_Name: CHA_001
+  m_EditorClassIdentifier: 
+  title:
+    name:
+      text: 
+      localKey: 
+    description:
+      text: 
+      localKey: 
+  icon: {fileID: 0}
+  prefab: {fileID: 1834822153155463742, guid: 54b939f13d34d44d3987a7a1883f4fc1, type: 3}
+  stats:
+    maxHealth: 100
+    maxStamina: 100
+    moveSpeed: 1.5
+    physicalDamage:
+      min: 0
+      max: 0
+    fireDamage:
+      min: 0
+      max: 0
+    coldDamage:
+      min: 0
+      max: 0
+    lightningDamage:
+      min: 0
+      max: 0
+    elementalDamage:
+      min: 0
+      max: 0
+    physicalDefens: 1000
+    fireDefens: 0
+    coldDefens: 0
+    lightningDefens: 0
+    elementalDefens: 0
+    atkRate: 0
+    atkArea: 0
+    criticalRate: 0
+    accuracyRate: 0
+    evasionRate: 0
+    isCanRespawn: 0
+  defaultBuff:
+  - {fileID: 11400000, guid: cede714e694dc4b5f8dc18b541a88963, type: 2}
+  - {fileID: 11400000, guid: 12ff13d069fe941ec8094ed35862647f, type: 2}
+  weapon: {fileID: 11400000, guid: 77791273a12534d6e981cc3208bb55f8, type: 2}
+  playerDebug:
+    itemsStartData:
+    - itemData: {fileID: 11400000, guid: 846b91750e1e34f7098bdbcf8fc773c7, type: 2}
+      amount: 2
+    - itemData: {fileID: 11400000, guid: 6e0b469914818404493d641b9d144bb5, type: 2}
+      amount: 1
+    - itemData: {fileID: 11400000, guid: 77791273a12534d6e981cc3208bb55f8, type: 2}
+      amount: 1
+    - itemData: {fileID: 11400000, guid: 2b0d3d629280f42d09de4daa49dd18f2, type: 2}
+      amount: 1
+    - itemData: {fileID: 11400000, guid: 040683348cc7e4ccf8b22954ec993cf6, type: 2}
+      amount: 10
+    - itemData: {fileID: 11400000, guid: 75ece4d76bded4844a75e206c1b2845d, type: 2}
+      amount: 10

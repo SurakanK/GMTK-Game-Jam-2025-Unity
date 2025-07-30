@@ -1,0 +1,64 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: baac27ec6e4e94258a736d50fd0f0afc, type: 3}
+  m_Name: WEAPON_STAFF
+  m_EditorClassIdentifier: 
+  title:
+    name:
+      text: staff
+      localKey: 
+    description:
+      text: 
+      localKey: 
+  icon: {fileID: 21300000, guid: eff38b551b2c4474f8719f9707c5b4bd, type: 3}
+  prefab: {fileID: 2439427857757576274, guid: 2542106059cd64bdbaed1e055ec70ec3, type: 3}
+  min: 1
+  max: 1
+  amount: 0
+  stackAmount: 1
+  softCurrency: 0
+  hardCurrency: 0
+  slotType: 2
+  spriteId: Staff
+  animActing: 1
+  stats:
+    maxHealth: 0
+    maxStamina: 0
+    moveSpeed: 0
+    physicalDamage:
+      min: 25
+      max: 28
+    fireDamage:
+      min: 0
+      max: 0
+    coldDamage:
+      min: 0
+      max: 0
+    lightningDamage:
+      min: 0
+      max: 0
+    elementalDamage:
+      min: 0
+      max: 0
+    physicalDefens: 0
+    fireDefens: 0
+    coldDefens: 0
+    lightningDefens: 0
+    elementalDefens: 0
+    atkRate: 1
+    atkArea: 1.5
+    criticalRate: 0.3
+    accuracyRate: 0.8
+    evasionRate: 0
+    isCanRespawn: 0
+  abilityData: []
+  isAoeDamage: 0
