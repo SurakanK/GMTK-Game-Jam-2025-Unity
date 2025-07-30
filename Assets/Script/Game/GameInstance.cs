@@ -36,11 +36,6 @@ public class GameInstance : MonoBehaviour
         {
             gameDataBase.RegisterGameData(this);
         }
-
-        if (GameObject.FindWithTag(GameTag.VegetableTilemap).TryGetComponent(out Tilemap tilemap))
-        {
-            vegetableTilemap = tilemap;
-        }
     }
 
     [Header("Gameplay Rule")]
@@ -51,8 +46,6 @@ public class GameInstance : MonoBehaviour
 
     [Header("Spawn Data")]
     public GameSpawnData gameSpawnData;
-
-    internal Tilemap vegetableTilemap;
 
     internal Dictionary<string, BaseBuff> buffs = new();
     internal Dictionary<string, BaseWeapon> weapons = new();
