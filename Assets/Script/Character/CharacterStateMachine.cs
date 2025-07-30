@@ -16,8 +16,6 @@ public class CharacterStateMachine : StateMachine
     public enum EnemyStateType
     {
         Idle,
-        Follow,
-        Chase,
         Attack
     }
 
