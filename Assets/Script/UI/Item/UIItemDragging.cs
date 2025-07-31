@@ -31,7 +31,8 @@ public class UIItemDragging : UIBaseItem, IBeginDragHandler, IDragHandler, IEndD
 
     void OnDestroy()
     {
-        GameEvent.Instance.EventDragging -= OnEventDragging;
+        if (GameEvent.Instance != null)
+            GameEvent.Instance.EventDragging -= OnEventDragging;
     }
 
     private void OnEventDragging(bool isDragging)

@@ -20,7 +20,7 @@ MonoBehaviour:
       text: 
       localKey: 
   icon: {fileID: 0}
-  prefab: {fileID: 1483442986474886783, guid: 9e4c67504a5674645bc590771f995d6e, type: 3}
+  prefab: {fileID: 0}
   stats:
     maxHealth: 100
     maxStamina: 100
@@ -53,7 +53,6 @@ MonoBehaviour:
     isCanRespawn: 0
   defaultBuff:
   - {fileID: 11400000, guid: cede714e694dc4b5f8dc18b541a88963, type: 2}
-  weapon: {fileID: 11400000, guid: d8538010fbb094e7899274924844c9a2, type: 2}
   itemDropData:
   - weight: 0.3
     minDrop: 0

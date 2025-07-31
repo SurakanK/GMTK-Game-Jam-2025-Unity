@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -23,12 +24,7 @@ public partial class Factory : MonoBehaviour
 
     private void Initialized()
     {
-        InitializedEnemy();
-    }
-
-    private void UpdateSpawn()
-    {
-        UpdateEnemySpawn();
+       
     }
 
     public void Destroy(BaseCharacter entity)

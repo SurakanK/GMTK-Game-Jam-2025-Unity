@@ -13,10 +13,7 @@ public class ItemData : BaseObject
     [Header("Data")]
     public int amount = 0;
     public int stack = int.MaxValue;
-
-    [Header("Setting Currency")]
-    public int softCurrency;
-    public int hardCurrency;
+    public int sellPrice = 0;
 
     public InventoryItemData inventoryItemData
     {

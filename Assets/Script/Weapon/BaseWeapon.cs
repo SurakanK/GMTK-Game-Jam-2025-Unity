@@ -10,14 +10,7 @@ public abstract class BaseWeapon : ItemData
     [Header("Weapon Stats")]
     public StatsData stats;
     public StatsData Stats => stats;
-
     public List<AbilityData> abilityData;
-
-    [Header("Weapon Setting")]
-    public bool isAoeDamage;
-
-    [Header("Random Data")]
-    public DropTable dropTable;
 
     private BaseCharacter _owner;
     public BaseCharacter Owner
@@ -37,23 +30,7 @@ public abstract class BaseWeapon : ItemData
     {
         return this is MeleeWeapon;
     }
-
-    public bool IsRangedWeapon()
-    {
-        return this is RangedWeapon;
-    }
-
-    public bool IsMagicWeapon()
-    {
-        return this is MagicWeapon;
-    }
-
-    public bool IsProjectileWeapon()
-    {
-        return this is RangedWeapon ||
-                this is MagicWeapon;
-    }
-
+    
     public abstract UniTaskVoid SpawnBullet();
     public abstract void Attack();
 }

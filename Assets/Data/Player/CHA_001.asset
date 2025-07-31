@@ -58,11 +58,7 @@ MonoBehaviour:
     itemsStartData:
     - itemData: {fileID: 11400000, guid: 846b91750e1e34f7098bdbcf8fc773c7, type: 2}
       amount: 2
-    - itemData: {fileID: 11400000, guid: 6e0b469914818404493d641b9d144bb5, type: 2}
-      amount: 1
     - itemData: {fileID: 11400000, guid: 77791273a12534d6e981cc3208bb55f8, type: 2}
-      amount: 1
-    - itemData: {fileID: 11400000, guid: 2b0d3d629280f42d09de4daa49dd18f2, type: 2}
       amount: 1
     - itemData: {fileID: 11400000, guid: 2529b6367d10e4ceda7f08ab56b50a5b, type: 2}
       amount: 5

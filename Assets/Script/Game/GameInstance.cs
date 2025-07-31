@@ -39,6 +39,7 @@ public class GameInstance : MonoBehaviour
     [Header("Game DataBase")]
     public GameDataBase gameDataBase;
 
+    internal int level = 1;
     internal Dictionary<string, BaseBuff> buffs = new();
     internal Dictionary<string, BaseWeapon> weapons = new();
     internal Dictionary<string, ItemData> currency = new();
@@ -61,7 +62,7 @@ public class GameInstance : MonoBehaviour
                 // Add weapons
                 foreach (var pair in weapons)
                     _allItems[pair.Key] = pair.Value;
-                
+
                 // Add item
                 foreach (var pair in items)
                     _allItems[pair.Key] = pair.Value;
