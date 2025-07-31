@@ -12,13 +12,6 @@ public class UIItemDroppingArea : UIBase, IDropHandler
     {
         if (eventData.pointerDrag.TryGetComponent(out UIItemDragging itemDrop))
         {
-            // Item in slot equip can't drop
-            if (itemDrop.uiSlotItem != null)
-            {
-                // TODO: message please unequip item
-                return;
-            }
-
             _itemData = itemDrop.Data;
             _curAmount = _itemData.amount;
 

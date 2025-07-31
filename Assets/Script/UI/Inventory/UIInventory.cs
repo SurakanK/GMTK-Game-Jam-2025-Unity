@@ -40,9 +40,7 @@ public class UIInventory : UIBase
 
     public void Initialized()
     {
-        if (GamePlayerCharacter.PlayerCharacter == null)
-            return;
-        GamePlayerCharacter.PlayerCharacter.EventNonEquipItemChanged += OnInventoryChange;
+        GameEvent.Instance.EventNonEquipItemChanged += OnInventoryChange;
         CreateList();
     }
 

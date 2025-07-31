@@ -9,5 +9,4 @@ public partial class BaseCharacter
     public UnityAction<StatsData> CurrentStatsChangeEvent;
     public UnityAction<int> CurrentHealthChangeEvent;
     public UnityAction<int> CurrentStaminaChangeEvent;
-    public Action<InventoryItemData> EventNonEquipItemChanged;
 }

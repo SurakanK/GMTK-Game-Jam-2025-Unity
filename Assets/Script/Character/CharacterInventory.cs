@@ -16,8 +16,6 @@ public class CharacterInventory : MonoBehaviour
 
     public void IncreaseItem(BaseCharacter owner, ItemData data)
     {
-        Debug.Log($"{data.DataId} {data.amount} {data.stack}");
-
         List<InventoryItemData> inventory = nonEquipItem;
         if (data.amount <= 0)
             return;
@@ -36,7 +34,7 @@ public class CharacterInventory : MonoBehaviour
             item.amount += toAdd;
             data.amount -= toAdd;
             InventoryItemData itemUpdate = inventory[i] = item;
-            owner.EventNonEquipItemChanged?.Invoke(itemUpdate);
+            GameEvent.Instance.EventNonEquipItemChanged?.Invoke(itemUpdate);
         }
 
         while (data.amount > 0)
@@ -52,7 +50,22 @@ public class CharacterInventory : MonoBehaviour
                 slotIndex = inventory.Count
             };
             inventory.Add(newItem);
-            owner.EventNonEquipItemChanged?.Invoke(newItem);
+            GameEvent.Instance.EventNonEquipItemChanged?.Invoke(newItem);
         }
+    }
+
+    public void Swap(int indexA, int indexB)
+    {
+        List<InventoryItemData> list = nonEquipItem;
+        if (indexA < 0 || indexA >= list.Count || indexB < 0 || indexB >= list.Count)
+        {
+            Debug.LogWarning("Swap index out of range");
+            return;
+        }
+
+        InventoryItemData temp = list[indexA];
+        list[indexA] = list[indexB];
+        list[indexB] = temp;
+        GameEvent.Instance.EventNonEquipItemChanged?.Invoke(temp);
     }
 }

@@ -47,7 +47,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gameRule: {fileID: 11400000, guid: 07590005f94ec46aa9f48093db041778, type: 2}
   gameDataBase: {fileID: 11400000, guid: b1fda24f25f6b44199d47285fd468c86, type: 2}
-  gameSpawnData: {fileID: 11400000, guid: 35715a745e83b40c2b5c84f9d5c1a82e, type: 2}
 --- !u!114 &3004876204141163571
 MonoBehaviour:
   m_ObjectHideFlags: 0

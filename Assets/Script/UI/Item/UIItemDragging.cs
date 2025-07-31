@@ -12,7 +12,6 @@ public class UIItemDragging : UIBaseItem, IBeginDragHandler, IDragHandler, IEndD
     private bool _isDragging;
 
     public InventoryItemData Data;
-    public UIItemSlotEquipEntity uiSlotItem;
     public int slotIndex = -1;
 
     void Start()
@@ -25,11 +24,21 @@ public class UIItemDragging : UIBaseItem, IBeginDragHandler, IDragHandler, IEndD
 
         if (_scrollRect == null)
             _scrollRect = GetComponentInParent<ScrollRect>();
+
+        GameEvent.Instance.EventDragging -= OnEventDragging;
+        GameEvent.Instance.EventDragging += OnEventDragging;
     }
 
     void OnDestroy()
     {
+        GameEvent.Instance.EventDragging -= OnEventDragging;
+    }
 
+    private void OnEventDragging(bool isDragging)
+    {
+        if (_isDragging)
+            return;
+        gameObject.SetActive(!isDragging);
     }
 
     public void Initialized(InventoryItemData data, int index)
@@ -40,11 +49,6 @@ public class UIItemDragging : UIBaseItem, IBeginDragHandler, IDragHandler, IEndD
         if (!data.TryGetItemData(out ItemData ItemData))
             return;
         SetImage(ItemData.icon);
-    }
-
-    public void Initialized(UIItemSlotEquipEntity uiItemSlot)
-    {
-        uiSlotItem = uiItemSlot;
     }
 
     public void OnBeginDrag(PointerEventData eventData)
@@ -66,6 +70,7 @@ public class UIItemDragging : UIBaseItem, IBeginDragHandler, IDragHandler, IEndD
         _canvasGroup.blocksRaycasts = false;
         _originalParent = transform.parent;
         transform.SetParent(_canvas.transform);
+        GameEvent.Instance.EventDragging?.Invoke(true);
         OnShow();
     }
 
@@ -85,6 +90,7 @@ public class UIItemDragging : UIBaseItem, IBeginDragHandler, IDragHandler, IEndD
         _canvasGroup.blocksRaycasts = true;
         transform.SetParent(_originalParent);
         transform.localPosition = Vector3.zero;
+        GameEvent.Instance.EventDragging?.Invoke(false);
         OnHide();
     }
 }

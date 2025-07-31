@@ -1,9 +1,11 @@
+using System;
 using UnityEngine;
-using UnityEngine.Events;
 
 public class GameEvent : MonoBehaviour
 {
-    public UnityAction<float> EventTimeUpdate;
+    public Action<bool> EventDragging;
+    public Action<InventoryItemData> EventNonEquipItemChanged;
+
     public static GameEvent _instance;
     public static GameEvent Instance
     {
