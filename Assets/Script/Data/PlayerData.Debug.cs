@@ -21,7 +21,7 @@ partial class PlayerData
             PlayerItemStartData data = playerDebug.itemsStartData[i];
             ItemData item = data.itemData.Clone();
             item.amount = data.amount;
-            GameInstance.Inventory.IncreaseItem(item);
+            BaseGamePlay.Inventory.IncreaseItem(item);
         }
     }
 }
