@@ -245,7 +245,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 15}
   m_SizeDelta: {x: 120, y: 120}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &2201124638156651153
@@ -355,7 +355,6 @@ MonoBehaviour:
   textEnchantLevel: {fileID: 0}
   textRarity: {fileID: 0}
   uiTier: {fileID: 0}
-  uiSlotItem: {fileID: 0}
   slotIndex: 0
 --- !u!1 &2961460889028963791
 GameObject:
@@ -391,7 +390,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 15}
   m_SizeDelta: {x: 120, y: 120}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &3018143641404950754
@@ -476,7 +475,6 @@ MonoBehaviour:
   textEnchantLevel: {fileID: 0}
   textRarity: {fileID: 0}
   uiTier: {fileID: 3821425648811346332}
-  slotType: 0
   uiItemDrag: {fileID: 3580231680050667248}
   uiItemDrop: {fileID: 8920746210104801710}
 --- !u!1 &4083021674740217678
@@ -496,7 +494,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &66374281528630271
 RectTransform:
   m_ObjectHideFlags: 0
@@ -512,10 +510,10 @@ RectTransform:
   m_Father: {fileID: 5225601265006649508}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 2.5000033}
-  m_SizeDelta: {x: -10, y: -14.999993}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 15}
+  m_SizeDelta: {x: 110, y: 110}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &81488334207386134
 CanvasRenderer:
@@ -545,7 +543,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: fabe682956bbcbb45980e168a2d57b4f, type: 3}
+  m_Sprite: {fileID: 21300000, guid: e8ac65f7faf3d461ab60a720ff7c73f4, type: 3}
   m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 1
@@ -797,7 +795,6 @@ MonoBehaviour:
   textEnchantLevel: {fileID: 0}
   textRarity: {fileID: 0}
   uiTier: {fileID: 0}
-  uiSlotItem: {fileID: 0}
   slotIndex: -1
 --- !u!1 &5709882845027801525
 GameObject:
@@ -1014,8 +1011,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 2.5}
-  m_SizeDelta: {x: -30, y: -35}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &8311511575686413322
 CanvasRenderer:
@@ -1045,7 +1042,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: fabe682956bbcbb45980e168a2d57b4f, type: 3}
+  m_Sprite: {fileID: 21300000, guid: e8ac65f7faf3d461ab60a720ff7c73f4, type: 3}
   m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 1
@@ -1102,8 +1099,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 2.5}
-  m_SizeDelta: {x: -30, y: -35}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &8262325408342293999
 CanvasRenderer:
@@ -1133,7 +1130,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: fabe682956bbcbb45980e168a2d57b4f, type: 3}
+  m_Sprite: {fileID: 21300000, guid: e8ac65f7faf3d461ab60a720ff7c73f4, type: 3}
   m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 1

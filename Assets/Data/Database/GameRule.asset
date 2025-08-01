@@ -13,6 +13,5 @@ MonoBehaviour:
   m_Name: GameRule
   m_EditorClassIdentifier: 
   _startLevel: 1
-  _startHp: 5
   _startCurrency: 10000
   _outstanding: -10000

@@ -20,7 +20,7 @@ MonoBehaviour:
       text: 
       localKey: 
   icon: {fileID: 0}
-  prefab: {fileID: 0}
+  body: {fileID: 0}
   stats:
     maxHealth: 5
     damage: 0
@@ -30,15 +30,5 @@ MonoBehaviour:
   defaultBuff: []
   playerDebug:
     itemsStartData:
-    - itemData: {fileID: 11400000, guid: 846b91750e1e34f7098bdbcf8fc773c7, type: 2}
-      amount: 2
-    - itemData: {fileID: 11400000, guid: 77791273a12534d6e981cc3208bb55f8, type: 2}
+    - itemData: {fileID: 11400000, guid: ef4ca0cc871d649398a322b93211fc52, type: 2}
       amount: 1
-    - itemData: {fileID: 11400000, guid: 2529b6367d10e4ceda7f08ab56b50a5b, type: 2}
-      amount: 5
-    - itemData: {fileID: 11400000, guid: d353745ca8439487499c3e0deb3ae0ec, type: 2}
-      amount: 20
-    - itemData: {fileID: 11400000, guid: 040683348cc7e4ccf8b22954ec993cf6, type: 2}
-      amount: 10
-    - itemData: {fileID: 11400000, guid: 75ece4d76bded4844a75e206c1b2845d, type: 2}
-      amount: 40

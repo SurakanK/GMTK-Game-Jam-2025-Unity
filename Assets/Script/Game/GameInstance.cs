@@ -34,7 +34,6 @@ public class GameInstance : MonoBehaviour
 
     internal Dictionary<string, BaseBuff> buffs = new();
     internal Dictionary<string, BaseWeapon> weapons = new();
-    internal Dictionary<string, ItemData> currency = new();
     internal Dictionary<string, ItemData> items = new();
     internal Dictionary<string, AbilityData> abilities = new();
     internal Dictionary<string, CharacterData> enemies = new();
@@ -47,10 +46,6 @@ public class GameInstance : MonoBehaviour
             if (_allItems == null)
             {
                 _allItems = new();
-
-                // Add all currency
-                foreach (var pair in currency)
-                    _allItems[pair.Key] = pair.Value;
 
                 // Add weapons
                 foreach (var pair in weapons)

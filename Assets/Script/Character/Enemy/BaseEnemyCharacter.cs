@@ -1,10 +1,17 @@
 
+using UnityEngine;
+
 public partial class BaseEnemyCharacter : BaseCharacter
 {
+    public SpriteRenderer body;
+
     public void Initialized(EnemyData enemyData)
     {
         defaultData = enemyData;
         Initialize();
+
+        if (body != null)
+            body.sprite = enemyData.body;
     }
 
     public void IdleState()

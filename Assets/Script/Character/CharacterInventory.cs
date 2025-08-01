@@ -17,7 +17,7 @@ public class CharacterInventory : MonoBehaviour
     {
         List<InventoryItemData> inventory = nonEquipItem;
         if (data.amount <= 0)
-            return;
+            data.amount = 1;
 
         if (data.stack <= 0)
             data.stack = 1;
@@ -35,7 +35,6 @@ public class CharacterInventory : MonoBehaviour
             InventoryItemData itemUpdate = inventory[i] = item;
             GameEvent.Instance.EventNonEquipItemChanged?.Invoke(itemUpdate);
         }
-
         while (data.amount > 0)
         {
             int toAdd = Math.Min(data.stack, data.amount);

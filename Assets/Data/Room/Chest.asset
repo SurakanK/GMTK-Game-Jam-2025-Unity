@@ -21,3 +21,4 @@ MonoBehaviour:
       localKey: 
   icon: {fileID: 0}
   type: 2
+  caveBg: {fileID: 21300000, guid: 35e10fd9b434940c08606d85fd665692, type: 3}

@@ -58,14 +58,14 @@ public class UIDevToolsItem : UIBase
 
         if (data is not ItemData item)
             return;
-            
+
         if (item.IsItem(out ItemData itemData))
         {
-
+            BaseGamePlay.Inventory.IncreaseItem(itemData);
         }
         else if (item.IsWeapon(out BaseWeapon weaponData))
         {
-
+            BaseGamePlay.Inventory.IncreaseItem(weaponData);
         }
     }
 }

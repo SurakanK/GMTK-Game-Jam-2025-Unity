@@ -4,4 +4,5 @@ using UnityEngine;
 public class RoomData : BaseObject
 {
     public RoomType type;
+    public Sprite caveBg;
 }

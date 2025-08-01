@@ -20,7 +20,7 @@ MonoBehaviour:
       text: 
       localKey: 
   icon: {fileID: 0}
-  prefab: {fileID: 0}
+  body: {fileID: 21300000, guid: 38172b5f74f0b4c2b906b7f5dda33daf, type: 3}
   stats:
     maxHealth: 1
     damage: 0

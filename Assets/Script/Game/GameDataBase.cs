@@ -7,7 +7,6 @@ public class GameDataBase : ScriptableObject
 {
     public List<BaseBuff> baseBuffs;
     public List<BaseWeapon> weapons;
-    public List<ItemData> currency;
     public List<AbilityData> abilities;
     public List<ItemData> items;
     public List<CharacterData> enemies;
@@ -17,7 +16,6 @@ public class GameDataBase : ScriptableObject
         RegisterToDict(gameInstance.items, items.Select(e => e.Clone()).ToList());
         RegisterToDict(gameInstance.buffs, baseBuffs.Select(e => e.Clone()).ToList());
         RegisterToDict(gameInstance.weapons, weapons.Select(e => e.Clone()).ToList());
-        RegisterToDict(gameInstance.currency, currency.Select(e => e.Clone()).ToList());
         RegisterToDict(gameInstance.abilities, abilities.Select(e => e.Clone()).ToList());
         RegisterToDict(gameInstance.enemies, enemies.Select(e => e.Clone()).ToList());
     }

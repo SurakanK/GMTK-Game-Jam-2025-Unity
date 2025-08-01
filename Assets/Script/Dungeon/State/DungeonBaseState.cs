@@ -5,9 +5,18 @@ using UnityEngine;
 public abstract class DungeonBaseState : IState
 {
     protected readonly DungeonState DungeonState;
-    protected DungeonBaseState(DungeonState dungeonState)
+    protected readonly RoomData RoomData;
+    protected DungeonBaseState(DungeonState dungeonState, RoomData roomData)
     {
         DungeonState = dungeonState;
+        RoomData = roomData;
+        SetBgCave(roomData.caveBg);
+    }
+
+    private void SetBgCave(Sprite bgCave)
+    {
+        if (DungeonState.caveBg != null)
+            DungeonState.caveBg.sprite = bgCave;
     }
 
     public override void OnInitialized()

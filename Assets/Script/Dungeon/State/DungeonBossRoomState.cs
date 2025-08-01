@@ -2,11 +2,16 @@ using UnityEngine;
 
 public class DungeonBossRoomState : DungeonBaseState
 {
-    public DungeonBossRoomState(DungeonState stateMachine) : base(stateMachine) { }
+    public DungeonBossRoomState(DungeonState stateMachine, RoomData roomData) : base(stateMachine, roomData) { }
 
     public override void OnActive()
     {
         base.OnActive();
+        DungeonState.player.gameObject.SetActive(true);
+        DungeonState.enemy.gameObject.SetActive(true);
+        DungeonState.npc.gameObject.SetActive(false);
+        DungeonState.chest.gameObject.SetActive(false);
+        SpawnEnemy();
     }
 
     public override void Update()
@@ -19,4 +24,11 @@ public class DungeonBossRoomState : DungeonBaseState
         base.OnEnded();
     }
 
+    private void SpawnEnemy()
+    {
+        CharacterData randomEnemy = GameInstance.Instance.enemies.GetRandomValue();
+        if (randomEnemy is not EnemyData enemyData)
+            return;
+        DungeonState.enemy.Initialized(enemyData);
+    }
 }

@@ -2,9 +2,6 @@ using UnityEngine;
 
 public class BaseGamePlay : MonoBehaviour
 {
-    public BasePlayerCharacter player;
-    public BaseEnemyCharacter enemy;
-
     private static int _level = 1;
     public static int Level
     {

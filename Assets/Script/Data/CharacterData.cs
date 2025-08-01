@@ -7,7 +7,8 @@ using UnityEngine;
 
 public class CharacterData : BaseObject
 {
-    public BaseCharacter prefab;
+    [Header("Character")]
+    public Sprite body;
 
     [Header("Stats")]
     public StatsData stats;

@@ -25,9 +25,19 @@ MonoBehaviour:
   abilities: []
   items:
   - {fileID: 11400000, guid: 2529b6367d10e4ceda7f08ab56b50a5b, type: 2}
-  - {fileID: 11400000, guid: d353745ca8439487499c3e0deb3ae0ec, type: 2}
-  - {fileID: 11400000, guid: 040683348cc7e4ccf8b22954ec993cf6, type: 2}
-  - {fileID: 11400000, guid: 75ece4d76bded4844a75e206c1b2845d, type: 2}
+  - {fileID: 11400000, guid: 5e9094c4ce6ee40a4b826fd2f8780b1b, type: 2}
+  - {fileID: 11400000, guid: f7543da5723f84c34b7bab4fdf4740fa, type: 2}
+  - {fileID: 11400000, guid: d7ac56e2455bf45929122b54efeb7340, type: 2}
+  - {fileID: 11400000, guid: b6acd75b7ab9d4e9cb1f769157e74fd2, type: 2}
+  - {fileID: 11400000, guid: cbadeb8fd7729429ebadee325a0ce1d4, type: 2}
+  - {fileID: 11400000, guid: ec827891076e2462d8b50fa3b08a0f50, type: 2}
+  - {fileID: 11400000, guid: 1a2b8b06e717048ac8cbff3f4c43c32b, type: 2}
+  - {fileID: 11400000, guid: ef4ca0cc871d649398a322b93211fc52, type: 2}
+  - {fileID: 11400000, guid: 6b8b1775539454813b394049fba90a3a, type: 2}
+  - {fileID: 11400000, guid: d54af39481528451ba6f5c866e2cbe1a, type: 2}
+  - {fileID: 11400000, guid: 8c90ffb680ee54c0c8f8f9633e75cb45, type: 2}
+  - {fileID: 11400000, guid: 9ce6fbaf3fc8d4b29ae3863d086efed9, type: 2}
+  - {fileID: 11400000, guid: a2eaa39fe37de462aaf5d309f2b99f7a, type: 2}
   enemies:
   - {fileID: 11400000, guid: 60ea44a1150d24449b5170bc9bc44e4b, type: 2}
   - {fileID: 11400000, guid: 6b106e31512314f449f549b3ece726ee, type: 2}
