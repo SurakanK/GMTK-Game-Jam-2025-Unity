@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using UnityEngine;
 
 public class GameEvent : MonoBehaviour
@@ -7,6 +8,8 @@ public class GameEvent : MonoBehaviour
     public Action<int> EventCurrencyChange;
     public Action<int> EventOutstandingChange;
     public Action<int, int> EventHealthChange;
+    public Action<List<BaseBuff>> EventBuffChange;
+
     public Action<bool> EventDragging;
     public Action<InventoryItemData> EventNonEquipItemChanged;
 

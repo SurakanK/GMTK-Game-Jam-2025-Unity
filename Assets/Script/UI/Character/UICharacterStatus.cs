@@ -57,7 +57,6 @@ public class UICharacterStatus : UIFollow
     {
         owner.Stats = next;
         UpdateMaxValue(progressHealth, next.maxHealth);
-        UpdateMaxValue(progressStamina, next.maxStamina);
     }
 
     private void OnDestroy()

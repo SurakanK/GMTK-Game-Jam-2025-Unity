@@ -4,7 +4,16 @@ using System.Linq;
 
 partial class BaseCharacter
 {
-    protected List<BaseBuff> curBuffs = new List<BaseBuff>();
+    private List<BaseBuff> _curBuffs = new();
+    protected List<BaseBuff> curBuffs
+    {
+        get { return _curBuffs; }
+        set
+        {
+            _curBuffs = value;
+            GameEvent.Instance.EventBuffChange?.Invoke(value);
+        }
+    }
 
     public void AddBuff(string buffId)
     {
