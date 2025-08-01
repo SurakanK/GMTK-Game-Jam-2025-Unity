@@ -31,7 +31,7 @@ public class UICharacter : UIBase
     private void OnEventBuffChange(List<BaseBuff> buffs)
     {
         foreach (UIBuffEntity uiBuff in uiBuffs)
-            uiBuff.Clear();
+            uiBuff.ResetUI();
 
         int count = Mathf.Min(buffs.Count, uiBuffs.Count);
         for (int i = 0; i < count; i++)

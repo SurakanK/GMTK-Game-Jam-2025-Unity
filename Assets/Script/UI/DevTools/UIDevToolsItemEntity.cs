@@ -1,7 +1,7 @@
 using TMPro;
 using UnityEngine;
 
-public class UIDevToolsItemEntity : UISelection<ItemData>
+public class UIDevToolsItemEntity : UISelection<GameData>
 {
     [Header("UI DevTools")]
     public TextMeshProUGUI textDataId;

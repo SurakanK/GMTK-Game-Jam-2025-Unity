@@ -5,18 +5,11 @@ using Newtonsoft.Json;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class UIDevToolsItem : UIBase
+public class UIDevToolsBuff : UIBase
 {
     [Header("UI Item List")]
     [SerializeField] private Transform _content;
     [SerializeField] private UIDevToolsItemEntity _prefab;
-    [SerializeField] private string _tag;
-
-    private HashSet<string> Tag => new HashSet<string>(
-        _tag.Split(',')
-        .Select(t => t.Trim())
-        .Where(t => !string.IsNullOrEmpty(t))
-    );
 
     private ItemData _curSelectedData;
     public ItemData CurSelectedData => _curSelectedData;
@@ -42,10 +35,8 @@ public class UIDevToolsItem : UIBase
 
     private void CreateList()
     {
-        var sortItem = GameInstance.AllItems.Values
-            .Where(e => Tag.Any(tag => e.DataId.Contains(tag)))
-            .ToList();
-        CacheList.Generate(sortItem.ToList(), (i, data, ui) =>
+        List<BaseBuff> buffs = GameInstance.Instance.buffs.Values.ToList();
+        CacheList.Generate(buffs, (i, data, ui) =>
         {
             ui.EventSelected += OnSelected;
         }, null);
@@ -55,17 +46,6 @@ public class UIDevToolsItem : UIBase
     {
         if (GamePlayerCharacter.PlayerCharacter == null)
             return;
-
-        if (data is not ItemData item)
-            return;
-            
-        if (item.IsItem(out ItemData itemData))
-        {
-
-        }
-        else if (item.IsWeapon(out BaseWeapon weaponData))
-        {
-
-        }
+        GamePlayerCharacter.PlayerCharacter.AddBuff(data.DataId);
     }
 }

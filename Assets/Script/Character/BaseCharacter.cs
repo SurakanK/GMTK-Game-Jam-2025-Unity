@@ -9,15 +9,12 @@ public abstract partial class BaseCharacter : CharacterStateMachine
 
     [Header("Element")]
     public CharacterReferencePoints ReferencePoints;
-    internal CharacterInventory Inventory;
     internal bool isAttacking = false;
     internal BaseEnemyCharacter Enemy => this as BaseEnemyCharacter;
     internal BasePlayerCharacter Player => this as BasePlayerCharacter;
 
     protected void Initialize()
     {
-        Inventory = GetComponent<CharacterInventory>();
-
         ApplyStats();
     }
 

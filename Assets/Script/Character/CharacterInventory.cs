@@ -4,7 +4,6 @@ using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 
-[RequireComponent(typeof(BaseCharacter))]
 public class CharacterInventory : MonoBehaviour
 {
     private List<InventoryItemData> _nonEquipItem = new();
@@ -14,7 +13,7 @@ public class CharacterInventory : MonoBehaviour
         set { _nonEquipItem = value; }
     }
 
-    public void IncreaseItem(BaseCharacter owner, ItemData data)
+    public void IncreaseItem(ItemData data)
     {
         List<InventoryItemData> inventory = nonEquipItem;
         if (data.amount <= 0)

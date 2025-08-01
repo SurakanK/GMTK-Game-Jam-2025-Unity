@@ -13,8 +13,9 @@ MonoBehaviour:
   m_Name: GameDataBase
   m_EditorClassIdentifier: 
   baseBuffs:
-  - {fileID: 11400000, guid: cede714e694dc4b5f8dc18b541a88963, type: 2}
-  - {fileID: 11400000, guid: 12ff13d069fe941ec8094ed35862647f, type: 2}
+  - {fileID: 11400000, guid: ae71e1256a5c94faf86ff45d76ac05f7, type: 2}
+  - {fileID: 11400000, guid: 0227908ed26e441d29215ab79d9f8d06, type: 2}
+  - {fileID: 11400000, guid: b49489724306d47a3822e62ff4f3d9ab, type: 2}
   weapons:
   - {fileID: 11400000, guid: d8538010fbb094e7899274924844c9a2, type: 2}
   - {fileID: 11400000, guid: 77791273a12534d6e981cc3208bb55f8, type: 2}

@@ -38,7 +38,12 @@ public class UIInventory : UIBase
         }
     }
 
-    public void Initialized()
+    void Start()
+    {
+        Initialized();
+    }
+
+    private void Initialized()
     {
         GameEvent.Instance.EventNonEquipItemChanged += OnInventoryChange;
         CreateList();
@@ -48,7 +53,7 @@ public class UIInventory : UIBase
     {
         CacheList.Clear();
 
-        CacheList.Generate(GamePlayerCharacter.Inventory.nonEquipItem, (i, data, ui) =>
+        CacheList.Generate(GameInstance.Inventory.nonEquipItem, (i, data, ui) =>
         {
           
         }, NoItemData);

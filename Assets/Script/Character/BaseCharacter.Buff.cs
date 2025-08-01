@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using UnityEngine;
 
 partial class BaseCharacter
 {
@@ -8,11 +9,7 @@ partial class BaseCharacter
     protected List<BaseBuff> curBuffs
     {
         get { return _curBuffs; }
-        set
-        {
-            _curBuffs = value;
-            GameEvent.Instance.EventBuffChange?.Invoke(value);
-        }
+        set { _curBuffs = value; }
     }
 
     public void AddBuff(string buffId)
@@ -34,11 +31,13 @@ partial class BaseCharacter
         BaseBuff buffClone = buff.Clone();
         curBuffs.Add(buffClone);
         buffClone.Apply(this);
+        GameEvent.Instance.EventBuffChange?.Invoke(curBuffs);
     }
 
     public void RemoveBuff(BaseBuff buff)
     {
         curBuffs.Remove(buff);
+        GameEvent.Instance.EventBuffChange?.Invoke(curBuffs);
     }
 
     public void ClearAllBuff()

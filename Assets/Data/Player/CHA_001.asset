@@ -23,37 +23,11 @@ MonoBehaviour:
   prefab: {fileID: 0}
   stats:
     maxHealth: 5
-    maxStamina: 0
-    moveSpeed: 0
-    physicalDamage:
-      min: 0
-      max: 0
-    fireDamage:
-      min: 0
-      max: 0
-    coldDamage:
-      min: 0
-      max: 0
-    lightningDamage:
-      min: 0
-      max: 0
-    elementalDamage:
-      min: 0
-      max: 0
-    physicalDefens: 0
-    fireDefens: 0
-    coldDefens: 0
-    lightningDefens: 0
-    elementalDefens: 0
-    atkRate: 0
-    atkArea: 0
-    criticalRate: 0
-    accuracyRate: 0
-    evasionRate: 0
-    isCanRespawn: 0
-  defaultBuff:
-  - {fileID: 11400000, guid: cede714e694dc4b5f8dc18b541a88963, type: 2}
-  - {fileID: 11400000, guid: 12ff13d069fe941ec8094ed35862647f, type: 2}
+    damage: 0
+    sellPriceRate: 1
+    blockDamage: 0
+    dungeonFee: 0
+  defaultBuff: []
   playerDebug:
     itemsStartData:
     - itemData: {fileID: 11400000, guid: 846b91750e1e34f7098bdbcf8fc773c7, type: 2}

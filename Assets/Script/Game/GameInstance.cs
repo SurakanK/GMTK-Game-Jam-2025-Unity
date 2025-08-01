@@ -65,6 +65,17 @@ public class GameInstance : MonoBehaviour
         }
     }
 
+    private static CharacterInventory _inventory;
+    public static CharacterInventory Inventory
+    {
+        get
+        {
+            if (_inventory == null)
+                _inventory = FindAnyObjectByType<CharacterInventory>();
+            return _inventory;
+        }
+    }
+
     internal Dictionary<string, BaseBuff> buffs = new();
     internal Dictionary<string, BaseWeapon> weapons = new();
     internal Dictionary<string, ItemData> currency = new();

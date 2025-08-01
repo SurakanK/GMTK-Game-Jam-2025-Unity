@@ -102,6 +102,11 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   healthIcon: {fileID: 5271944118625374606}
+  faceIcon: {fileID: 0}
+  uiBuffs:
+  - {fileID: 6015202259276254173}
+  - {fileID: 9196790252974510727}
+  - {fileID: 7373834408881315374}
 --- !u!1 &4377721326657193715
 GameObject:
   m_ObjectHideFlags: 0
@@ -288,13 +293,14 @@ GameObject:
   - component: {fileID: 2915354400291838117}
   - component: {fileID: 3456017695000790072}
   - component: {fileID: 7264805124790139018}
+  - component: {fileID: 9196790252974510727}
   m_Layer: 0
   m_Name: UIBuff--Entity
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &2915354400291838117
 RectTransform:
   m_ObjectHideFlags: 0
@@ -343,7 +349,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: c269f8d3688d646ce9487eafb7a3e5ac, type: 3}
+  m_Sprite: {fileID: 0}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -353,6 +359,35 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &9196790252974510727
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4891577824083799648}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dc4552b61c85847559d068fb3df8694b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  root: {fileID: 0}
+  isHideOnAwake: 0
+  onShow:
+    m_PersistentCalls:
+      m_Calls: []
+  onHide:
+    m_PersistentCalls:
+      m_Calls: []
+  bg: {fileID: 0}
+  imageItem: {fileID: 7264805124790139018}
+  textTitle: {fileID: 0}
+  textDescription: {fileID: 0}
+  textAmount: {fileID: 0}
+  textLevel: {fileID: 0}
+  textEnchantLevel: {fileID: 0}
+  textRarity: {fileID: 0}
+  uiTier: {fileID: 0}
 --- !u!1 &6400859363908184509
 GameObject:
   m_ObjectHideFlags: 0
@@ -364,13 +399,14 @@ GameObject:
   - component: {fileID: 3281620118178735015}
   - component: {fileID: 3216454089103737051}
   - component: {fileID: 2437320013284465317}
+  - component: {fileID: 7373834408881315374}
   m_Layer: 0
   m_Name: UIBuff--Entity
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &3281620118178735015
 RectTransform:
   m_ObjectHideFlags: 0
@@ -419,7 +455,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: c269f8d3688d646ce9487eafb7a3e5ac, type: 3}
+  m_Sprite: {fileID: 0}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -429,6 +465,35 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &7373834408881315374
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6400859363908184509}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dc4552b61c85847559d068fb3df8694b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  root: {fileID: 0}
+  isHideOnAwake: 0
+  onShow:
+    m_PersistentCalls:
+      m_Calls: []
+  onHide:
+    m_PersistentCalls:
+      m_Calls: []
+  bg: {fileID: 0}
+  imageItem: {fileID: 2437320013284465317}
+  textTitle: {fileID: 0}
+  textDescription: {fileID: 0}
+  textAmount: {fileID: 0}
+  textLevel: {fileID: 0}
+  textEnchantLevel: {fileID: 0}
+  textRarity: {fileID: 0}
+  uiTier: {fileID: 0}
 --- !u!1 &7970550466585864927
 GameObject:
   m_ObjectHideFlags: 0
@@ -440,13 +505,14 @@ GameObject:
   - component: {fileID: 5311497942206783829}
   - component: {fileID: 3252047516561334450}
   - component: {fileID: 4029122051055451343}
+  - component: {fileID: 6015202259276254173}
   m_Layer: 0
   m_Name: UIBuff--Entity
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &5311497942206783829
 RectTransform:
   m_ObjectHideFlags: 0
@@ -495,7 +561,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: c269f8d3688d646ce9487eafb7a3e5ac, type: 3}
+  m_Sprite: {fileID: 0}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -505,3 +571,32 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &6015202259276254173
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7970550466585864927}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dc4552b61c85847559d068fb3df8694b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  root: {fileID: 0}
+  isHideOnAwake: 0
+  onShow:
+    m_PersistentCalls:
+      m_Calls: []
+  onHide:
+    m_PersistentCalls:
+      m_Calls: []
+  bg: {fileID: 0}
+  imageItem: {fileID: 4029122051055451343}
+  textTitle: {fileID: 0}
+  textDescription: {fileID: 0}
+  textAmount: {fileID: 0}
+  textLevel: {fileID: 0}
+  textEnchantLevel: {fileID: 0}
+  textRarity: {fileID: 0}
+  uiTier: {fileID: 0}

@@ -24,7 +24,6 @@ public partial class UIGameplayController : MonoBehaviour
 
     public void InitializedUI()
     {
-        if (panelInventory != null)
-            panelInventory.Initialized();
+      
     }
 }

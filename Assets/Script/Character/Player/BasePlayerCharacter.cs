@@ -14,7 +14,6 @@ public class BasePlayerCharacter : BaseCharacter
         IdleState();
 
         GamePlayerCharacter.PlayerCharacter = this;
-        GamePlayerCharacter.Inventory = Inventory;
         UIGameplayController.Instance.InitializedUI();
 
         // Initialize debug
