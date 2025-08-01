@@ -14,22 +14,23 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   DialogType: 0
   dialogEntries:
-  - characterData: {fileID: 11400000, guid: 7ae9076cdff21384c81795d81a59923e, type: 2}
-    text: "\u0E27\u0E48\u0E32\u0E41\u0E15\u0E48\u0E2A\u0E35\u0E1F\u0E49\u0E32\u0E15\u0E48\u0E32\u0E07\u0E08\u0E32\u0E01\u0E2A\u0E35\u0E41\u0E14\u0E07\u0E44\u0E07\u0E19\u0E30"
+  - characterData: {fileID: 11400000, guid: 0784f58f0ecf21647ad815946102453f, type: 2}
+    text: What is diif between red and blue pill?
     spriteNumber: 6
     picturePosition: 0
+    BackgroundImage: {fileID: 0}
     MultipleCharacter: 1
-    SupportCharacterData1: {fileID: 11400000, guid: dcf0aa4eada03c64aaefb5e0c122a4ba,
-      type: 2}
+    SupportCharacterData1: {fileID: 11400000, guid: dcf0aa4eada03c64aaefb5e0c122a4ba, type: 2}
     SupportCharacterSpriteNumber1: 0
     SupportCharacterPicturePosition1: 2
-  - characterData: {fileID: 11400000, guid: dcf0aa4eada03c64aaefb5e0c122a4ba, type: 2}
-    text: "\u0E23\u0E2A\u0E2A\u0E15\u0E2D\u0E40\u0E1A\u0E2D\u0E23\u0E35\u0E48\u0E40\u0E2B\u0E21\u0E37\u0E2D\u0E19\u0E01\u0E31\u0E19\u0E19\u0E30\u0E41\u0E04\u0E48\u0E2A\u0E35\u0E1F\u0E49\u0E32"
+  - characterData: {fileID: 11400000, guid: 31256ef4d11066b44bce2fbcafa538bb, type: 2}
+    text: Oh it just a taste
     spriteNumber: 0
     picturePosition: 0
+    BackgroundImage: {fileID: 0}
     MultipleCharacter: 1
-    SupportCharacterData1: {fileID: 11400000, guid: 7ae9076cdff21384c81795d81a59923e,
-      type: 2}
+    SupportCharacterData1: {fileID: 11400000, guid: 7ae9076cdff21384c81795d81a59923e, type: 2}
     SupportCharacterSpriteNumber1: 6
     SupportCharacterPicturePosition1: 2
   dialogChoices: []
+  CurrentDialogIndex: 0

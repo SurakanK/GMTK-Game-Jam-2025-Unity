@@ -16,7 +16,7 @@ MonoBehaviour:
   dialogEntries:
   - characterData: {fileID: 11400000, guid: 0784f58f0ecf21647ad815946102453f, type: 2}
     text: 'Now is Test Dialog System '
-    spriteNumber: 0
+    spriteNumber: 1
     picturePosition: 0
     BackgroundImage: {fileID: 21300000, guid: 2163c6a666685d34e97ff339e40c28f2, type: 3}
     MultipleCharacter: 1
@@ -25,11 +25,11 @@ MonoBehaviour:
     SupportCharacterPicturePosition1: 2
   - characterData: {fileID: 11400000, guid: 31256ef4d11066b44bce2fbcafa538bb, type: 2}
     text: What I am going to do?
-    spriteNumber: 2
+    spriteNumber: 3
     picturePosition: 0
     BackgroundImage: {fileID: 21300000, guid: 25c3ffda6e58c2a41ab5148133624b3d, type: 3}
     MultipleCharacter: 1
-    SupportCharacterData1: {fileID: 11400000, guid: dcf0aa4eada03c64aaefb5e0c122a4ba, type: 2}
+    SupportCharacterData1: {fileID: 0}
     SupportCharacterSpriteNumber1: 3
     SupportCharacterPicturePosition1: 2
   - characterData: {fileID: 11400000, guid: 0784f58f0ecf21647ad815946102453f, type: 2}
@@ -38,16 +38,16 @@ MonoBehaviour:
     picturePosition: 0
     BackgroundImage: {fileID: 21300000, guid: 2163c6a666685d34e97ff339e40c28f2, type: 3}
     MultipleCharacter: 1
-    SupportCharacterData1: {fileID: 11400000, guid: 7ae9076cdff21384c81795d81a59923e, type: 2}
+    SupportCharacterData1: {fileID: 0}
     SupportCharacterSpriteNumber1: 4
     SupportCharacterPicturePosition1: 2
   - characterData: {fileID: 11400000, guid: 31256ef4d11066b44bce2fbcafa538bb, type: 2}
     text: Sound good
-    spriteNumber: 7
+    spriteNumber: 9
     picturePosition: 0
     BackgroundImage: {fileID: 0}
     MultipleCharacter: 1
-    SupportCharacterData1: {fileID: 11400000, guid: dcf0aa4eada03c64aaefb5e0c122a4ba, type: 2}
+    SupportCharacterData1: {fileID: 0}
     SupportCharacterSpriteNumber1: 4
     SupportCharacterPicturePosition1: 2
   dialogChoices:

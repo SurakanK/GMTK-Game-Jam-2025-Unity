@@ -14,8 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   DialogType: 0
   dialogEntries:
-  - characterData: {fileID: 11400000, guid: 7ae9076cdff21384c81795d81a59923e, type: 2}
-    text: "B \u0E08\u0E49\u0E32"
+  - characterData: {fileID: 11400000, guid: 31256ef4d11066b44bce2fbcafa538bb, type: 2}
+    text: 'B '
     spriteNumber: 0
     picturePosition: 0
     BackgroundImage: {fileID: 21300000, guid: 25c3ffda6e58c2a41ab5148133624b3d, type: 3}
@@ -24,3 +24,4 @@ MonoBehaviour:
     SupportCharacterSpriteNumber1: 0
     SupportCharacterPicturePosition1: 0
   dialogChoices: []
+  CurrentDialogIndex: 0
