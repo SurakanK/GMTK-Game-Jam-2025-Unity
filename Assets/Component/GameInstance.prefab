@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 3397529222072578294}
   - component: {fileID: 825648643}
   - component: {fileID: 6695662258613542070}
+  - component: {fileID: 7209019662095865060}
   m_Layer: 0
   m_Name: GameInstance
   m_TagString: Untagged
@@ -106,3 +107,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   DungeonData: {fileID: 11400000, guid: df18d3918061b480c86e9025346296a1, type: 2}
+--- !u!114 &7209019662095865060
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8834368468739571894}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d86f87248708348bead86e5a654eab4c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
