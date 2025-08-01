@@ -1,20 +1,10 @@
-using UnityEngine;
-using UnityEngine.AI;
 
-[RequireComponent(typeof(NavMeshAgent))]
 public partial class BaseEnemyCharacter : BaseCharacter
 {
-    [Header("Follow Setting")]
-    public bool avoidFollowEnemy;
-    public float followBackDistance;
-
-    [Header("Chase Setting")]
-    public bool avoidChaseEnemy;
-    public float chaseBackDistance;
-
-    void Awake()
+    public void Initialized(EnemyData enemyData)
     {
-     
+        defaultData = enemyData;
+        Initialize();
     }
 
     public void IdleState()

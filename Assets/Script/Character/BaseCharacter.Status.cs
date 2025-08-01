@@ -3,7 +3,6 @@ using UnityEngine.Events;
 partial class BaseCharacter
 {
     public int MaxHealth => Stats.maxHealth;
-    public int MaxStamina => Stats.maxHealth;
 
     public StatsData _status;
     public StatsData Stats
@@ -22,8 +21,6 @@ partial class BaseCharacter
             GameEvent.Instance.EventHealthChange?.Invoke(_currentHealth, MaxHealth);
         }
     }
-
-    public int currentStamina;
 
     private void ApplyStats()
     {

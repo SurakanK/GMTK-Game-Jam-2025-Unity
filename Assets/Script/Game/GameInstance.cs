@@ -81,6 +81,7 @@ public class GameInstance : MonoBehaviour
     internal Dictionary<string, ItemData> currency = new();
     internal Dictionary<string, ItemData> items = new();
     internal Dictionary<string, AbilityData> abilities = new();
+    internal Dictionary<string, CharacterData> enemies = new();
 
     private Dictionary<string, ItemData> _allItems;
     public Dictionary<string, ItemData> allItems

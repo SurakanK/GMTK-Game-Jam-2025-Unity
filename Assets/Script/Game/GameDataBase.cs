@@ -10,6 +10,7 @@ public class GameDataBase : ScriptableObject
     public List<ItemData> currency;
     public List<AbilityData> abilities;
     public List<ItemData> items;
+    public List<CharacterData> enemies;
 
     public void RegisterGameData(GameInstance gameInstance)
     {
@@ -18,6 +19,7 @@ public class GameDataBase : ScriptableObject
         RegisterToDict(gameInstance.weapons, weapons.Select(e => e.Clone()).ToList());
         RegisterToDict(gameInstance.currency, currency.Select(e => e.Clone()).ToList());
         RegisterToDict(gameInstance.abilities, abilities.Select(e => e.Clone()).ToList());
+        RegisterToDict(gameInstance.enemies, enemies.Select(e => e.Clone()).ToList());
     }
 
     private void RegisterToDict<T>(Dictionary<string, T> target, List<T> source) where T : IIdentifiableData

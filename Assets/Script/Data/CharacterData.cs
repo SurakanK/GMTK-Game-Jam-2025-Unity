@@ -31,4 +31,9 @@ public class CharacterData : BaseObject
             owner.AddBuff(buff);
         }
     }
+
+    public CharacterData Clone()
+    {
+        return Instantiate(this);
+    }
 }

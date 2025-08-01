@@ -2,6 +2,7 @@ using System;
 using UnityEngine;
 using UnityEngine.Pool;
 
+
 public partial class UIGameplayController : MonoBehaviour
 {
     [Header("UI GamePlay")]
@@ -24,6 +25,6 @@ public partial class UIGameplayController : MonoBehaviour
 
     public void InitializedUI()
     {
-      
+
     }
 }
