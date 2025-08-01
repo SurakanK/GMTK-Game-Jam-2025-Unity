@@ -25,7 +25,7 @@ public class UIItemDropping : UIBaseItem, IDropHandler
     {
         if (eventData.pointerDrag.TryGetComponent(out UIItemDragging itemDrop))
         {
-            GameInstance.Inventory.Swap(itemDrop.slotIndex, slotIndex);
+            BaseGamePlay.Inventory.Swap(itemDrop.slotIndex, slotIndex);
         }
     }
 }

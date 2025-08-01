@@ -10,8 +10,8 @@ public class UICurrency : UIBase
     {
         OnEvent();
 
-        UpdateCurrency(GameInstance.Currency);
-        UpdateOutstanding(GameInstance.Outstanding);
+        UpdateCurrency(BaseGamePlay.Currency);
+        UpdateOutstanding(BaseGamePlay.Outstanding);
     }
 
     private void OnEvent()

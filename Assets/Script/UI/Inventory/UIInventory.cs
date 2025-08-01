@@ -53,7 +53,7 @@ public class UIInventory : UIBase
     {
         CacheList.Clear();
 
-        CacheList.Generate(GameInstance.Inventory.nonEquipItem, (i, data, ui) =>
+        CacheList.Generate(BaseGamePlay.Inventory.nonEquipItem, (i, data, ui) =>
         {
           
         }, NoItemData);
