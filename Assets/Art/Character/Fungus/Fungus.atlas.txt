@@ -1,0 +1,23 @@
+Fungus.png
+size:2048,512
+filter:Linear,Linear
+pma:true
+Fungus arm
+bounds:852,262,243,269
+offsets:417,382,1024,1024
+rotate:90
+Fungus body
+bounds:526,274,324,231
+offsets:380,489,1024,1024
+Fungus head
+bounds:526,2,283,270
+offsets:399,575,1024,1024
+Fungus lower body
+bounds:2,37,522,468
+offsets:258,153,1024,1024
+Fungus mushroom
+bounds:1340,406,91,99
+offsets:592,781,1024,1024
+Fungus spore
+bounds:1123,312,215,193
+offsets:450,643,1024,1024

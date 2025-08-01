@@ -20,9 +20,6 @@ namespace StatePatternInUnity
             if (_currentState == null)
                 Initialize(newState);
 
-            if (newState.GetType() == _currentState.GetType())
-                return;
-
             _currentState.OnEnded();
             _previousState = _currentState;
             _currentState = newState;

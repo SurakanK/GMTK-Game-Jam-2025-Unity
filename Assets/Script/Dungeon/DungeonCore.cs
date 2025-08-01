@@ -24,6 +24,11 @@ public class DungeonCore : MonoBehaviour
 
     void Start()
     {
+        NextRoom();
+    }
+
+    public void NextRoom()
+    {
         dungeon.ChangeState(GetRoom());
     }
 
@@ -31,7 +36,9 @@ public class DungeonCore : MonoBehaviour
     {
         if (Room == null || Room.Count == 0)
             DungeonData.Generate(ref _rooms);
-        RoomData roomData = Room.First();
+        RoomData roomData = Room[0];
+        Room.RemoveAt(0);
+
         return roomData.type switch
         {
             RoomType.Empty => new DungeonEmptyRoomState(dungeon, roomData),

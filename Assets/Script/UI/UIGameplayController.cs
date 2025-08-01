@@ -1,6 +1,7 @@
 using System;
 using UnityEngine;
 using UnityEngine.Pool;
+using UnityEngine.UI;
 
 
 public partial class UIGameplayController : MonoBehaviour
@@ -9,6 +10,10 @@ public partial class UIGameplayController : MonoBehaviour
     [SerializeField] public UIInventory panelInventory;
     [SerializeField] public UICharacter panelCharacter;
     [SerializeField] public UICurrency panelCurrency;
+
+    [Header("UI Button")]
+    [SerializeField] public Button buttonNext;
+    [SerializeField] public Button buttonLeave;
 
     public static UIGameplayController _instance;
     public static UIGameplayController Instance
@@ -26,5 +31,15 @@ public partial class UIGameplayController : MonoBehaviour
     public void InitializedUI()
     {
 
+    }
+
+    public void OnClickNext()
+    {
+        DungeonCore.Instance.NextRoom();
+    }
+
+    public void OnClickLeave()
+    {
+       
     }
 }

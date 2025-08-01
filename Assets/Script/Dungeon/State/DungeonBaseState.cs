@@ -1,6 +1,7 @@
 using static CharacterStateMachine;
 using StatePatternInUnity;
 using UnityEngine;
+using System;
 
 public abstract class DungeonBaseState : IState
 {
