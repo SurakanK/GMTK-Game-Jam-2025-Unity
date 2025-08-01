@@ -1,0 +1,36 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5df279269eed66e44bfcf83357f2b275, type: 3}
+  m_Name: Q2
+  m_EditorClassIdentifier: 
+  DialogType: 0
+  dialogEntries:
+  - characterData: {fileID: 11400000, guid: 7ae9076cdff21384c81795d81a59923e, type: 2}
+    text: "A \u0E2B\u0E23\u0E37\u0E2D B"
+    spriteNumber: 1
+    picturePosition: 0
+    BackgroundImage: {fileID: 0}
+    MultipleCharacter: 1
+    SupportCharacterData1: {fileID: 11400000, guid: dcf0aa4eada03c64aaefb5e0c122a4ba,
+      type: 2}
+    SupportCharacterSpriteNumber1: 0
+    SupportCharacterPicturePosition1: 2
+  dialogChoices:
+  - text: A
+    statChange: 0
+    NextDialog: {fileID: 11400000, guid: 5c1273acd22d0fe45801be4ea81e9bd2, type: 2}
+  - text: B
+    statChange: 0
+    NextDialog: {fileID: 11400000, guid: d8ac59aaed75623449edf09b0484ba74, type: 2}
+  CurrentDialogIndex: 0
+  ChatdialogEntries: []
+  ChatdialogChoices: []

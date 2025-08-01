@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5df279269eed66e44bfcf83357f2b275, type: 3}
+  m_Name: Q2-A
+  m_EditorClassIdentifier: 
+  DialogType: 0
+  dialogEntries:
+  - characterData: {fileID: 11400000, guid: dcf0aa4eada03c64aaefb5e0c122a4ba, type: 2}
+    text: "A \u0E08\u0E49\u0E32"
+    spriteNumber: 0
+    picturePosition: 0
+    BackgroundImage: {fileID: 21300000, guid: ee129f0ae6bd7844eb260d631ff128a2, type: 3}
+    MultipleCharacter: 1
+    SupportCharacterData1: {fileID: 11400000, guid: dcf0aa4eada03c64aaefb5e0c122a4ba,
+      type: 2}
+    SupportCharacterSpriteNumber1: 2
+    SupportCharacterPicturePosition1: 2
+  dialogChoices: []
