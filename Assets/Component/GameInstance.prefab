@@ -8,9 +8,10 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 8834368468739571892}
+  - component: {fileID: 7223251060384887370}
   - component: {fileID: 8834368468739571893}
   - component: {fileID: 3004876204141163571}
+  - component: {fileID: 3397529222072578294}
   - component: {fileID: 6695662258613542070}
   m_Layer: 0
   m_Name: GameInstance
@@ -19,21 +20,26 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &8834368468739571892
-Transform:
+--- !u!224 &7223251060384887370
+RectTransform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8834368468739571894}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.19373856, y: -0.093946084, z: -0.20619848}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0, y: 0, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &8834368468739571893
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -60,6 +66,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9f834cd66a0dd4c85835be28ce8e20c6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &3397529222072578294
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8834368468739571894}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 44c4cadbf9a8943a1bff1f5b4c417dbb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &6695662258613542070
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -72,5 +90,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fbc2dbc3f399b4732bfb28b3f70ecbb6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bias: 1
   DungeonData: {fileID: 11400000, guid: df18d3918061b480c86e9025346296a1, type: 2}

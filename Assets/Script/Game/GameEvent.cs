@@ -3,6 +3,10 @@ using UnityEngine;
 
 public class GameEvent : MonoBehaviour
 {
+    public Action<int> EventLevelChange;
+    public Action<int> EventCurrencyChange;
+    public Action<int> EventOutstandingChange;
+    public Action<int, int> EventHealthChange;
     public Action<bool> EventDragging;
     public Action<InventoryItemData> EventNonEquipItemChanged;
 
@@ -17,16 +21,6 @@ public class GameEvent : MonoBehaviour
             }
             return _instance;
         }
-    }
-
-    private void Awake()
-    {
-        if (_instance != null)
-        {
-            Destroy(gameObject);
-        }
-
-        DontDestroyOnLoad(gameObject);
     }
 }
 

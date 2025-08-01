@@ -6,7 +6,14 @@ public class BaseGameRule : ScriptableObject
     [Header("Behaviour Data")]
 
     [SerializeField]
-    private int _dashCost;
-    public int DashCost => _dashCost;    
-    
+    private int _startLevel;
+    public int StartLevel => _startLevel;
+
+    [SerializeField]
+    private int _startCurrency;
+    public int StartCurrency => _startCurrency;
+
+    [SerializeField]
+    private int _outstanding;
+    public int Outstanding => _outstanding;
 }

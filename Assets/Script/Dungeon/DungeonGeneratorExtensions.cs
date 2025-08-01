@@ -25,7 +25,7 @@ public static class DungeonGeneratorExtensions
 
     public static void Generate(this DungeonData data, ref List<RoomData> result)
     {
-        int level = GameInstance.Instance.level;
+        int level = GameInstance.Level;
         if (data.roomTableLevels.TryGetTableByLevel(level, out RoomTableLevel roomTableLevel))
         {
             for (int i = 0; i < roomTableLevel.randomAmount; i++)
@@ -33,7 +33,6 @@ public static class DungeonGeneratorExtensions
                 if (roomTableLevel.roomTableData.TryGetDropTable(out RoomTableData roomData))
                 {
                     result.Add(roomData.room);
-                    Debug.Log(roomData.room.DataId);
                 }
             }
         }

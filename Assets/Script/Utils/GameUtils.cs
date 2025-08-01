@@ -15,9 +15,12 @@ public static class GameUtils
         return (input - minInput) * (maxOutput - minOutput) / (maxInput - minInput) + minInput;
     }
 
-    public static float ReverseLinear(float curInput, float maxInput, float minOutput, float maxOutput)
+    public static float MapReverse(int value, int min, int max, float minOutput, float maxOutput)
     {
-        return minOutput + (maxOutput - minOutput) * (1 - (float)curInput / maxInput);
+        value = Mathf.Clamp(value, min, max);
+        float t = (float)(value - min) / (max - min);
+        t = 1f - t;
+        return Mathf.Lerp(minOutput, maxOutput, t);
     }
 
     public static Color HexToRGB(string hex)

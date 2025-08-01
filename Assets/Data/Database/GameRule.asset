@@ -12,4 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4df51ac9439414c77b2822836ebb8bab, type: 3}
   m_Name: GameRule
   m_EditorClassIdentifier: 
-  _dashCost: 10
+  _startLevel: 1
+  _startHp: 5
+  _startCurrency: 10000
+  _outstanding: -10000

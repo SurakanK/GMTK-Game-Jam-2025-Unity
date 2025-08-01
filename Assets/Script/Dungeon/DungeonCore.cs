@@ -21,16 +21,6 @@ public class DungeonCore : MonoBehaviour
         }
     }
 
-    private void Awake()
-    {
-        if (_instance != null)
-        {
-            Destroy(gameObject);
-        }
-
-        DontDestroyOnLoad(gameObject);
-    }
-
     void Start()
     {
         DungeonData.Generate(ref _rooms);

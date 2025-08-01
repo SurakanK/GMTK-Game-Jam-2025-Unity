@@ -24,13 +24,6 @@ public class GameInstance : MonoBehaviour
     {
         if (gameDataBase != null)
             gameDataBase.RegisterGameData(this);
-
-        if (_instance != null)
-        {
-            Destroy(gameObject);
-        }
-
-        DontDestroyOnLoad(gameObject);
     }
 
     [Header("Gameplay Rule")]
@@ -39,7 +32,39 @@ public class GameInstance : MonoBehaviour
     [Header("Game DataBase")]
     public GameDataBase gameDataBase;
 
-    internal int level = 1;
+    private static int _level = 1;
+    public static int Level
+    {
+        get { return _level; }
+        set
+        {
+            _level = value;
+            GameEvent.Instance.EventLevelChange?.Invoke(_level);
+        }
+    }
+
+    private static int _currency;
+    public static int Currency
+    {
+        get { return _currency; }
+        set
+        {
+            _currency = value;
+            GameEvent.Instance.EventCurrencyChange?.Invoke(_currency);
+        }
+    }
+
+    private static int _outstanding;
+    public static int Outstanding
+    {
+        get { return _outstanding; }
+        set
+        {
+            _outstanding = value;
+            GameEvent.Instance.EventCurrencyChange?.Invoke(_outstanding);
+        }
+    }
+
     internal Dictionary<string, BaseBuff> buffs = new();
     internal Dictionary<string, BaseWeapon> weapons = new();
     internal Dictionary<string, ItemData> currency = new();

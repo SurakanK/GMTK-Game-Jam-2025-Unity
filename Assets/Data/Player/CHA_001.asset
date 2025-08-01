@@ -22,9 +22,9 @@ MonoBehaviour:
   icon: {fileID: 0}
   prefab: {fileID: 0}
   stats:
-    maxHealth: 100
-    maxStamina: 100
-    moveSpeed: 1.5
+    maxHealth: 5
+    maxStamina: 0
+    moveSpeed: 0
     physicalDamage:
       min: 0
       max: 0

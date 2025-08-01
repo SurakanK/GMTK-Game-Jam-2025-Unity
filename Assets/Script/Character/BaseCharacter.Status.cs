@@ -12,7 +12,17 @@ partial class BaseCharacter
         set { _status = value; }
     }
 
-    public int currentHealth;
+    private int _currentHealth;
+    public int currentHealth
+    {
+        get { return _currentHealth; }
+        set
+        {
+            _currentHealth = value;
+            GameEvent.Instance.EventHealthChange?.Invoke(_currentHealth, MaxHealth);
+        }
+    }
+
     public int currentStamina;
 
     private void ApplyStats()
