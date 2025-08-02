@@ -17,6 +17,7 @@ public class EnemyAttackState : CharacterBaseState
     private void OnFinishAnimation(TrackEntry trackEntry)
     {
         Enemy.entity.FadeOut(Enemy, 0.2f);
+        UIGameplayController.Instance.buttonNext.interactable = true;
         trackEntry.Complete -= OnFinishAnimation;
     }
 

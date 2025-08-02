@@ -14,6 +14,7 @@ public class ItemData : BaseObject
     public int amount = 0;
     public int stack = int.MaxValue;
     public int sellPrice = 0;
+    public int price = 0;
 
     public InventoryItemData inventoryItemData
     {

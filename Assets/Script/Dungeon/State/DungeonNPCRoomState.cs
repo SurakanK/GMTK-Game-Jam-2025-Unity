@@ -13,7 +13,8 @@ public class DungeonNPCRoomState : DungeonBaseState
         DungeonState.enemy.gameObject.SetActive(false);
         DungeonState.npc.gameObject.SetActive(true);
         DungeonState.chest.gameObject.SetActive(false);
-
+        
+        UIGameplayController.Instance.buttonNext.interactable = true;
         UIGameplayController.Instance.buttonLeave.gameObject.SetActive(true);
         UIGameplayController.Instance.buttonNext.gameObject.SetActive(Player.currentHealth > 0);
 

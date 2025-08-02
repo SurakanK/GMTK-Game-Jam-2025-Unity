@@ -2,6 +2,7 @@ using UnityEngine;
 
 public class BaseGamePlay : MonoBehaviour
 {
+    public static bool isGameStart;
     private static int _level = 1;
     public static int Level
     {
@@ -31,7 +32,7 @@ public class BaseGamePlay : MonoBehaviour
         set
         {
             _outstanding = value;
-            GameEvent.Instance.EventOutstandingChange?.Invoke(_outstanding); 
+            GameEvent.Instance.EventOutstandingChange?.Invoke(_outstanding);
         }
     }
 
@@ -73,6 +74,11 @@ public class BaseGamePlay : MonoBehaviour
         UIGameplayController.Instance.panelInventory.Initialized();
         UIGameplayController.Instance.panelCharacter.Initialized();
         DungeonCore.Instance.dungeon.player.InitializePlayer();
+    }
+
+    public void OnClickGoToCave()
+    {
+        UIManager.Instance.GoToCave();
         DungeonCore.Instance.NextRoom();
     }
 }

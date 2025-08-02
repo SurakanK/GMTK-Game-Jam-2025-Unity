@@ -11,6 +11,7 @@ public class UIInventory : UIBase
     [SerializeField] private Transform _content;
     [SerializeField] private UIItemEntity _prefab;
     [SerializeField] private List<Image> _iconLockLevel;
+    [SerializeField] private GameObject uiDropArea;
 
     [Header("Event")]
     public UnityEvent OnNoItemData;
@@ -40,6 +41,24 @@ public class UIInventory : UIBase
         }
     }
 
+    void Start()
+    {
+        OnEvent();
+    }
+
+    private void OnEvent()
+    {
+        GameEvent.Instance.EventDragging -= OnEventDragging;
+        GameEvent.Instance.EventDragging += OnEventDragging;
+    }
+
+    private void OnEventDragging(bool isDragging)
+    {
+        if (!BaseGamePlay.isGameStart)
+            return;
+        uiDropArea.SetActive(isDragging);
+    }
+
     public void Initialized()
     {
         GameEvent.Instance.EventNonEquipItemChanged += OnInventoryChange;
@@ -63,7 +82,7 @@ public class UIInventory : UIBase
             SetLockSlot();
     }
 
-    private void SetLockSlot()
+    public void SetLockSlot()
     {
         int[] unlockThresholds = { 10, 15 };
         for (int i = 0; i < unlockThresholds.Length; i++)

@@ -47,11 +47,7 @@ public partial class UIGameplayController : MonoBehaviour
 
     public void OnClickNext()
     {
+        buttonNext.interactable = false;
         DungeonCore.Instance.NextRoom();
-    }
-
-    public void OnClickLeave()
-    {
-
     }
 }

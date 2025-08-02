@@ -20,4 +20,8 @@ public class BaseGameRule : ScriptableObject
     [SerializeField]
     private int _limitSlot;
     public int LimitSlot => _limitSlot;
+
+    [SerializeField]
+    private int _fee;
+    public int Fee => _fee;
 }

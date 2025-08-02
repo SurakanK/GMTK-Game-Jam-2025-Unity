@@ -16,7 +16,6 @@ public abstract class DungeonBaseState : IRoomState
     {
         DungeonState = dungeonState;
         RoomData = roomData;
-        SetBgCave(roomData.caveBg);
     }
 
     private void SetBgCave(Sprite bgCave)
@@ -33,6 +32,9 @@ public abstract class DungeonBaseState : IRoomState
     public override void OnActive()
     {
         base.OnActive();
+        SetBgCave(RoomData.caveBg);
+        UIGameplayController.Instance.panelInventory.ClearHighlight();
+
         Color color = Color.green;
         Debug.Log(string.Format("<color=#{0:X2}{1:X2}{2:X2}> Active state: </color> {3}", (byte)(color.r * 255f), (byte)(color.g * 255f), (byte)(color.b * 255f), this.GetType().FullName));
     }
@@ -40,6 +42,7 @@ public abstract class DungeonBaseState : IRoomState
     public override void OnEnded()
     {
         base.OnEnded();
+        BaseGamePlay.Level += 1;
         Color color = Color.red;
         Debug.Log(string.Format("<color=#{0:X2}{1:X2}{2:X2}> Ended state: </color> {3}", (byte)(color.r * 255f), (byte)(color.g * 255f), (byte)(color.b * 255f), this.GetType().FullName));
     }

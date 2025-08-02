@@ -26,6 +26,7 @@ MonoBehaviour:
   amount: 0
   stack: 1
   sellPrice: 500
+  price: 2000
   spriteId: 
   stats:
     maxHealth: 0

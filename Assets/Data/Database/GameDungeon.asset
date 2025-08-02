@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: GameDungeon
   m_EditorClassIdentifier: 
   roomTableLevels:
-  - level: 1
+  - level: 15
     randomAmount: 5
     roomTableData:
     - weight: 0.25

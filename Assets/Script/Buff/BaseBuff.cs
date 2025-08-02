@@ -6,6 +6,7 @@ public abstract class BaseBuff : GameData
     public float duration;
     public float tickRateEffect;
     public StatsData stats;
+    public int price;
     protected BaseCharacter owner;
 
     public abstract void Apply(BaseCharacter target);

@@ -153,6 +153,7 @@ MonoBehaviour:
   _iconLockLevel:
   - {fileID: 9008020525260042341}
   - {fileID: 1086054915587891771}
+  uiDropArea: {fileID: 8006676752682947695}
   OnNoItemData:
     m_PersistentCalls:
       m_Calls: []
@@ -541,7 +542,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &487212088449332846
 RectTransform:
   m_ObjectHideFlags: 0

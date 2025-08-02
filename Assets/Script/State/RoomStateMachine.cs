@@ -31,6 +31,13 @@ namespace StatePatternInUnity
             newState.Initialize(this);
         }
 
+        public void ClearState()
+        {
+            _currentState.OnEnded();
+            _currentState = null;
+            _previousState = null;
+        }
+
         private void Update()
         {
             _currentState?.Update();

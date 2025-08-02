@@ -12,26 +12,28 @@ partial class BaseCharacter
         set { _curBuffs = value; }
     }
 
-    public void AddBuff(string buffId)
+    public bool AddBuff(string buffId)
     {
         if (GameInstance.Instance.buffs.TryGetValue(buffId, out BaseBuff baseBuff))
         {
-            AddBuff(baseBuff);
+            return AddBuff(baseBuff);
         }
+        return false;
     }
 
-    public void AddBuff(BaseBuff buff)
+    public bool AddBuff(BaseBuff buff)
     {
         if (buff == null)
-            return;
+            return false;
 
         if (curBuffs.Any(e => e.GetType() == buff.GetType()))
-            return;
+            return false;
 
         BaseBuff buffClone = buff.Clone();
         curBuffs.Add(buffClone);
         buffClone.Apply(this);
         GameEvent.Instance.EventBuffChange?.Invoke(curBuffs);
+        return true;
     }
 
     public void RemoveBuff(BaseBuff buff)

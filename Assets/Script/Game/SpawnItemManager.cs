@@ -46,6 +46,7 @@ public class SpawnItemManager : MonoBehaviour
 
     public void PickUpItem(BaseItem itemDrop)
     {
+        BlockClickItem();
         Vector3 startPos = itemDrop.transform.position;
         Vector3 endPos = DungeonCore.Instance.dungeon.player.transform.position;
         Vector3 centerPos = (startPos + endPos) * 0.5f;
@@ -57,6 +58,12 @@ public class SpawnItemManager : MonoBehaviour
             Destroy(itemDrop.gameObject);
             BaseGamePlay.Inventory.IncreaseItem(itemDrop.itemData);
         });
+    }
+
+    private void BlockClickItem()
+    {
+        foreach (BaseItem item in itemSpawned)
+            item.GetComponent<Collider2D>().enabled = false;
     }
 
     public void Clear()

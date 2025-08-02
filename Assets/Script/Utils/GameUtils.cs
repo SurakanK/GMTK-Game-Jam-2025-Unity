@@ -2,6 +2,7 @@ using System.Collections;
 using Cysharp.Threading.Tasks;
 using DG.Tweening;
 using Spine.Unity;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -268,5 +269,19 @@ public static class GameUtils
         if (hour12 == 0) hour12 = 12;
 
         return (time: $"{hour12:D2}:{minutes:D2}", suffix, isDay);
+    }
+
+    public static IEnumerator LerpTextValue(TextMeshProUGUI textComponent, int from, int to, float duration, string format = null)
+    {
+        float elapsed = 0f;
+        while (elapsed < duration)
+        {
+            elapsed += Time.deltaTime;
+            float t = Mathf.Clamp01(elapsed / duration);
+            int value = Mathf.RoundToInt(Mathf.Lerp(from, to, t));
+            textComponent.text = string.IsNullOrEmpty(format) ? value.ToString() : value.ToString(format);
+            yield return null;
+        }
+        textComponent.text = string.IsNullOrEmpty(format) ? to.ToString() : to.ToString(format);
     }
 }

@@ -26,7 +26,8 @@ public class UICurrency : UIBase
     {
         if (textCurrency != null)
         {
-            textCurrency.text = amount.ToString();
+            int from = int.Parse(textCurrency.text);
+            StartCoroutine(GameUtils.LerpTextValue(textCurrency, from, amount, 0.5f, null));
         }
     }
 
@@ -35,8 +36,9 @@ public class UICurrency : UIBase
         if (textOutstanding != null)
         {
             Color color = amount <= 0 ? GameColor.Red : GameColor.Green;
-            textOutstanding.text = amount.ToString();
             textOutstanding.color = color;
+            int from = int.Parse(textOutstanding.text);
+            StartCoroutine(GameUtils.LerpTextValue(textOutstanding, from, amount, 0.5f, null));
         }
     }
 }

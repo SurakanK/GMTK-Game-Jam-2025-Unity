@@ -2,9 +2,9 @@ using System.Collections;
 using TMPro;
 using UnityEngine;
 
-public class BankSystem : MonoBehaviour
+public class UIBank : UIBase
 {
-    [SerializeField] int CurrencyMoney, Debt = 0;
+    private int CurrencyMoney, Debt = 0;
     [SerializeField] TextMeshProUGUI DebtText;
     [SerializeField] TMP_InputField TMP_PaidDebt;
 
