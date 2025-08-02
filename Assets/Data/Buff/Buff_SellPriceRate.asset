@@ -19,7 +19,7 @@ MonoBehaviour:
     description:
       text: 
       localKey: 
-  icon: {fileID: 21300000, guid: d696fceca4c164275a7601cd8213acf6, type: 3}
+  icon: {fileID: 21300000, guid: e986e47dcaded43319ee6bb4b10d0499, type: 3}
   duration: 0
   tickRateEffect: 0
   stats:
