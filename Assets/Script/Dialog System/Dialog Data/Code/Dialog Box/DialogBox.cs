@@ -1,4 +1,4 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
@@ -12,6 +12,7 @@ public class DialogBox : MonoBehaviour
     public TextMeshProUGUI characterText; // Reference to the Text UI element
     public Image characterImage; // Reference to the main character Image UI element
     public Image supportCharacterImage; // Reference to the support character Image UI element
+    public GameObject DialogPanal;
 
     [Header("Choice Setting")]
     public GameObject choiceGameObject;
@@ -21,6 +22,7 @@ public class DialogBox : MonoBehaviour
     [Header("Sound Setting")]
     public AudioClip BackgroundMusic; // Background music clip
     private AudioSource audioSource; // AudioSource component
+    public AudioClip TypeSound; // Background music clip
 
     [Header("Background Setting")]
     public Image BackgroundUI;
@@ -75,7 +77,15 @@ public class DialogBox : MonoBehaviour
                 DisplayDialog(currentDialogIndex);
             }
             else Debug.LogWarning("This chat data is NOT Box dialog type"); 
-        }        
+        }
+
+        if (BackgroundMusic != null)
+        {
+            audioSource.clip = BackgroundMusic;
+            audioSource.loop = true;
+            audioSource.Play(); // ← optional, skip if you only want to play background between dialogs
+        }
+
     }
 
     public void DisplayDialog(int index)
@@ -195,12 +205,34 @@ public class DialogBox : MonoBehaviour
     private IEnumerator TypeText(string text)
     {
         dialogText.text = "";
+
+        if (TypeSound != null)
+        {
+            audioSource.clip = TypeSound;
+            audioSource.loop = true;
+            audioSource.Play();
+        }
+
         foreach (char letter in text.ToCharArray())
         {
             dialogText.text += letter;
             yield return new WaitForSeconds(typingSpeed);
         }
+
+        if (audioSource.isPlaying)
+        {
+            audioSource.Stop();
+        }
+
+        // Optionally resume background music
+        if (BackgroundMusic != null)
+        {
+            audioSource.clip = BackgroundMusic;
+            audioSource.loop = true;
+            audioSource.Play();
+        }
     }
+
 
     // Call this method to proceed to the next dialog entry
     public void NextDialog()
@@ -208,6 +240,18 @@ public class DialogBox : MonoBehaviour
         if (typingCoroutine != null)
         {
             StopCoroutine(typingCoroutine);
+            typingCoroutine = null;
+
+            if (audioSource.isPlaying)
+                audioSource.Stop();
+
+            // Optionally resume background music
+            if (BackgroundMusic != null)
+            {
+                audioSource.clip = BackgroundMusic;
+                audioSource.loop = true;
+                audioSource.Play();
+            }
         }
 
         currentDialogIndex++;
@@ -227,8 +271,10 @@ public class DialogBox : MonoBehaviour
             else
             {
                 Debug.Log("End of dialog.");
-                SceneManager.LoadScene(0); // To go Back into Minimap Scene
-         
+                DialogPanal.SetActive(false);
+
+                //SceneManager.LoadScene(0); // To go Back into Minimap Scene
+
             }
         }
     }
