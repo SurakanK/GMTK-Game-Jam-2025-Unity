@@ -49,6 +49,8 @@ public class BankSystem : MonoBehaviour
 
             Debug.Log("After pay debt: " + Debt);
             Debug.Log("After pay CurrencyMoney: " + CurrencyMoney);
+            Debug.Log("After pay debt (BaseGamePlay): " + Debt);
+            Debug.Log("After pay CurrencyMoney (BaseGamePlay): " + CurrencyMoney);
         }
         else
         {

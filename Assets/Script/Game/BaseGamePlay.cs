@@ -31,9 +31,10 @@ public class BaseGamePlay : MonoBehaviour
         set
         {
             _outstanding = value;
-            GameEvent.Instance.EventCurrencyChange?.Invoke(_outstanding);
+            GameEvent.Instance.EventOutstandingChange?.Invoke(_outstanding); 
         }
     }
+
 
     private static CharacterInventory _inventory;
     public static CharacterInventory Inventory
