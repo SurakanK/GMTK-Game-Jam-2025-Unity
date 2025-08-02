@@ -17,11 +17,11 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 0227908ed26e441d29215ab79d9f8d06, type: 2}
   - {fileID: 11400000, guid: b49489724306d47a3822e62ff4f3d9ab, type: 2}
   weapons:
-  - {fileID: 11400000, guid: d8538010fbb094e7899274924844c9a2, type: 2}
+  - {fileID: 11400000, guid: bf2bb0ad3a9514090805eb1fe46b6424, type: 2}
   - {fileID: 11400000, guid: 77791273a12534d6e981cc3208bb55f8, type: 2}
+  - {fileID: 11400000, guid: 637f53258b3bf4e55867b08da71eef47, type: 2}
   - {fileID: 11400000, guid: 846b91750e1e34f7098bdbcf8fc773c7, type: 2}
-  currency:
-  - {fileID: 11400000, guid: 7a3df343a788e4fe5890a803b0dcb8fc, type: 2}
+  - {fileID: 11400000, guid: d8538010fbb094e7899274924844c9a2, type: 2}
   abilities: []
   items:
   - {fileID: 11400000, guid: 2529b6367d10e4ceda7f08ab56b50a5b, type: 2}

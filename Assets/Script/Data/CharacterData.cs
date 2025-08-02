@@ -1,14 +1,12 @@
 
 using System.Collections.Generic;
-using System.Threading.Tasks;
-using Cysharp.Threading.Tasks;
-using Newtonsoft.Json;
+using Spine.Unity;
 using UnityEngine;
 
 public class CharacterData : BaseObject
 {
     [Header("Character")]
-    public Sprite body;
+    public SkeletonAnimation prefab;
 
     [Header("Stats")]
     public StatsData stats;

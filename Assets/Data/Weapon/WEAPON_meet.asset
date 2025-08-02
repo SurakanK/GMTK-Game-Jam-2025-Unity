@@ -9,8 +9,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 49ef472c2098a462a85a30bdbd298c52, type: 3}
-  m_Name: JUNK_Diamond_Shell_Epic
+  m_Script: {fileID: 11500000, guid: 5d9680d4bf5fa4a6a997089b4d033a32, type: 3}
+  m_Name: WEAPON_meet
   m_EditorClassIdentifier: 
   title:
     name:
@@ -19,10 +19,18 @@ MonoBehaviour:
     description:
       text: 
       localKey: 
-  icon: {fileID: 21300000, guid: 80c58bca76abe4fbc984f2faf8eb710b, type: 3}
+  icon: {fileID: 21300000, guid: 740cfb511b92e49b3a387b6a8804662d, type: 3}
   prefab: {fileID: 0}
   min: 1
   max: 1
   amount: 0
   stack: 1
-  sellPrice: 250
+  sellPrice: 500
+  spriteId: 
+  stats:
+    maxHealth: 0
+    damage: 1
+    sellPriceRate: 0
+    blockDamage: 0
+    dungeonFee: 0
+  abilityData: []

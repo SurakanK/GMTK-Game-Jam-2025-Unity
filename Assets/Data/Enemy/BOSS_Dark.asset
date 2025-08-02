@@ -20,7 +20,7 @@ MonoBehaviour:
       text: 
       localKey: 
   icon: {fileID: 0}
-  body: {fileID: 21300000, guid: 1bbd0dfd9dbf1446ea756fa0fda28e56, type: 3}
+  prefab: {fileID: 4319608251905782297, guid: 8306c41600b4445a1b3cc1d025d65797, type: 3}
   stats:
     maxHealth: 1
     damage: 0
@@ -29,23 +29,18 @@ MonoBehaviour:
     dungeonFee: 0
   defaultBuff: []
   itemDropData:
-  - weight: 0.3
-    minDrop: 0
-    maxDrop: 0
-    itemData: {fileID: 0}
-    OverrideAmount: 0
-  - weight: 0.2
+  - weight: 1
     minDrop: 1
     maxDrop: 1
-    itemData: {fileID: 11400000, guid: 7a3df343a788e4fe5890a803b0dcb8fc, type: 2}
+    itemData: {fileID: 11400000, guid: 2529b6367d10e4ceda7f08ab56b50a5b, type: 2}
     OverrideAmount: 0
-  - weight: 0.5
+  - weight: 1
     minDrop: 1
     maxDrop: 1
-    itemData: {fileID: 11400000, guid: d353745ca8439487499c3e0deb3ae0ec, type: 2}
+    itemData: {fileID: 11400000, guid: 5e9094c4ce6ee40a4b826fd2f8780b1b, type: 2}
     OverrideAmount: 0
-  - weight: 0.5
+  - weight: 1
     minDrop: 1
     maxDrop: 1
-    itemData: {fileID: 11400000, guid: 846b91750e1e34f7098bdbcf8fc773c7, type: 2}
+    itemData: {fileID: 11400000, guid: ec827891076e2462d8b50fa3b08a0f50, type: 2}
     OverrideAmount: 0

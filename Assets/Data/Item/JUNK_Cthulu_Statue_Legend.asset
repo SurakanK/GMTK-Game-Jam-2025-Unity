@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   title:
     name:
-      text: Carrot
+      text: 
       localKey: 
     description:
       text: 

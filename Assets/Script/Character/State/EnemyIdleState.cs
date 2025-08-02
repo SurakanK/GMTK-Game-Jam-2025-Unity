@@ -7,6 +7,7 @@ public class EnemyIdleState : CharacterBaseState
     public override void OnActive()
     {
         base.OnActive();
+        BaseCharacter.entity.AnimationName = GameAnim.Idle;
     }
 
     public override void Update()

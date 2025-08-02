@@ -37,18 +37,6 @@ public abstract class CharacterBaseState : IState
         Debug.Log(string.Format("<color=#{0:X2}{1:X2}{2:X2}> Ended state: </color> {3}", (byte)(color.r * 255f), (byte)(color.g * 255f), (byte)(color.b * 255f), this.GetType().FullName));
     }
 
-    protected void ChangeDefaultState()
-    {
-        if (BaseCharacter.IsCharacter())
-        {
-            ChangeState(GetStateInstance(PlayerStateType.Idle));
-        }
-        else if (BaseCharacter.IsEnemy())
-        {
-            BaseCharacter.Enemy.IdleState();
-        }
-    }
-
     protected IState GetStateInstance(PlayerStateType state)
     {
         return BaseCharacter.GetStateInstance(state);

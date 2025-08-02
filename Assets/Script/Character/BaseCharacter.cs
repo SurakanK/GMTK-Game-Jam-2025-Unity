@@ -1,10 +1,12 @@
 
 using Newtonsoft.Json;
+using Spine.Unity;
 using UnityEngine;
 
 public abstract partial class BaseCharacter : CharacterStateMachine
 {
     [Header("Setting")]
+    public Transform spawnPoint;
     public CharacterData defaultData;
 
     [Header("Element")]
@@ -12,6 +14,7 @@ public abstract partial class BaseCharacter : CharacterStateMachine
     internal bool isAttacking = false;
     internal BaseEnemyCharacter Enemy => this as BaseEnemyCharacter;
     internal BasePlayerCharacter Player => this as BasePlayerCharacter;
+    internal SkeletonAnimation entity;
 
     protected void Initialize()
     {
@@ -42,5 +45,12 @@ public abstract partial class BaseCharacter : CharacterStateMachine
     public T GetData<T>() where T : CharacterData
     {
         return defaultData as T;
+    }
+
+    protected void SpawnEntity()
+    {
+        if (entity != null)
+            Destroy(entity.gameObject);
+        entity = Instantiate(defaultData.prefab, spawnPoint);
     }
 }
