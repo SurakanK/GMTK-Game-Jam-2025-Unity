@@ -11,6 +11,12 @@ public class DungeonChestRoomState : DungeonBaseState
         DungeonState.enemy.gameObject.SetActive(false);
         DungeonState.npc.gameObject.SetActive(false);
         DungeonState.chest.gameObject.SetActive(true);
+
+        UIGameplayController.Instance.buttonLeave.gameObject.SetActive(true);
+        UIGameplayController.Instance.buttonNext.gameObject.SetActive(Player.currentHealth > 0);
+
+        if (RoomData.itemDropData.TryGetDropTable(out DropTableItemData dropTable))
+            SpawnItemManager.Instance.SpawnItem(dropTable.itemData);
     }
 
     public override void Update()
@@ -20,7 +26,6 @@ public class DungeonChestRoomState : DungeonBaseState
 
     public override void OnEnded()
     {
-        base.OnEnded();
+        SpawnItemManager.Instance.Clear();
     }
-
 }

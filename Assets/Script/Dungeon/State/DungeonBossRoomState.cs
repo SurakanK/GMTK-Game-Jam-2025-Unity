@@ -23,6 +23,7 @@ public class DungeonBossRoomState : DungeonBaseState
     public override void OnEnded()
     {
         base.OnEnded();
+        SpawnItemManager.Instance.Clear();
     }
 
     private void SpawnEnemy()

@@ -22,3 +22,29 @@ MonoBehaviour:
   icon: {fileID: 0}
   type: 1
   caveBg: {fileID: 21300000, guid: ba7cde37aec4b4c2aabc061e489696e3, type: 3}
+  itemDropData:
+  - weight: 1
+    minDrop: 1
+    maxDrop: 1
+    itemData: {fileID: 11400000, guid: bf2bb0ad3a9514090805eb1fe46b6424, type: 2}
+    OverrideAmount: 0
+  - weight: 1
+    minDrop: 1
+    maxDrop: 1
+    itemData: {fileID: 11400000, guid: 77791273a12534d6e981cc3208bb55f8, type: 2}
+    OverrideAmount: 0
+  - weight: 1
+    minDrop: 1
+    maxDrop: 1
+    itemData: {fileID: 11400000, guid: 637f53258b3bf4e55867b08da71eef47, type: 2}
+    OverrideAmount: 0
+  - weight: 1
+    minDrop: 1
+    maxDrop: 1
+    itemData: {fileID: 11400000, guid: 846b91750e1e34f7098bdbcf8fc773c7, type: 2}
+    OverrideAmount: 0
+  - weight: 1
+    minDrop: 1
+    maxDrop: 1
+    itemData: {fileID: 11400000, guid: d8538010fbb094e7899274924844c9a2, type: 2}
+    OverrideAmount: 0

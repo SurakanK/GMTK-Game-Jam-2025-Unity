@@ -11,6 +11,8 @@ public class DungeonEmptyRoomState : DungeonBaseState
         DungeonState.enemy.gameObject.SetActive(false);
         DungeonState.npc.gameObject.SetActive(false);
         DungeonState.chest.gameObject.SetActive(false);
+
+        UIGameplayController.Instance.buttonLeave.gameObject.SetActive(true);
     }
 
     public override void Update()

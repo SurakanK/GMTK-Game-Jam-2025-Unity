@@ -8,11 +8,12 @@ public class CharacterTakeDamageState : CharacterBaseState
     {
         base.OnActive();
         if (Player.TryToGetBuff(out BuffBlockDamage buff))
-        {
             Player.RemoveBuff(buff);
-            return;
-        }
-        Player.currentHealth -= 1;
+        else
+            Player.currentHealth -= 1;
+        
+        UIGameplayController.Instance.buttonLeave.gameObject.SetActive(true);
+        UIGameplayController.Instance.buttonNext.gameObject.SetActive(Player.currentHealth > 0);
     }
 
     public override void Update()

@@ -49,4 +49,11 @@ public class SpawnItemManager : MonoBehaviour
             BaseGamePlay.Inventory.IncreaseItem(itemDrop.itemData);
         });
     }
+
+    public void Clear()
+    {
+        foreach (BaseItem item in itemSpawned)
+            Destroy(item.gameObject);
+        itemSpawned.Clear();
+    }
 }
