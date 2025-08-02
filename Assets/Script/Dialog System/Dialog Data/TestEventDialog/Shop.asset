@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   DialogType: 0
   dialogEntries:
-  - characterData: {fileID: 11400000, guid: 0784f58f0ecf21647ad815946102453f, type: 2}
+  - characterData: {fileID: 11400000, guid: 31256ef4d11066b44bce2fbcafa538bb, type: 2}
     text: Welcome Explorer!
     spriteNumber: 6
     picturePosition: 1
