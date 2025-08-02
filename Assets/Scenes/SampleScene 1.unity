@@ -753,7 +753,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2089383389835831560, guid: 946e4d482bb9441d381f5dc8e13b0f51, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 0
+      value: 48
       objectReference: {fileID: 0}
     - target: {fileID: 6880854213648347219, guid: 946e4d482bb9441d381f5dc8e13b0f51, type: 3}
       propertyPath: m_Name
@@ -761,7 +761,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6880854213648347219, guid: 946e4d482bb9441d381f5dc8e13b0f51, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7798750766710379019, guid: 946e4d482bb9441d381f5dc8e13b0f51, type: 3}
       propertyPath: m_Pivot.x
@@ -1709,6 +1709,50 @@ PrefabInstance:
       propertyPath: m_Name
       value: Town Canva
       objectReference: {fileID: 0}
+    - target: {fileID: 3005554900650858917, guid: a1940b7c508a2be4c88678adaf9319a0, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 17
+      objectReference: {fileID: 0}
+    - target: {fileID: 3005554900650858971, guid: a1940b7c508a2be4c88678adaf9319a0, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 79c7196fa4535c64fbac882deccec3b4, type: 3}
+    - target: {fileID: 3005554900877901994, guid: a1940b7c508a2be4c88678adaf9319a0, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 3f9e7e4bc7d477a4b92f2cf9cb194065, type: 3}
+    - target: {fileID: 3005554901521324260, guid: a1940b7c508a2be4c88678adaf9319a0, type: 3}
+      propertyPath: m_Color.b
+      value: 0.3529412
+      objectReference: {fileID: 0}
+    - target: {fileID: 3005554901521324260, guid: a1940b7c508a2be4c88678adaf9319a0, type: 3}
+      propertyPath: m_Color.g
+      value: 0.27058825
+      objectReference: {fileID: 0}
+    - target: {fileID: 3005554901521324260, guid: a1940b7c508a2be4c88678adaf9319a0, type: 3}
+      propertyPath: m_Color.r
+      value: 0.0627451
+      objectReference: {fileID: 0}
+    - target: {fileID: 3005554901521324261, guid: a1940b7c508a2be4c88678adaf9319a0, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 1055.4338
+      objectReference: {fileID: 0}
+    - target: {fileID: 3005554901521324261, guid: a1940b7c508a2be4c88678adaf9319a0, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -41.03473
+      objectReference: {fileID: 0}
+    - target: {fileID: 3005554902342491296, guid: a1940b7c508a2be4c88678adaf9319a0, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -58
+      objectReference: {fileID: 0}
+    - target: {fileID: 3005554902342491303, guid: a1940b7c508a2be4c88678adaf9319a0, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 72f88cd58c7065d47aeab704d615360d, type: 3}
+    - target: {fileID: 3005554902365182624, guid: a1940b7c508a2be4c88678adaf9319a0, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 4b8ebfef4aea11d40897450adf3fffcc, type: 3}
     - target: {fileID: 3005554902365182625, guid: a1940b7c508a2be4c88678adaf9319a0, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
       value: 5
@@ -2454,7 +2498,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4377721326570052331, guid: ecc560218b3734dd3bece1dad7a23e34, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ecc560218b3734dd3bece1dad7a23e34, type: 3}
@@ -2652,7 +2696,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5085291902908006286, guid: a6bcebf65a4644242a3374e0ddad4a98, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a6bcebf65a4644242a3374e0ddad4a98, type: 3}
@@ -3773,7 +3817,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2339215012104024210, guid: b1a5775feb8bf7b4aab09c6092ddb17c, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2339215012104024211, guid: b1a5775feb8bf7b4aab09c6092ddb17c, type: 3}
       propertyPath: m_Pivot.x
@@ -3874,7 +3918,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6582279856574616560, guid: 46a317cf74bf04f6498fb56e1d54a484, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6582279856574616561, guid: 46a317cf74bf04f6498fb56e1d54a484, type: 3}
       propertyPath: m_Pivot.x
@@ -4142,6 +4186,10 @@ PrefabInstance:
     - target: {fileID: 6163913653555090330, guid: 36c152d6e95ae4331a41d7c89cd99677, type: 3}
       propertyPath: m_Name
       value: Canvas--UIGeneric
+      objectReference: {fileID: 0}
+    - target: {fileID: 6163913653555090330, guid: 36c152d6e95ae4331a41d7c89cd99677, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6163913653555090334, guid: 36c152d6e95ae4331a41d7c89cd99677, type: 3}
       propertyPath: m_Pivot.x
@@ -4575,6 +4623,10 @@ PrefabInstance:
     - target: {fileID: 8802401065419429667, guid: 7bb6d8795ca62432fabcf5a769b7ddf5, type: 3}
       propertyPath: m_Name
       value: Canvas--UIDevTools
+      objectReference: {fileID: 0}
+    - target: {fileID: 8802401065419429667, guid: 7bb6d8795ca62432fabcf5a769b7ddf5, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8802401065419429671, guid: 7bb6d8795ca62432fabcf5a769b7ddf5, type: 3}
       propertyPath: m_Pivot.x
