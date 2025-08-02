@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class SoundManager : MonoBehaviour
 {
@@ -14,15 +15,7 @@ public class SoundManager : MonoBehaviour
     private AudioSource audioSource;
 
     void Awake()
-    {
-        // Singleton 
-        if (Instance != null && Instance != this)
-        {
-            Destroy(gameObject);
-            return;
-        }
-        Instance = this;
-
+    {      
         // Setup AudioSource
         audioSource = GetComponent<AudioSource>();
         if (audioSource == null)
@@ -32,6 +25,14 @@ public class SoundManager : MonoBehaviour
 
         audioSource.loop = IsLoop;
         audioSource.playOnAwake = IsPlayonAwake;
+
+        // Auto-bind to Button if present
+        Button uiButton = GetComponent<Button>();
+        if (uiButton != null)
+        {
+            if (audioClips.Length == 1) uiButton.onClick.AddListener(PlayFirstClip);
+            else if (audioClips.Length > 1 && IsRandom) uiButton.onClick.AddListener(PlayRandomClip);           
+        }
     }
 
     void Start()
@@ -40,6 +41,11 @@ public class SoundManager : MonoBehaviour
         {
             if (IsRandom) PlayRandomClip();
             else PlayFirstClip();
+        }
+
+        if (this.gameObject.GetComponent<Button>() != null)
+        {
+
         }
     }
 
