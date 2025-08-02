@@ -10,8 +10,7 @@ public class DialogBox : MonoBehaviour
     [Header("UI Setting")]
     public TextMeshProUGUI dialogText; // Reference to the Text UI element
     public TextMeshProUGUI characterText; // Reference to the Text UI element
-    public Image characterImage; // Reference to the main character Image UI element
-    public Image supportCharacterImage; // Reference to the support character Image UI element
+
     public GameObject DialogPanal;
 
     [Header("Choice Setting")]
@@ -34,12 +33,6 @@ public class DialogBox : MonoBehaviour
     // Private variable area
     private int currentDialogIndex = 0;
     private Coroutine typingCoroutine;
-
-    [Header("Image Position Setting")]
-    // UI Positions based on PicturePosition enum
-    public  Vector2 leftPosition = new Vector2(-389f, 23f);
-    public  Vector2 middlePosition = new Vector2(-14f, 390.67f);
-    public  Vector2 rightPosition = new Vector2(509f, 390.67f);
 
     //need to setup instant when scene start
     public void SetNewDialog(DialogInfoSO dialogData)
@@ -102,56 +95,8 @@ public class DialogBox : MonoBehaviour
             {
                 StopCoroutine(typingCoroutine);
             }
-            typingCoroutine = StartCoroutine(TypeText(entry.text));
-
-            // Set the main character image if available
-            if (entry.characterData != null && entry.characterData.characterImages.Count > entry.spriteNumber)
-            {
-                characterImage.sprite = entry.characterData.characterImages[entry.spriteNumber];
-                characterImage.enabled = true;
-
-                // Set the image position based on PicturePosition
-                switch (entry.picturePosition)
-                {
-                    case PicturePosition.Left:
-                        characterImage.rectTransform.anchoredPosition = leftPosition;
-                        break;
-                    case PicturePosition.Middle:
-                        characterImage.rectTransform.anchoredPosition = middlePosition;
-                        break;
-                    case PicturePosition.Right:
-                        characterImage.rectTransform.anchoredPosition = rightPosition;
-                        break;
-                }
-            }
-            else
-            {
-                characterImage.enabled = false; // Hide the image if no valid sprite is found
-            }
-
-            // Handle the support character image based on MultipleCharacter flag
-            if (entry.MultipleCharacter && entry.SupportCharacterData1 != null && entry.SupportCharacterData1.characterImages.Count > entry.SupportCharacterSpriteNumber1)
-            {
-                supportCharacterImage.sprite = entry.SupportCharacterData1.characterImages[entry.SupportCharacterSpriteNumber1];
-                supportCharacterImage.gameObject.SetActive(true);
-
-                switch (entry.SupportCharacterPicturePosition1)
-                {
-                    case PicturePosition.Left:
-                        supportCharacterImage.rectTransform.anchoredPosition = leftPosition;
-                        break;
-                    case PicturePosition.Middle:
-                        supportCharacterImage.rectTransform.anchoredPosition = middlePosition;
-                        break;
-                    case PicturePosition.Right:
-                        supportCharacterImage.rectTransform.anchoredPosition = rightPosition;
-                        break;
-                }
-            }
-            else
-            {
-                supportCharacterImage.gameObject.SetActive(false); // Hide the support character image
-            }
+            typingCoroutine = StartCoroutine(TypeText(entry.text));          
+           
         }
     }
 
