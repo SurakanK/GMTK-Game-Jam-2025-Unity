@@ -18,7 +18,8 @@ partial class BaseCharacter
         set
         {
             _currentHealth = value;
-            GameEvent.Instance.EventHealthChange?.Invoke(_currentHealth, MaxHealth);
+            if (!IsEnemy())
+                GameEvent.Instance.EventHealthChange?.Invoke(_currentHealth, MaxHealth);
         }
     }
 

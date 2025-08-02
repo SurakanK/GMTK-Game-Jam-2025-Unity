@@ -5,8 +5,8 @@ using UnityEngine;
 public abstract class CharacterBaseState : IState
 {
     protected readonly BaseCharacter BaseCharacter;
-    protected BaseCharacter Target => BaseCharacter.Target;
-    protected StatsData Stats => BaseCharacter.Stats;
+    protected BasePlayerCharacter Player => DungeonCore.Instance.dungeon.player;
+    protected BaseEnemyCharacter Enemy => DungeonCore.Instance.dungeon.enemy;
 
     protected CharacterBaseState(BaseCharacter baseCharacter)
     {

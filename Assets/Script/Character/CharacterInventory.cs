@@ -60,7 +60,7 @@ public class CharacterInventory : MonoBehaviour
 
         newInventory.RemoveAt(removeAt);
         SortSlotIndex();
-        
+
         GameEvent.Instance.EventNonEquipItemChanged?.Invoke();
     }
 
@@ -88,5 +88,24 @@ public class CharacterInventory : MonoBehaviour
             item.slotIndex = i;
             list[i] = item;
         }
+    }
+
+    public bool HasItem(HashSet<string> ids)
+    {
+        return nonEquipItem.Any(e => ids.Contains(e.itemId));
+    }
+    
+    public bool HasItem(string itemId)
+    {
+        int total = 0;
+        foreach (var item in nonEquipItem)
+        {
+            if (item.itemId == itemId)
+                total += item.amount;
+
+            if (total >= 1)
+                return true;
+        }
+        return false;
     }
 }

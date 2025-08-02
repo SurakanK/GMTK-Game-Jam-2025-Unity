@@ -69,6 +69,7 @@ public class BaseGamePlay : MonoBehaviour
         Outstanding = GameInstance.Instance.gameRule.Outstanding;
 
         UIGameplayController.Instance.panelInventory.Initialized();
+        UIGameplayController.Instance.panelCharacter.Initialized();
         DungeonCore.Instance.dungeon.player.InitializePlayer();
         DungeonCore.Instance.NextRoom();
     }

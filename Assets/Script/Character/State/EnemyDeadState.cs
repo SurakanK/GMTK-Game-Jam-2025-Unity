@@ -7,7 +7,6 @@ using UnityEngine;
 public class EnemyDeadState : CharacterBaseState
 {
     public EnemyDeadState(BaseCharacter stateMachine) : base(stateMachine) { }
-    private BaseEnemyCharacter Enemy => BaseCharacter.Enemy;
     public override void OnActive()
     {
         base.OnActive();
