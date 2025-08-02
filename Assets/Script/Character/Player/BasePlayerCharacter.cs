@@ -1,4 +1,3 @@
-using Cinemachine;
 
 public class BasePlayerCharacter : BaseCharacter
 {
@@ -7,38 +6,21 @@ public class BasePlayerCharacter : BaseCharacter
         gameObject.tag = GameTag.Player;
     }
 
-    void Start()
+    public void InitializePlayer()
     {
         Initialize();
-        SetCameraOwner();
         IdleState();
 
         GamePlayerCharacter.PlayerCharacter = this;
-        UIGameplayController.Instance.InitializedUI();
 
         // Initialize debug
         if (defaultData is PlayerData playerData)
             playerData.InitializedDebug(this);
     }
 
-    private void SetCameraOwner()
-    {
-        var virtualCameras = FindAnyObjectByType<CinemachineVirtualCamera>();
-        if (virtualCameras != null)
-        {
-            virtualCameras.Follow = transform;
-            virtualCameras.LookAt = transform;
-        }
-    }
-
     public void IdleState()
     {
         ChangeState(GetStateInstance(PlayerStateType.Idle));
-    }
-
-    public void DashState()
-    {
-        ChangeState(GetStateInstance(PlayerStateType.Dash));
     }
 
     public void AttackState()
@@ -49,6 +31,11 @@ public class BasePlayerCharacter : BaseCharacter
     public void DeadState()
     {
         ChangeState(GetStateInstance(PlayerStateType.Dead));
+    }
+
+    public void TakeDamageState()
+    {
+        ChangeState(GetStateInstance(PlayerStateType.TakeDamage));
     }
 
     public override void Dead()

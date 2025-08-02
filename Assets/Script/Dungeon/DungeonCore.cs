@@ -21,12 +21,7 @@ public class DungeonCore : MonoBehaviour
             return _instance;
         }
     }
-
-    void Start()
-    {
-        NextRoom();
-    }
-
+    
     public void NextRoom()
     {
         dungeon.ChangeState(GetRoom());

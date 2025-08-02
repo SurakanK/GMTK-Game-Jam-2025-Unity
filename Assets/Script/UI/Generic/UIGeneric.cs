@@ -38,6 +38,23 @@ public class UIGeneric : MonoBehaviour
             Instance.UILoading.ShowLoading(isActive);
     }
 
+    public static void ShowMessage(
+        Action EventConfirm,
+        Action EventCancel,
+        string textHeader,
+        string textMessage = "",
+        string textButtonConfirm = "Confirm")
+    {
+        if (Instance.UIMessage)
+            Instance.UIMessage.ShowMessage(
+                EventConfirm,
+                EventCancel,
+                textHeader,
+                textMessage,
+                textButtonConfirm
+            );
+    }
+
     public static void ShowInputAmountField(
             Action<string> EventConfirm,
             Action EventCancel,

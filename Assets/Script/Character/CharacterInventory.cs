@@ -33,7 +33,7 @@ public class CharacterInventory : MonoBehaviour
             item.amount += toAdd;
             data.amount -= toAdd;
             InventoryItemData itemUpdate = inventory[i] = item;
-            GameEvent.Instance.EventNonEquipItemChanged?.Invoke(itemUpdate);
+            GameEvent.Instance.EventNonEquipItemChanged?.Invoke();
         }
         while (data.amount > 0)
         {
@@ -48,8 +48,20 @@ public class CharacterInventory : MonoBehaviour
                 slotIndex = inventory.Count
             };
             inventory.Add(newItem);
-            GameEvent.Instance.EventNonEquipItemChanged?.Invoke(newItem);
+            GameEvent.Instance.EventNonEquipItemChanged?.Invoke();
         }
+    }
+
+    public void RemoveItemAt(int removeAt)
+    {
+        List<InventoryItemData> newInventory = nonEquipItem;
+        if (removeAt < 0 || removeAt >= newInventory.Count)
+            return;
+
+        newInventory.RemoveAt(removeAt);
+        SortSlotIndex();
+        
+        GameEvent.Instance.EventNonEquipItemChanged?.Invoke();
     }
 
     public void Swap(int indexA, int indexB)
@@ -64,6 +76,17 @@ public class CharacterInventory : MonoBehaviour
         InventoryItemData temp = list[indexA];
         list[indexA] = list[indexB];
         list[indexB] = temp;
-        GameEvent.Instance.EventNonEquipItemChanged?.Invoke(temp);
+        GameEvent.Instance.EventNonEquipItemChanged?.Invoke();
+    }
+
+    private void SortSlotIndex()
+    {
+        List<InventoryItemData> list = nonEquipItem;
+        for (int i = 0; i < list.Count; i++)
+        {
+            var item = list[i];
+            item.slotIndex = i;
+            list[i] = item;
+        }
     }
 }

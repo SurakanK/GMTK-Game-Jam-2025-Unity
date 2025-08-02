@@ -18,7 +18,10 @@ namespace StatePatternInUnity
         public void ChangeState(IState newState)
         {
             if (_currentState == null)
+            {
                 Initialize(newState);
+                return;
+            }
 
             _currentState.OnEnded();
             _previousState = _currentState;

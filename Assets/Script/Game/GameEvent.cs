@@ -11,7 +11,7 @@ public class GameEvent : MonoBehaviour
     public Action<List<BaseBuff>> EventBuffChange;
 
     public Action<bool> EventDragging;
-    public Action<InventoryItemData> EventNonEquipItemChanged;
+    public Action EventNonEquipItemChanged;
 
     public static GameEvent _instance;
     public static GameEvent Instance

@@ -59,12 +59,7 @@ public class BaseGamePlay : MonoBehaviour
         }
     }
 
-    void Awake()
-    {
-        Initialized();
-    }
-
-    private void Initialized()
+    public void Initialized()
     {
         if (GameInstance.Instance.gameRule == null)
             return;
@@ -72,5 +67,9 @@ public class BaseGamePlay : MonoBehaviour
         Level = GameInstance.Instance.gameRule.StartLevel;
         Currency = GameInstance.Instance.gameRule.StartCurrency;
         Outstanding = GameInstance.Instance.gameRule.Outstanding;
+
+        UIGameplayController.Instance.panelInventory.Initialized();
+        DungeonCore.Instance.dungeon.player.InitializePlayer();
+        DungeonCore.Instance.NextRoom();
     }
 }

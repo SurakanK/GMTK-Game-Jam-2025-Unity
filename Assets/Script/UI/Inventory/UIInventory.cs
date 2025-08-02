@@ -16,6 +16,7 @@ public class UIInventory : UIBase
 
     private InventoryItemData _curSelectedData;
     public InventoryItemData CurSelectedData => _curSelectedData;
+    private HashSet<string> _curHighlight;
 
     private string _tag;
     private HashSet<string> Tag => new HashSet<string>(
@@ -38,12 +39,7 @@ public class UIInventory : UIBase
         }
     }
 
-    void Start()
-    {
-        Initialized();
-    }
-
-    private void Initialized()
+    public void Initialized()
     {
         GameEvent.Instance.EventNonEquipItemChanged += OnInventoryChange;
         CreateList();
@@ -55,11 +51,27 @@ public class UIInventory : UIBase
 
         CacheList.Generate(BaseGamePlay.Inventory.nonEquipItem, (i, data, ui) =>
         {
-          
+
         }, NoItemData);
 
         if (CacheList.Caches.Count > 0)
             SortByTag(_tag);
+        if (_curHighlight != null && _curHighlight.Count > 0)
+            HighlightItem(_curHighlight);
+    }
+
+    public void HighlightItem(HashSet<string> ids)
+    {
+        _curHighlight = ids;
+        foreach (UIItemEntity ui in CacheList.Caches)
+            ui.SetHighlight(ids.Contains(ui.Data.itemId));
+    }
+
+    public void ClearHighlight()
+    {
+        _curHighlight = null;
+        foreach (UIItemEntity ui in CacheList.Caches)
+            ui.SetHighlight(false);
     }
 
     public void SortByTag(string tag)
@@ -82,7 +94,7 @@ public class UIInventory : UIBase
         OnNoItemData?.Invoke();
     }
 
-    private void OnInventoryChange(InventoryItemData newItem)
+    private void OnInventoryChange()
     {
         CreateList();
     }

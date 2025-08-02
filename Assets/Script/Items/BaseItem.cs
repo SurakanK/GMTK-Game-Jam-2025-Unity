@@ -4,19 +4,18 @@ using UnityEngine;
 [RequireComponent(typeof(CircleCollider2D))]
 public class BaseItem : MonoBehaviour
 {
-    public bool isPickingUp;
-    public string objectId;
+    public SpriteRenderer imageItem;
     private QuadraticCurve _curve;
     private Action _onFinished;
-    private CircleCollider2D _collider2D;
     private float _time;
     private float _speed;
+    public ItemData itemData;
 
-    void Awake()
+    public void Initialized(ItemData item)
     {
-        _collider2D = GetComponent<CircleCollider2D>();
-        _collider2D.isTrigger = true;
-        gameObject.layer = GameLayer.Item;
+        itemData = item;
+        if (imageItem)
+            imageItem.sprite = item.icon;
     }
 
     public void Launch(QuadraticCurve curve, float speed)

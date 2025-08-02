@@ -28,11 +28,6 @@ public partial class UIGameplayController : MonoBehaviour
         }
     }
 
-    public void InitializedUI()
-    {
-
-    }
-
     public void OnClickNext()
     {
         DungeonCore.Instance.NextRoom();

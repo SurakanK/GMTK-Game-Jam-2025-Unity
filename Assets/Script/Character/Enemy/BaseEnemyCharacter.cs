@@ -3,8 +3,10 @@ using UnityEngine;
 
 public partial class BaseEnemyCharacter : BaseCharacter
 {
+    public EnemyData EnemyData;
     public void Initialized(EnemyData enemyData)
     {
+        EnemyData = enemyData;
         defaultData = enemyData;
         Initialize();
         SpawnEntity();
@@ -23,7 +25,7 @@ public partial class BaseEnemyCharacter : BaseCharacter
 
     public void DeadState()
     {
-        ChangeState(GetStateInstance(PlayerStateType.Dead));
+        ChangeState(GetStateInstance(EnemyStateType.Dead));
     }
 
     public override void Dead()

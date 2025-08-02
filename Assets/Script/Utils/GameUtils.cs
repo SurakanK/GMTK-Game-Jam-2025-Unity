@@ -1,4 +1,7 @@
+using System.Collections;
+using Cysharp.Threading.Tasks;
 using DG.Tweening;
+using Spine.Unity;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -188,6 +191,40 @@ public static class GameUtils
             if (child == null) continue;
             SetGameObjectLayer(child.gameObject, newLayer);
         }
+    }
+
+    public static void Fade(this SkeletonAnimation skeleton, MonoBehaviour runner, float from, float to, float duration)
+    {
+        if (skeleton == null || skeleton.Skeleton == null || runner == null)
+            return;
+
+        runner.StartCoroutine(FadeCoroutine(skeleton, from, to, duration));
+    }
+
+    private static IEnumerator FadeCoroutine(SkeletonAnimation skeleton, float from, float to, float duration)
+    {
+        float time = 0f;
+        skeleton.Skeleton.A = from;
+
+        while (time < duration)
+        {
+            time += Time.deltaTime;
+            float alpha = Mathf.Lerp(from, to, time / duration);
+            skeleton.Skeleton.A = alpha;
+            yield return null;
+        }
+
+        skeleton.Skeleton.A = to;
+    }
+
+    public static void FadeIn(this SkeletonAnimation skeleton, MonoBehaviour runner, float duration = 1f)
+    {
+        Fade(skeleton, runner, skeleton.Skeleton.A, 1f, duration);
+    }
+
+    public static void FadeOut(this SkeletonAnimation skeleton, MonoBehaviour runner, float duration = 1f)
+    {
+        Fade(skeleton, runner, skeleton.Skeleton.A, 0f, duration);
     }
 
     public static void UIFade(this CanvasGroup canvasGroup, bool isActive, bool isFade, float duration = 0)

@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ba8f9091c627d4662a3f30c666221521, type: 3}
-  m_Name: NPC
+  m_Name: ROOM_Boss
   m_EditorClassIdentifier: 
   title:
     name:
@@ -20,5 +20,5 @@ MonoBehaviour:
       text: 
       localKey: 
   icon: {fileID: 0}
-  type: 1
-  caveBg: {fileID: 21300000, guid: ba7cde37aec4b4c2aabc061e489696e3, type: 3}
+  type: 3
+  caveBg: {fileID: 21300000, guid: 9deaab931754546cea8912b7b235aa77, type: 3}

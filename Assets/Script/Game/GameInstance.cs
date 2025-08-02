@@ -24,6 +24,7 @@ public class GameInstance : MonoBehaviour
     {
         if (gameDataBase != null)
             gameDataBase.RegisterGameData(this);
+        BaseGamePlay.Instance.Initialized();
     }
 
     [Header("Gameplay Rule")]

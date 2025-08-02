@@ -3,6 +3,8 @@ using UnityEngine;
 public class DungeonBossRoomState : DungeonBaseState
 {
     public DungeonBossRoomState(DungeonState stateMachine, RoomData roomData) : base(stateMachine, roomData) { }
+    public EnemyData enemyData;
+    public BaseEnemyCharacter Enemy => DungeonState.enemy;
 
     public override void OnActive()
     {
@@ -29,6 +31,12 @@ public class DungeonBossRoomState : DungeonBaseState
         CharacterData randomEnemy = GameInstance.Instance.enemies.GetRandomValue();
         if (randomEnemy is not EnemyData enemyData)
             return;
+        this.enemyData = enemyData;
         DungeonState.enemy.Initialized(enemyData);
+    }
+
+    public void DeadState()
+    {
+        Enemy.DeadState();
     }
 }

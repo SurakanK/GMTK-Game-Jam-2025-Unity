@@ -15,28 +15,44 @@ public class UIItemDroppingArea : UIBase, IDropHandler
             _itemData = itemDrop.Data;
             _curAmount = _itemData.amount;
 
-            if (_curAmount > 1)
-            {
-                UIGeneric.ShowInputAmountField(
-                    OnConfirm,
-                    null,
-                    "Drop Item",
-                    "Enter amount to drop.",
-                    itemDrop.Data.amount,
-                    itemDrop.Data.amount,
-                    "Amount..."
-                );
+            if (!GameInstance.AllItems.TryGetValue(itemDrop.Data.itemId, out ItemData itemData))
+                return;
 
-                void OnConfirm(string amount)
+            // drop in boss room
+            if (DungeonCore.Instance.dungeon.IsCurrentState(out DungeonBossRoomState bossState))
+            {
+                if (itemData.IsWeapon(out _) && bossState.Enemy.IsCurrentState<EnemyIdleState>(out _))
                 {
-                    DrpoItem(int.Parse(amount));
+                    if (bossState.enemyData.weaponWeaknessIds.Contains(itemData.DataId))
+                    {
+                        BaseGamePlay.Inventory.RemoveItemAt(itemDrop.slotIndex);
+                        bossState.DeadState();
+                    }
+                    else
+                    {
+                        UIGeneric.ShowMessage(
+                        null,
+                        null,
+                        "Boss Immune",
+                        "Choose a weapon that exploits its weakness.",
+                        "Ok"
+                        );
+                    }
+                    return;
                 }
             }
-            else
-            {
-                DrpoItem(1);
-            }
+
+            UIGeneric.ShowMessage(
+               () => OnConfirm(itemDrop.Data),
+               null,
+               "Drop Item",
+               "Are you sure you want to destroy this item?");
         }
+    }
+
+    public void OnConfirm(InventoryItemData data)
+    {
+        BaseGamePlay.Inventory.RemoveItemAt(data.slotIndex);
     }
 
     private void DrpoItem(int amount)

@@ -1,8 +1,11 @@
+using System;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class UIItemEntity : UISelection<InventoryItemData>
 {
     [Header("DragDrop Componemt")]
+    public Image imageSelect;
     public UIItemDragging uiItemDrag;
     public UIItemDropping uiItemDrop;
 
@@ -21,5 +24,11 @@ public class UIItemEntity : UISelection<InventoryItemData>
             uiItemDrop.Initialized(Data, Index);
 
         base.UIUpdate();
+    }
+
+    internal void SetHighlight(bool isHighlight)
+    {
+        if (imageSelect != null)
+            imageSelect.gameObject.SetActive(isHighlight);
     }
 }

@@ -8,14 +8,15 @@ public class CharacterStateMachine : StateMachine
     {
         Idle,
         Attack,
+        TakeDamage,
         Dead,
-        Dash,
     }
 
     public enum EnemyStateType
     {
         Idle,
-        Attack
+        Attack,
+        Dead,
     }
 
     private readonly Dictionary<System.Type, EnemyStateType> EnemyStateMap = new()
@@ -56,6 +57,7 @@ public class CharacterStateMachine : StateMachine
         {
             EnemyStateType.Idle => new EnemyIdleState(baseCharacter),
             EnemyStateType.Attack => new EnemyAttackState(baseCharacter),
+            EnemyStateType.Dead => new EnemyDeadState(baseCharacter),
             _ => null
         };
     }
