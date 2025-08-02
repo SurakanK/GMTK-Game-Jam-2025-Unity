@@ -39,8 +39,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: -223, y: 216}
-  m_SizeDelta: {x: 418.3405, y: 321.2365}
+  m_AnchoredPosition: {x: -233.63599, y: 222.12537}
+  m_SizeDelta: {x: 439.6125, y: 337.5709}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &90826669966830472
 CanvasRenderer:
@@ -245,8 +245,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Howdy, wait what who the fuck are you?
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 2efcf18cd01ee124ea5f6271d09caeda, type: 2}
+  m_sharedMaterial: {fileID: -3759913544485334642, guid: 2efcf18cd01ee124ea5f6271d09caeda, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -512,8 +512,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Test
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 59f73be4590f8fe48bdf8c0d57c90bf2, type: 2}
+  m_sharedMaterial: {fileID: -1716439899996992375, guid: 59f73be4590f8fe48bdf8c0d57c90bf2, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -944,7 +944,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3035351376252129209}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 1640, y: 631.1885, z: -5.8108616}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
