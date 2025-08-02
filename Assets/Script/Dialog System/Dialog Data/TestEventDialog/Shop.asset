@@ -10,22 +10,23 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5df279269eed66e44bfcf83357f2b275, type: 3}
-  m_Name: Test Jam
+  m_Name: Shop
   m_EditorClassIdentifier: 
   DialogType: 0
   dialogEntries:
   - characterData: {fileID: 11400000, guid: 0784f58f0ecf21647ad815946102453f, type: 2}
-    text: Howdy, Who... are you ? What do you want?
-    spriteNumber: 3
+    text: Welcome Explorer!
+    spriteNumber: 6
     picturePosition: 1
     BackgroundImage: {fileID: 0}
     MultipleCharacter: 0
     SupportCharacterData1: {fileID: 0}
     SupportCharacterSpriteNumber1: 0
     SupportCharacterPicturePosition1: 0
-  - characterData: {fileID: 11400000, guid: 0784f58f0ecf21647ad815946102453f, type: 2}
-    text: Never mind.
-    spriteNumber: 3
+  - characterData: {fileID: 11400000, guid: 31256ef4d11066b44bce2fbcafa538bb, type: 2}
+    text: Come and see my things first, or I will pay you handsomely if you offer
+      me anything good.
+    spriteNumber: 6
     picturePosition: 1
     BackgroundImage: {fileID: 0}
     MultipleCharacter: 0

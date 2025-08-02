@@ -10,13 +10,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5df279269eed66e44bfcf83357f2b275, type: 3}
-  m_Name: TestJam 2
+  m_Name: Banker
   m_EditorClassIdentifier: 
   DialogType: 0
   dialogEntries:
   - characterData: {fileID: 11400000, guid: 0784f58f0ecf21647ad815946102453f, type: 2}
-    text: Done....
-    spriteNumber: 6
+    text: "The day of reckoning is upon \u2014 Now pay your debt!"
+    spriteNumber: 3
     picturePosition: 1
     BackgroundImage: {fileID: 0}
     MultipleCharacter: 0
