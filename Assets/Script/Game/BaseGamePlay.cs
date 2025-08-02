@@ -67,6 +67,7 @@ public class BaseGamePlay : MonoBehaviour
         Level = GameInstance.Instance.gameRule.StartLevel;
         Currency = GameInstance.Instance.gameRule.StartCurrency;
         Outstanding = GameInstance.Instance.gameRule.Outstanding;
+        Inventory.curSlot = GameInstance.Instance.gameRule.LimitSlot;
 
         UIGameplayController.Instance.panelInventory.Initialized();
         UIGameplayController.Instance.panelCharacter.Initialized();

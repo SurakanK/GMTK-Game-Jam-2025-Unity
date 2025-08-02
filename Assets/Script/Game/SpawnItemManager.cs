@@ -6,6 +6,7 @@ public class SpawnItemManager : MonoBehaviour
     public BaseItem itemDropPrefab;
     public Transform starPoint;
     public List<Transform> spawnPoint;
+    public List<Transform> showItemPoint;
     private List<BaseItem> itemSpawned = new();
 
     public static SpawnItemManager _instance;
@@ -19,6 +20,14 @@ public class SpawnItemManager : MonoBehaviour
             }
             return _instance;
         }
+    }
+
+    public void ShowItem(ItemData data, int slotIndex)
+    {
+        Vector3 startPos = showItemPoint[slotIndex].position;
+        BaseItem itemDrop = Instantiate(itemDropPrefab, startPos, Quaternion.identity);
+        itemDrop.Initialized(data);
+        itemSpawned.Add(itemDrop);
     }
 
     public void SpawnItem(ItemData data)

@@ -15,3 +15,4 @@ MonoBehaviour:
   _startLevel: 10
   _startCurrency: 900
   _outstanding: -10000
+  _limitSlot: 10

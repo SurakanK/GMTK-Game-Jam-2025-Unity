@@ -10,6 +10,7 @@ public class UIInventory : UIBase
     [Header("UI Item List")]
     [SerializeField] private Transform _content;
     [SerializeField] private UIItemEntity _prefab;
+    [SerializeField] private List<Image> _iconLockLevel;
 
     [Header("Event")]
     public UnityEvent OnNoItemData;
@@ -58,6 +59,18 @@ public class UIInventory : UIBase
             SortByTag(_tag);
         if (_curHighlight != null && _curHighlight.Count > 0)
             HighlightItem(_curHighlight);
+        if (_iconLockLevel != null && _iconLockLevel.Count == 2)
+            SetLockSlot();
+    }
+
+    private void SetLockSlot()
+    {
+        int[] unlockThresholds = { 10, 15 };
+        for (int i = 0; i < unlockThresholds.Length; i++)
+        {
+            bool isLocked = BaseGamePlay.Inventory.curSlot <= unlockThresholds[i];
+            _iconLockLevel[i].gameObject.SetActive(isLocked);
+        }
     }
 
     public void HighlightItem(HashSet<string> ids)

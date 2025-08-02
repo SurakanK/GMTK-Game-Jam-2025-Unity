@@ -71,7 +71,10 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   healthIcon: {fileID: 5271944118625374606}
-  faceIcon: {fileID: 0}
+  faceImage: {fileID: 4377721327135500720}
+  faceIcons:
+  - {fileID: 21300000, guid: f56f47a0ab32845a8a23eac72562813e, type: 3}
+  - {fileID: 21300000, guid: 98206a11369104a5286a314184b4e08b, type: 3}
   uiBuffs:
   - {fileID: 6015202259276254173}
   - {fileID: 9196790252974510727}
@@ -235,13 +238,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 98206a11369104a5286a314184b4e08b, type: 3}
+  m_Sprite: {fileID: 21300000, guid: f56f47a0ab32845a8a23eac72562813e, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1

@@ -14,6 +14,17 @@ public class DungeonNPCRoomState : DungeonBaseState
 
         UIGameplayController.Instance.buttonLeave.gameObject.SetActive(true);
         UIGameplayController.Instance.buttonNext.gameObject.SetActive(Player.currentHealth > 0);
+
+        ShowItem();
+    }
+
+    private void ShowItem()
+    {
+        for (int i = 0; i < 3; i++)
+        {
+            if (RoomData.itemDropData.TryGetDropTable(out DropTableItemData dropTable))
+                SpawnItemManager.Instance.ShowItem(dropTable.itemData, i);
+        }
     }
 
     public override void Update()
@@ -24,6 +35,6 @@ public class DungeonNPCRoomState : DungeonBaseState
     public override void OnEnded()
     {
         base.OnEnded();
+        SpawnItemManager.Instance.Clear();
     }
-
 }

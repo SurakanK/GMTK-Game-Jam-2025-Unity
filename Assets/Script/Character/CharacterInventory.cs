@@ -13,9 +13,16 @@ public class CharacterInventory : MonoBehaviour
         set { _nonEquipItem = value; }
     }
 
+    public int curSlot;
+
     public void IncreaseItem(ItemData data)
     {
+
         List<InventoryItemData> inventory = nonEquipItem;
+
+        if (!CheckSlotLimit())
+            return;
+
         if (data.amount <= 0)
             data.amount = 1;
 
@@ -94,7 +101,7 @@ public class CharacterInventory : MonoBehaviour
     {
         return nonEquipItem.Any(e => ids.Contains(e.itemId));
     }
-    
+
     public bool HasItem(string itemId)
     {
         int total = 0;
@@ -107,5 +114,10 @@ public class CharacterInventory : MonoBehaviour
                 return true;
         }
         return false;
+    }
+
+    public bool CheckSlotLimit()
+    {
+        return nonEquipItem.Count + 1 <= curSlot;
     }
 }

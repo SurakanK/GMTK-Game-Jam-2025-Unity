@@ -1,12 +1,15 @@
 using System;
 using System.Collections.Generic;
+using System.Threading.Tasks;
+using Cysharp.Threading.Tasks;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class UICharacter : UIBase
 {
     public Animator healthIcon;
-    public Image faceIcon;
+    public Image faceImage;
+    public List<Sprite> faceIcons;
     public List<UIBuffEntity> uiBuffs;
 
     public void Initialized()
@@ -26,8 +29,8 @@ public class UICharacter : UIBase
     {
         if (healthIcon == null)
             return;
-            
-        float speed = health > 0? GameUtils.MapReverse(health, 0, maxHealth, 0.5f, 2): 0;
+
+        float speed = health > 0 ? GameUtils.MapReverse(health, 0, maxHealth, 0.5f, 2) : 0;
         healthIcon.speed = speed;
     }
 
@@ -42,5 +45,12 @@ public class UICharacter : UIBase
             if (uiBuffs[i] != null)
                 uiBuffs[i].Data = buffs[i];
         }
+    }
+
+    public async UniTask ShowFaceDamage()
+    {
+        faceImage.sprite = faceIcons[1];
+        await UniTask.Delay(TimeSpan.FromSeconds(1f));
+        faceImage.sprite = faceIcons[0];
     }
 }

@@ -71,8 +71,8 @@ TrailRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -1559018027
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_Time: 0.3
   m_Parameters:
@@ -159,7 +159,7 @@ Transform:
   m_GameObject: {fileID: 3840490232182440741}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 4.3, y: -0.09, z: 4.9}
-  m_LocalScale: {x: 1.5, y: 1.5, z: 1.5}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 3840490232340983609}
@@ -182,7 +182,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 0.42
+  m_Radius: 0.7
 --- !u!114 &3840490232182440739
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -288,8 +288,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -1559018027
+  m_SortingLayer: 2
   m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: e8ac65f7faf3d461ab60a720ff7c73f4, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}

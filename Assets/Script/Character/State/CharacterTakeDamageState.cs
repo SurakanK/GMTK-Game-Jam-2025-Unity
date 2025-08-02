@@ -1,3 +1,4 @@
+using Cysharp.Threading.Tasks;
 using UnityEngine;
 
 public class CharacterTakeDamageState : CharacterBaseState
@@ -11,9 +12,10 @@ public class CharacterTakeDamageState : CharacterBaseState
             Player.RemoveBuff(buff);
         else
             Player.currentHealth -= 1;
-        
+
         UIGameplayController.Instance.buttonLeave.gameObject.SetActive(true);
         UIGameplayController.Instance.buttonNext.gameObject.SetActive(Player.currentHealth > 0);
+        UIGameplayController.Instance.panelCharacter.ShowFaceDamage().Forget();
     }
 
     public override void Update()

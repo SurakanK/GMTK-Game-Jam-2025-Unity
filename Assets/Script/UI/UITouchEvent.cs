@@ -12,6 +12,18 @@ public class UITouchEvent : MonoBehaviour
             {
                 if (hit.collider.TryGetComponent(out BaseItem item))
                 {
+                    if (!BaseGamePlay.Inventory.CheckSlotLimit())
+                    {
+                        UIGeneric.ShowMessage(
+                            null,
+                            null,
+                            "Inventory Full",
+                            "Please drop some items",
+                            "Ok"
+                            );
+                        return;
+                    }
+
                     SpawnItemManager.Instance.PickUpItem(item);
                 }
             }

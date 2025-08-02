@@ -8,7 +8,5 @@ public class DungeonState : StateMachine
     public SpriteRenderer npc;
     public SpriteRenderer chest;
     public BasePlayerCharacter player;
-    public BaseEnemyCharacter enemy;
-    
-    public List<Transform> spawnItemPoints;
+    public BaseEnemyCharacter enemy;    
 }
