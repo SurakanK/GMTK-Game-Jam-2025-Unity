@@ -218,10 +218,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: UI--Character
       objectReference: {fileID: 0}
-    - target: {fileID: 4377721327135500720, guid: ecc560218b3734dd3bece1dad7a23e34, type: 3}
-      propertyPath: m_RaycastTarget
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ecc560218b3734dd3bece1dad7a23e34, type: 3}
 --- !u!224 &49405448 stripped
@@ -944,7 +940,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &934107042
 Transform:
   m_ObjectHideFlags: 0
@@ -1248,6 +1244,7 @@ MonoBehaviour:
   panelInventory: {fileID: 1516915685}
   panelCharacter: {fileID: 49405449}
   panelCurrency: {fileID: 593292659}
+  textLevel: {fileID: 1468517407}
   buttonNext: {fileID: 5085291902892829713}
   buttonLeave: {fileID: 5085291902892829712}
 --- !u!1 &1126650478
@@ -1878,6 +1875,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 69b136fb5b2e64148a5d5d2be91be2a3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  curSlot: 0
 --- !u!1 &1625414213
 GameObject:
   m_ObjectHideFlags: 0

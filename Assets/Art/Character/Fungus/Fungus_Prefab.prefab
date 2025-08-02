@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 4319608251905782296}
   - component: {fileID: 4319608251905782297}
   m_Layer: 0
-  m_Name: prefab
+  m_Name: Fungus_Prefab
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -80,8 +80,8 @@ MeshRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: 1955360837
+  m_SortingLayer: 1
   m_SortingOrder: 1
   m_AdditionalVertexStreams: {fileID: 0}
 --- !u!114 &4319608251905782297

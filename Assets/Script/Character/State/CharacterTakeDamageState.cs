@@ -15,7 +15,7 @@ public class CharacterTakeDamageState : CharacterBaseState
 
         UIGameplayController.Instance.buttonLeave.gameObject.SetActive(true);
         UIGameplayController.Instance.buttonNext.gameObject.SetActive(Player.currentHealth > 0);
-        UIGameplayController.Instance.panelCharacter.ShowFaceDamage().Forget();
+        UIGameplayController.Instance.panelCharacter.ShowFace().Forget();
     }
 
     public override void Update()
