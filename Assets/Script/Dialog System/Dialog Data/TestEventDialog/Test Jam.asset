@@ -15,7 +15,7 @@ MonoBehaviour:
   DialogType: 0
   dialogEntries:
   - characterData: {fileID: 11400000, guid: 0784f58f0ecf21647ad815946102453f, type: 2}
-    text: What do you want?
+    text: Howdy, Who... are you ? What do you want?
     spriteNumber: 3
     picturePosition: 1
     BackgroundImage: {fileID: 0}
@@ -23,13 +23,14 @@ MonoBehaviour:
     SupportCharacterData1: {fileID: 0}
     SupportCharacterSpriteNumber1: 0
     SupportCharacterPicturePosition1: 0
-  dialogChoices:
-  - text: Item A (500)
-    statChange: 1
-    statValue: 0
-    NextDialog: {fileID: 11400000, guid: d3ffefc7d6b4b324381e70288d624736, type: 2}
-  - text: Item B (300)
-    statChange: 1
-    statValue: 0
-    NextDialog: {fileID: 11400000, guid: d3ffefc7d6b4b324381e70288d624736, type: 2}
+  - characterData: {fileID: 11400000, guid: 0784f58f0ecf21647ad815946102453f, type: 2}
+    text: Never mind.
+    spriteNumber: 3
+    picturePosition: 1
+    BackgroundImage: {fileID: 0}
+    MultipleCharacter: 0
+    SupportCharacterData1: {fileID: 0}
+    SupportCharacterSpriteNumber1: 0
+    SupportCharacterPicturePosition1: 0
+  dialogChoices: []
   CurrentDialogIndex: 0
