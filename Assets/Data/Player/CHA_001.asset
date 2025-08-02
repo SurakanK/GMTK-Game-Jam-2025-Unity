@@ -27,7 +27,10 @@ MonoBehaviour:
     sellPriceRate: 1
     blockDamage: 0
     dungeonFee: 0
-  defaultBuff: []
+  defaultBuff:
+  - {fileID: 11400000, guid: ae71e1256a5c94faf86ff45d76ac05f7, type: 2}
+  - {fileID: 11400000, guid: 0227908ed26e441d29215ab79d9f8d06, type: 2}
+  - {fileID: 11400000, guid: b49489724306d47a3822e62ff4f3d9ab, type: 2}
   playerDebug:
     itemsStartData:
     - itemData: {fileID: 11400000, guid: ef4ca0cc871d649398a322b93211fc52, type: 2}

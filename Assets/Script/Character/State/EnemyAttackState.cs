@@ -23,12 +23,7 @@ public class EnemyAttackState : CharacterBaseState
     private async UniTask Attack()
     {
         await UniTask.Delay(TimeSpan.FromSeconds(0.4f));
-        if (Player.TryToGetBuff(out BuffBlockDamage buff))
-        {
-            Player.RemoveBuff(buff);
-            return;
-        }
-        Player.currentHealth -= 1;
+        Player.TakeDamageState();
     }
 
     public override void Update()

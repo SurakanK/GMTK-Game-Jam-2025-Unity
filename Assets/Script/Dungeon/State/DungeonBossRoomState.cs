@@ -4,7 +4,6 @@ public class DungeonBossRoomState : DungeonBaseState
 {
     public DungeonBossRoomState(DungeonState stateMachine, RoomData roomData) : base(stateMachine, roomData) { }
     public EnemyData enemyData;
-    public BaseEnemyCharacter Enemy => DungeonState.enemy;
 
     public override void OnActive()
     {
@@ -35,8 +34,9 @@ public class DungeonBossRoomState : DungeonBaseState
         DungeonState.enemy.Initialized(enemyData);
     }
 
-    public void DeadState()
+    public void PlayerAttack()
     {
+        Player.AttackState();
         Enemy.DeadState();
     }
 }

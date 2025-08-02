@@ -36,6 +36,7 @@ partial class BaseCharacter
 
     public void RemoveBuff(BaseBuff buff)
     {
+        buff.Remove();
         curBuffs.Remove(buff);
         GameEvent.Instance.EventBuffChange?.Invoke(curBuffs);
     }

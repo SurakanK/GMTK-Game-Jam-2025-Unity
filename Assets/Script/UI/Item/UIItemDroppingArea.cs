@@ -26,7 +26,7 @@ public class UIItemDroppingArea : UIBase, IDropHandler
                     if (bossState.enemyData.weaponWeaknessIds.Contains(itemData.DataId))
                     {
                         BaseGamePlay.Inventory.RemoveItemAt(itemDrop.slotIndex);
-                        bossState.DeadState();
+                        bossState.PlayerAttack();
                     }
                     else
                     {

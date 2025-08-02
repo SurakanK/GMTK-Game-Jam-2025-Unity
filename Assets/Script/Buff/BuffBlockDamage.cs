@@ -14,6 +14,5 @@ public class BuffBlockDamage : BaseBuff
     public override void Remove()
     {
         owner.Stats -= stats;
-        owner.RemoveBuff(this);
     }
 }

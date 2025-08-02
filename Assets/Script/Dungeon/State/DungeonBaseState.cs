@@ -7,6 +7,10 @@ public abstract class DungeonBaseState : IState
 {
     protected readonly DungeonState DungeonState;
     protected readonly RoomData RoomData;
+
+    public BaseEnemyCharacter Enemy => DungeonState.enemy;
+    public BasePlayerCharacter Player => DungeonState.player;
+
     protected DungeonBaseState(DungeonState dungeonState, RoomData roomData)
     {
         DungeonState = dungeonState;

@@ -7,7 +7,6 @@ public class CharacterDeadState : CharacterBaseState
     public override void OnActive()
     {
         base.OnActive();
-        BaseCharacter.RemoveUIEvent?.Invoke();
     }
 
     public override void Update()
@@ -18,10 +17,5 @@ public class CharacterDeadState : CharacterBaseState
     public override void OnEnded()
     {
         base.OnEnded();
-    }
-
-    private void OnFinishedEvent()
-    {
-        BaseCharacter.Dead();
     }
 }
