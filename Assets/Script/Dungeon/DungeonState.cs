@@ -2,7 +2,7 @@ using System.Collections.Generic;
 using StatePatternInUnity;
 using UnityEngine;
 
-public class DungeonState : StateMachine
+public class DungeonState : RoomStateMachine
 {
     public SpriteRenderer caveBg;
     public SpriteRenderer npc;

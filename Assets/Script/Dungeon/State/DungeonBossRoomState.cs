@@ -1,3 +1,6 @@
+using System;
+using System.Threading.Tasks;
+using Cysharp.Threading.Tasks;
 using UnityEngine;
 
 public class DungeonBossRoomState : DungeonBaseState
@@ -18,6 +21,12 @@ public class DungeonBossRoomState : DungeonBaseState
     public override void Update()
     {
         base.Update();
+    }
+
+    public override async UniTask OnTransition()
+    {
+        await base.OnTransition();
+        await UniTask.Delay(TimeSpan.FromSeconds(1f));
     }
 
     public override void OnEnded()

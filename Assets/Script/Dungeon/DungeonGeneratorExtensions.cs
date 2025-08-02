@@ -33,7 +33,6 @@ public static class DungeonGeneratorExtensions
                 if (roomTableLevel.roomTableData.TryGetDropTable(out RoomTableData roomData))
                 {
                     result.Add(roomData.room);
-                    Debug.Log(roomData.room.type);
                 }
             }
         }
