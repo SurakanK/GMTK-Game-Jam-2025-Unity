@@ -2374,6 +2374,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Canvas--Shop Group
       objectReference: {fileID: 0}
+    - target: {fileID: 1277980984317921029, guid: 58364c550ffbd2b4081e669fab59aa17, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1277980985702839686, guid: 58364c550ffbd2b4081e669fab59aa17, type: 3}
       propertyPath: m_AnchoredPosition.x
       value: -0.00012207031
