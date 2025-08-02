@@ -4,29 +4,38 @@ using UnityEngine;
 
 public class SoundManager : MonoBehaviour
 {
+    public static SoundManager Instance { get; private set; }
+
     [SerializeField] private AudioClip[] audioClips;
     [SerializeField] private bool IsLoop = false;
     [SerializeField] private bool IsPlayonAwake = false;
     [SerializeField] private bool IsRandom = false;
+
     private AudioSource audioSource;
 
     void Awake()
     {
-        // Ensure AudioSource is attached
+        // Singleton 
+        if (Instance != null && Instance != this)
+        {
+            Destroy(gameObject);
+            return;
+        }
+        Instance = this;
+
+        // Setup AudioSource
         audioSource = GetComponent<AudioSource>();
         if (audioSource == null)
         {
             audioSource = gameObject.AddComponent<AudioSource>();
         }
 
-        // Apply loop and playOnAwake settings
         audioSource.loop = IsLoop;
         audioSource.playOnAwake = IsPlayonAwake;
     }
 
     void Start()
     {
-        // Play a clip if GameObject is active and playOnAwake is true
         if (gameObject.activeInHierarchy && audioClips.Length > 0 && IsPlayonAwake)
         {
             if (IsRandom) PlayRandomClip();

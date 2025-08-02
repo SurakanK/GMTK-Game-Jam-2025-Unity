@@ -29,8 +29,18 @@ public class DungeonChestRoomState : DungeonBaseState
     public override async UniTask OnTransition()
     {
         await base.OnTransition();
-        await UniTask.Delay(TimeSpan.FromSeconds(1f));
+
+        if (TransitionController.Instance != null)
+        {
+            await TransitionController.Instance.TriggerFadeOutTransition();
+        }
+        else
+        {
+            Debug.LogWarning("TransitionController.Instance is null!");
+        }
     }
+
+
 
     public override void OnEnded()
     {
