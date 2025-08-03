@@ -17,6 +17,7 @@ public class ItemData : BaseObject
     public int price = 0;
 
     [Header("SFX")]
+    public AudioClip SpawnItem;
     public AudioClip ClickItem;
     public AudioClip UsingItem;
 

@@ -42,6 +42,12 @@ public class SpawnItemManager : MonoBehaviour
         itemDrop.Launch(curve, 3);
         itemDrop.Initialized(data);
         itemSpawned.Add(itemDrop);
+
+        AudioSource sfx = itemDrop.GetComponent<AudioSource>();
+        if (sfx != null && itemDrop.itemData != null && itemDrop.itemData.SpawnItem != null)
+        {
+            sfx.PlayOneShot(itemDrop.itemData.SpawnItem);
+        }
     }
 
     public void PickUpItem(BaseItem itemDrop)

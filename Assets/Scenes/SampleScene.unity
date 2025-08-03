@@ -312,7 +312,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 164590254552279429, guid: 271d8f3dd8da7b5498dbfc70b99565e4, type: 3}
   m_PrefabInstance: {fileID: 164590254924353053}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 1578884098}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 97e4dafcf4cf8fa4fb371ecc359a8a21, type: 3}
@@ -2153,6 +2153,28 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 810e2228cd84143549d72794949bd731, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &1578884098 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 164590254552279438, guid: 271d8f3dd8da7b5498dbfc70b99565e4, type: 3}
+  m_PrefabInstance: {fileID: 164590254924353053}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1578884104
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1578884098}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ffe2169bf2645454ca57b2b4ded85631, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioClips:
+  - {fileID: 8300000, guid: 104d1bd9240beb14c80de3aef8ab67e3, type: 3}
+  IsLoop: 0
+  IsPlayonAwake: 1
+  IsRandom: 0
 --- !u!114 &1590707773 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 3397529222072578294, guid: 0614a158d47224144bc4ab268ba37c4c, type: 3}
@@ -2253,6 +2275,28 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
+  IsLoop: 0
+  IsPlayonAwake: 0
+  IsRandom: 0
+--- !u!1 &1621355359 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3169792742979849363, guid: 271d8f3dd8da7b5498dbfc70b99565e4, type: 3}
+  m_PrefabInstance: {fileID: 164590254924353053}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1621355364
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1621355359}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ffe2169bf2645454ca57b2b4ded85631, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioClips:
+  - {fileID: 8300000, guid: 573099ebada51ad45b3746320ca94aae, type: 3}
   IsLoop: 0
   IsPlayonAwake: 0
   IsRandom: 0
@@ -2457,7 +2501,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1277980984317921029, guid: 58364c550ffbd2b4081e669fab59aa17, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1277980984320466831, guid: 58364c550ffbd2b4081e669fab59aa17, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
@@ -3281,7 +3325,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 164590254552279438, guid: 271d8f3dd8da7b5498dbfc70b99565e4, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 164590254572313689, guid: 271d8f3dd8da7b5498dbfc70b99565e4, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -3373,7 +3417,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3169792742979849361, guid: 271d8f3dd8da7b5498dbfc70b99565e4, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
-      value: 3
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3169792742979849361, guid: 271d8f3dd8da7b5498dbfc70b99565e4, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
@@ -3577,11 +3621,11 @@ AudioSource:
   m_Enabled: 0
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: e1d0be85567382340a925dd70879865a, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 6c223aa9cd2f3454792610a9ae5b9084, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
