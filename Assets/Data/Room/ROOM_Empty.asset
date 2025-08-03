@@ -20,7 +20,9 @@ MonoBehaviour:
       text: 
       localKey: 
   icon: {fileID: 0}
+  iconSelect: {fileID: 0}
   type: 0
   caveBg: {fileID: 21300000, guid: ba7cde37aec4b4c2aabc061e489696e3, type: 3}
   itemDropData: []
   prefab: {fileID: 7771264814884493854, guid: 9b00139f3f9784dd5893ab205cbc0527, type: 3}
+  BackgroundSFX: {fileID: 8300000, guid: b53735bf1e9538945910c7806d4e6deb, type: 3}

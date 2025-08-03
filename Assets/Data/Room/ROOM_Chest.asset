@@ -50,3 +50,4 @@ MonoBehaviour:
     itemData: {fileID: 11400000, guid: 9ce6fbaf3fc8d4b29ae3863d086efed9, type: 2}
     OverrideAmount: 0
   prefab: {fileID: 3781700668032931810, guid: 63cd1f612848042ff874a769dcf6260b, type: 3}
+  BackgroundSFX: {fileID: 8300000, guid: b53735bf1e9538945910c7806d4e6deb, type: 3}

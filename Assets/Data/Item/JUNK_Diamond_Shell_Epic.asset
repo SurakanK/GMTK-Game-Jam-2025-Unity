@@ -28,5 +28,6 @@ MonoBehaviour:
   stack: 1
   sellPrice: 750
   price: 0
+  SpawnItem: {fileID: 8300000, guid: 7d683d6d779ae4f4da53c0f83ec01f59, type: 3}
   ClickItem: {fileID: 8300000, guid: e0c50c75c38251e4ba9a11860d9b2b9d, type: 3}
   UsingItem: {fileID: 0}

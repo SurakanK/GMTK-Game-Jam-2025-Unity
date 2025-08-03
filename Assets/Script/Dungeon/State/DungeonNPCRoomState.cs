@@ -14,6 +14,11 @@ public class DungeonNPCRoomState : DungeonBaseState
         DungeonState.chest.gameObject.SetActive(false);
 
         DungeonState.npc.gameObject.SetActive(true);
+
+        //if NPC dont have AudioSource
+  
+
+       
         DungeonState.npc.FadeIn(DungeonState, 0.2f);
 
         UIGameplayController.Instance.buttonNext.interactable = true;

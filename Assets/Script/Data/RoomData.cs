@@ -11,4 +11,7 @@ public class RoomData : BaseObject
 
     [Header("Map")]
     public SkeletonAnimation prefab;
+
+    [Header("Sound")]
+    public AudioClip BackgroundSFX;
 }
