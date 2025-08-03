@@ -1,8 +1,7 @@
-using static CharacterStateMachine;
+using Cysharp.Threading.Tasks;
+using Spine.Unity;
 using StatePatternInUnity;
 using UnityEngine;
-using System;
-using Cysharp.Threading.Tasks;
 
 public abstract class DungeonBaseState : IRoomState
 {
@@ -32,7 +31,7 @@ public abstract class DungeonBaseState : IRoomState
     public override void OnActive()
     {
         base.OnActive();
-        SetBgCave(RoomData.caveBg);
+        DungeonState.SetBgCave(RoomData.prefab);
         Player.IdleState();
         UIGameplayController.Instance.panelInventory.ClearHighlight();
 
@@ -51,6 +50,7 @@ public abstract class DungeonBaseState : IRoomState
     public override async UniTask OnTransition()
     {
         await base.OnTransition();
+        DungeonState.BgWalk();
         Color color = Color.grey;
         Debug.Log(string.Format("<color=#{0:X2}{1:X2}{2:X2}> Transition State: </color> {3}", (byte)(color.r * 255f), (byte)(color.g * 255f), (byte)(color.b * 255f), this.GetType().FullName));
     }

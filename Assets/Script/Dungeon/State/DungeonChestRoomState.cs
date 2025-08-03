@@ -30,6 +30,7 @@ public class DungeonChestRoomState : DungeonBaseState
     public override async UniTask OnTransition()
     {
         await base.OnTransition();
+        SpawnItemManager.Instance.Clear();
 
         if (TransitionController.Instance != null)
         {
@@ -41,10 +42,8 @@ public class DungeonChestRoomState : DungeonBaseState
         }
     }
 
-
-
     public override void OnEnded()
     {
-        SpawnItemManager.Instance.Clear();
+        base.OnEnded();
     }
 }

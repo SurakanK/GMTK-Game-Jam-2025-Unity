@@ -38,7 +38,7 @@ public class DungeonNPCRoomState : DungeonBaseState
     public override async UniTask OnTransition()
     {
         await base.OnTransition();
-
+        SpawnItemManager.Instance.Clear();
         if (TransitionController.Instance != null)
         {
             await TransitionController.Instance.TriggerFadeOutTransition();
@@ -52,6 +52,5 @@ public class DungeonNPCRoomState : DungeonBaseState
     public override void OnEnded()
     {
         base.OnEnded();
-        SpawnItemManager.Instance.Clear();
     }
 }

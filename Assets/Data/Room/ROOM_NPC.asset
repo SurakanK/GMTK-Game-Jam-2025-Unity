@@ -48,3 +48,4 @@ MonoBehaviour:
     maxDrop: 1
     itemData: {fileID: 11400000, guid: d8538010fbb094e7899274924844c9a2, type: 2}
     OverrideAmount: 0
+  prefab: {fileID: 3383293845047545166, guid: 3b975bb501cd347659a1dd2cadeac95d, type: 3}
