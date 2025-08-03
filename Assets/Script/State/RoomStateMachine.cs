@@ -33,6 +33,8 @@ namespace StatePatternInUnity
 
         public void ClearState()
         {
+            if (_currentState == null)
+                return;
             _currentState.OnEnded();
             _currentState = null;
             _previousState = null;

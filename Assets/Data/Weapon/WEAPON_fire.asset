@@ -21,16 +21,13 @@ MonoBehaviour:
       localKey: 
   icon: {fileID: 21300000, guid: 09e533173851e4309ba8f72a46abf496, type: 3}
   iconSelect: {fileID: 21300000, guid: 8c399ac8fa73046cba38368595589141, type: 3}
-  prefab: {fileID: 2439427857757576274, guid: 4392561b289ba46d4bfffead2e512e55, type: 3}
+  prefab: {fileID: 0}
   min: 1
   max: 1
   amount: 0
   stack: 1
-  sellPrice: 500
-  price: 2000
-  SpawnItem: {fileID: 8300000, guid: 76158c2fe1c20784fb4916a9522f1f9b, type: 3}
-  ClickItem: {fileID: 8300000, guid: e0c50c75c38251e4ba9a11860d9b2b9d, type: 3}
-  UsingItem: {fileID: 8300000, guid: 76158c2fe1c20784fb4916a9522f1f9b, type: 3}
+  sellPrice: 200
+  price: 100
   spriteId: 
   stats:
     maxHealth: 0

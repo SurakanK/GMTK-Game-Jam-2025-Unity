@@ -45,6 +45,7 @@ public class DungeonChestRoomState : DungeonBaseState
 
     public override void OnEnded()
     {
+        SpawnItemManager.Instance.Clear();
         base.OnEnded();
     }
 }

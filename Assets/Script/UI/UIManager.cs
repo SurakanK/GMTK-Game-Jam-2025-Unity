@@ -56,6 +56,7 @@ public class UIManager : MonoBehaviour
         townCanvas.gameObject.SetActive(true);
         BaseGamePlay.isGameStart = false;
         DungeonCore.Instance.dungeon.ClearState();
+        BaseGamePlay.Day += 1;
     }
 
     private void DisableButton()

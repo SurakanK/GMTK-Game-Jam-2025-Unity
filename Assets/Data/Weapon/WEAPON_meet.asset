@@ -26,11 +26,8 @@ MonoBehaviour:
   max: 1
   amount: 0
   stack: 1
-  sellPrice: 500
-  price: 2000
-  SpawnItem: {fileID: 8300000, guid: 600ead2e590b11a419c7868288093ded, type: 3}
-  ClickItem: {fileID: 8300000, guid: e0c50c75c38251e4ba9a11860d9b2b9d, type: 3}
-  UsingItem: {fileID: 8300000, guid: 600ead2e590b11a419c7868288093ded, type: 3}
+  sellPrice: 200
+  price: 100
   spriteId: 
   stats:
     maxHealth: 0

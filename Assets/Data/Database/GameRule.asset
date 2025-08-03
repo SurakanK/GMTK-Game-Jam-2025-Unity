@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4df51ac9439414c77b2822836ebb8bab, type: 3}
   m_Name: GameRule
   m_EditorClassIdentifier: 
-  _startLevel: 10
-  _startCurrency: 10000
-  _outstanding: -10000
+  _startLevel: 0
+  _startCurrency: 4000
+  _outstanding: -40000
   _limitSlot: 10
   _fee: 250

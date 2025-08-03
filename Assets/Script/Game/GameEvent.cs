@@ -5,6 +5,7 @@ using UnityEngine;
 public class GameEvent : MonoBehaviour
 {
     public Action<int> EventLevelChange;
+    public Action<int> EventDayChange;
     public Action<int> EventCurrencyChange;
     public Action<int> EventOutstandingChange;
     public Action<int, int> EventHealthChange;

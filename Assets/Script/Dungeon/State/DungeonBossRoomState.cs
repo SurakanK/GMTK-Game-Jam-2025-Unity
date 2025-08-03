@@ -39,6 +39,7 @@ public class DungeonBossRoomState : DungeonBaseState
 
     public override void OnEnded()
     {
+        SpawnItemManager.Instance.Clear();
         base.OnEnded();
     }
 

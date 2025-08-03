@@ -20,27 +20,43 @@ MonoBehaviour:
       room: {fileID: 11400000, guid: dd1dbb8d44b074e568656b9dfd41d312, type: 2}
     - weight: 0.25
       room: {fileID: 11400000, guid: 53f2e8772eb6845768c3d0f6fd85d9d5, type: 2}
-    - weight: 0.25
+    - weight: 0.4
       room: {fileID: 11400000, guid: 6a33319dbbf5a4c3f8811e8b9cc5e14b, type: 2}
-    - weight: 0.2
+    - weight: 0.1
       room: {fileID: 11400000, guid: a16b974881a2048c6a660bf62f4e5e21, type: 2}
-  - level: 2
-    randomAmount: 2
+  - level: 6
+    randomAmount: 5
     roomTableData:
-    - weight: 0.2
+    - weight: 0.1
       room: {fileID: 11400000, guid: dd1dbb8d44b074e568656b9dfd41d312, type: 2}
-  - level: 3
-    randomAmount: 2
-    roomTableData:
-    - weight: 0.2
+    - weight: 0.15
       room: {fileID: 11400000, guid: 53f2e8772eb6845768c3d0f6fd85d9d5, type: 2}
-  - level: 4
-    randomAmount: 2
-    roomTableData:
-    - weight: 0.2
+    - weight: 0.15
       room: {fileID: 11400000, guid: 6a33319dbbf5a4c3f8811e8b9cc5e14b, type: 2}
-  - level: 5
-    randomAmount: 2
+    - weight: 0.3
+      room: {fileID: 11400000, guid: a16b974881a2048c6a660bf62f4e5e21, type: 2}
+  - level: 11
+    randomAmount: 5
     roomTableData:
-    - weight: 0.2
+    - weight: 0.1
+      room: {fileID: 11400000, guid: dd1dbb8d44b074e568656b9dfd41d312, type: 2}
+    - weight: 0.3
+      room: {fileID: 11400000, guid: 53f2e8772eb6845768c3d0f6fd85d9d5, type: 2}
+    - weight: 0.15
       room: {fileID: 11400000, guid: 6a33319dbbf5a4c3f8811e8b9cc5e14b, type: 2}
+    - weight: 0.5
+      room: {fileID: 11400000, guid: a16b974881a2048c6a660bf62f4e5e21, type: 2}
+  - level: 16
+    randomAmount: 10
+    roomTableData:
+    - weight: 0.15
+      room: {fileID: 11400000, guid: 53f2e8772eb6845768c3d0f6fd85d9d5, type: 2}
+    - weight: 0.15
+      room: {fileID: 11400000, guid: 6a33319dbbf5a4c3f8811e8b9cc5e14b, type: 2}
+    - weight: 0.6
+      room: {fileID: 11400000, guid: a16b974881a2048c6a660bf62f4e5e21, type: 2}
+  - level: 30
+    randomAmount: 10
+    roomTableData:
+    - weight: 0.15
+      room: {fileID: 11400000, guid: a16b974881a2048c6a660bf62f4e5e21, type: 2}
