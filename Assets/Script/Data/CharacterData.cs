@@ -18,6 +18,8 @@ public class CharacterData : BaseObject
     public AudioClip sfxIdle;
     public AudioClip sfxAttack;
     public AudioClip sfxDead;
+    public AudioClip sfxGethit;
+    public AudioClip sfxSpawn;
 
     public void Apply(BaseCharacter owner)
     {
