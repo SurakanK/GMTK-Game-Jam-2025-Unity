@@ -19,8 +19,11 @@ public class EnemyDeadState : CharacterBaseState
         Enemy.entity.FadeOut(Enemy, 0.2f);
         if (Enemy.EnemyData.itemDropData.TryGetDropTable(out DropTableItemData dropTable))
             SpawnItemManager.Instance.SpawnItem(dropTable.itemData);
-            
+
         UIGameplayController.Instance.buttonNext.interactable = true;
+        UIGameplayController.Instance.buttonLeave.interactable = true;
+        UIGameplayController.Instance.buttonNext.gameObject.SetActive(true);
+        UIGameplayController.Instance.buttonLeave.gameObject.SetActive(true);
         trackEntry.Complete -= OnFinishAnimation;
     }
 
