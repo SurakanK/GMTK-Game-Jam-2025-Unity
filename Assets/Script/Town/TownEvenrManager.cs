@@ -1,12 +1,12 @@
-using UnityEngine;
+/*using UnityEngine;
 using UnityEngine.UI;
 
 public class TownEvenrManager : MonoBehaviour
 {
     public static TownEvenrManager Instance { get; private set; }
 
-     private DialogBox Banker_box;
-     private DialogBox Shopkeeper_box;
+*//*     private DialogBox Banker_box;
+     private DialogBox Shopkeeper_box;*//*
 
     [SerializeField] private GameObject Banker;
     [SerializeField] private GameObject Shopkeeper;
@@ -16,8 +16,8 @@ public class TownEvenrManager : MonoBehaviour
     [SerializeField] private Button Shopkeeper_btn;
 
     [Header("Dialog List")]
-    [SerializeField] DialogInfoSO[] BankerDialogData;
-    [SerializeField] DialogInfoSO[] ShopkeeperDialogData;
+*//*    [SerializeField] DialogInfoSO[] BankerDialogData;
+    [SerializeField] DialogInfoSO[] ShopkeeperDialogData;*//*
 
 
     [SerializeField] bool IsFirstDay = true;
@@ -37,8 +37,8 @@ public class TownEvenrManager : MonoBehaviour
 
     private void Start()
     {
-       /* Banker_box = Banker.GetComponent<DialogBox>();
-        Shopkeeper_box = Shopkeeper.GetComponent<DialogBox>();*/
+       *//* Banker_box = Banker.GetComponent<DialogBox>();
+        Shopkeeper_box = Shopkeeper.GetComponent<DialogBox>();*//*
 
         Button caveButton = Cave.GetComponent<Button>();
         if (IsFirstDay) caveButton.onClick.AddListener(OnCaveButtonClicked);
@@ -82,3 +82,4 @@ public class TownEvenrManager : MonoBehaviour
 
    
 }
+*/
