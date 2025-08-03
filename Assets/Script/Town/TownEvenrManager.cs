@@ -12,6 +12,9 @@ public class TownEvenrManager : MonoBehaviour
     [SerializeField] private GameObject Shopkeeper;
     [SerializeField] private GameObject Cave;
 
+    [SerializeField] private Button Banker_btn;
+    [SerializeField] private Button Shopkeeper_btn;
+
     [Header("Dialog List")]
     [SerializeField] DialogInfoSO[] BankerDialogData;
     [SerializeField] DialogInfoSO[] ShopkeeperDialogData;
