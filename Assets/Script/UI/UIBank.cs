@@ -48,6 +48,8 @@ public class UIBank : UIBase
 
             AnimateDebt(previousDebt, Debt, 0.5f);
 
+            TMP_PaidDebt.text = "";
+
             Debug.Log("After pay debt: " + Debt);
             Debug.Log("After pay CurrencyMoney: " + CurrencyMoney);
             Debug.Log("After pay debt (BaseGamePlay): " + Debt);
