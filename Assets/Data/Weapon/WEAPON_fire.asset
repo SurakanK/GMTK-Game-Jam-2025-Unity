@@ -28,9 +28,9 @@ MonoBehaviour:
   stack: 1
   sellPrice: 200
   price: 100
-  SpawnItem: {fileID: 0}
-  ClickItem: {fileID: 0}
-  UsingItem: {fileID: 0}
+  SpawnItem: {fileID: 8300000, guid: 76158c2fe1c20784fb4916a9522f1f9b, type: 3}
+  ClickItem: {fileID: 8300000, guid: 76158c2fe1c20784fb4916a9522f1f9b, type: 3}
+  UsingItem: {fileID: 8300000, guid: 76158c2fe1c20784fb4916a9522f1f9b, type: 3}
   Attack: {fileID: 8300000, guid: 8506036942cd8574cb65ec57ed09fe77, type: 3}
   spriteId: 
   stats:
