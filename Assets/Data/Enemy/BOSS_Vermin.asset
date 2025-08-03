@@ -28,8 +28,13 @@ MonoBehaviour:
     blockDamage: 0
     dungeonFee: 0
   defaultBuff: []
+  sfxIdle: {fileID: 0}
+  sfxAttack: {fileID: 8300000, guid: 1e5a73c2cae9a8a4491a80789fc35dd6, type: 3}
+  sfxDead: {fileID: 8300000, guid: 4f64480b66dbdb3449c8ac34e47b5bf1, type: 3}
+  sfxGethit: {fileID: 8300000, guid: e97c4535d85bf774ebcf34ad91752316, type: 3}
+  sfxSpawn: {fileID: 8300000, guid: 5ae17a15a27b3d54f81e34110731131f, type: 3}
   weaponWeakness:
-  - {fileID: 11400000, guid: 77791273a12534d6e981cc3208bb55f8, type: 2}
+  - {fileID: 11400000, guid: d8538010fbb094e7899274924844c9a2, type: 2}
   itemDropData:
   - weight: 1
     minDrop: 1

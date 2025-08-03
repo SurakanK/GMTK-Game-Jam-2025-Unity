@@ -28,4 +28,4 @@ MonoBehaviour:
     sellPriceRate: 0
     blockDamage: 1
     dungeonFee: 0
-  price: 1500
+  price: 600
