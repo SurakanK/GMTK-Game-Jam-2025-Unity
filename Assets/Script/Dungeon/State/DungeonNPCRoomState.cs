@@ -55,6 +55,7 @@ public class DungeonNPCRoomState : DungeonBaseState
 
     public override void OnEnded()
     {
+        SpawnItemManager.Instance.Clear();
         DungeonState.npc.gameObject.SetActive(false);
         base.OnEnded();
     }
