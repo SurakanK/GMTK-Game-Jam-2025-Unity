@@ -22,3 +22,5 @@ MonoBehaviour:
   icon: {fileID: 0}
   type: 3
   caveBg: {fileID: 21300000, guid: 9deaab931754546cea8912b7b235aa77, type: 3}
+  itemDropData: []
+  prefab: {fileID: 3383293845047545166, guid: 3b975bb501cd347659a1dd2cadeac95d, type: 3}

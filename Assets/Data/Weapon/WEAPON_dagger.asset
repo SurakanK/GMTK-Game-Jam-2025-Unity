@@ -20,6 +20,7 @@ MonoBehaviour:
       text: 
       localKey: 
   icon: {fileID: 21300000, guid: 92ff08471fac640058c06b32a3344709, type: 3}
+  iconSelect: {fileID: 21300000, guid: 9e874801f63cd4675bfe6c9f05fd3acf, type: 3}
   prefab: {fileID: 0}
   min: 1
   max: 1

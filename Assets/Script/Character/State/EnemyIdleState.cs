@@ -10,6 +10,7 @@ public class EnemyIdleState : CharacterBaseState
     public override void OnActive()
     {
         base.OnActive();
+        Enemy.entity.FadeIn(Enemy, 0.2f);
         Enemy.entity.AnimationState.SetAnimation(0, GameAnim.Idle, true);
         HashSet<string> highlightItem = Enemy.EnemyData.weaponWeakness.Select(e => e.DataId).ToHashSet();
         UIGameplayController.Instance.panelInventory.HighlightItem(highlightItem);

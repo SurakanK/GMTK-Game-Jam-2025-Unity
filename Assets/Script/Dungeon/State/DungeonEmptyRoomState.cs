@@ -37,8 +37,6 @@ public class DungeonEmptyRoomState : DungeonBaseState
         }
     }
 
-
-
     public override void OnEnded()
     {
         base.OnEnded();
