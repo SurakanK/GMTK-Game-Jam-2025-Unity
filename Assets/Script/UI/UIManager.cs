@@ -21,7 +21,7 @@ public class UIManager : MonoBehaviour
     public void GoToCave()
     {
         BasePlayerCharacter player = DungeonCore.Instance.dungeon.player;
-        if (player.TryToGetBuff(out BuffBlockDamage buff))
+        if (player.TryToGetBuff(out BuffDungeonFee buff))
         {
             player.RemoveBuff(buff);
         }

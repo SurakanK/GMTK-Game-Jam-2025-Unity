@@ -349,7 +349,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1277980984317921028
 RectTransform:
   m_ObjectHideFlags: 0
@@ -475,12 +475,10 @@ MonoBehaviour:
     itemSell: {fileID: 11400000, guid: 0227908ed26e441d29215ab79d9f8d06, type: 2}
   - button: {fileID: 3248423543077098105}
     itemSell: {fileID: 11400000, guid: ae71e1256a5c94faf86ff45d76ac05f7, type: 2}
-  - button: {fileID: 0}
-    itemSell: {fileID: 11400000, guid: b49489724306d47a3822e62ff4f3d9ab, type: 2}
   imageBag: {fileID: 1761730293519796287}
   iconBag:
   - {fileID: -632045980, guid: 464198f522cc45a43a0e204efeb81d6e, type: 3}
-  - {fileID: 1743335826, guid: 9400a3bb18726a8469177aa1e5213055, type: 3}
+  - {fileID: 21300000, guid: 9400a3bb18726a8469177aa1e5213055, type: 3}
   slotPrice: 1500
 --- !u!114 &1749635685
 MonoBehaviour:

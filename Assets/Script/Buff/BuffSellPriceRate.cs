@@ -14,6 +14,5 @@ public class BuffSellPriceRate : BaseBuff
     public override void Remove()
     {
         owner.Stats -= stats;
-        owner.RemoveBuff(this);
     }
 }
