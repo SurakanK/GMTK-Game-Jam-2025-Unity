@@ -37,6 +37,9 @@ public class SoundManager : MonoBehaviour
 
     void Start()
     {
+        if (audioClips == null)
+            return;
+            
         if (gameObject.activeInHierarchy && audioClips.Length > 0 && IsPlayonAwake)
         {
             if (IsRandom) PlayRandomClip();
