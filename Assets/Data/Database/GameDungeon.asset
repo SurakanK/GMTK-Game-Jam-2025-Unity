@@ -43,4 +43,4 @@ MonoBehaviour:
     randomAmount: 2
     roomTableData:
     - weight: 0.2
-      room: {fileID: 11400000, guid: 6a33319dbbf5a4c3f8811e8b9cc5e14b, type: 2}
+      room: {fileID: 11400000, guid: a16b974881a2048c6a660bf62f4e5e21, type: 2}

@@ -58,6 +58,12 @@ public class SpawnItemManager : MonoBehaviour
             Destroy(itemDrop.gameObject);
             BaseGamePlay.Inventory.IncreaseItem(itemDrop.itemData);
         });
+                
+        AudioSource sfx = itemDrop.GetComponent<AudioSource>();
+        if (sfx != null && itemDrop.itemData != null && itemDrop.itemData.ClickItem != null)
+        {
+            sfx.PlayOneShot(itemDrop.itemData.ClickItem);
+        }
     }
 
     private void BlockClickItem()

@@ -28,6 +28,8 @@ MonoBehaviour:
   stack: 1
   sellPrice: 500
   price: 2000
+  ClickItem: {fileID: 8300000, guid: e0c50c75c38251e4ba9a11860d9b2b9d, type: 3}
+  UsingItem: {fileID: 8300000, guid: 13fc2dd39cdd7284eb80e8cb582e9e30, type: 3}
   spriteId: 
   stats:
     maxHealth: 0

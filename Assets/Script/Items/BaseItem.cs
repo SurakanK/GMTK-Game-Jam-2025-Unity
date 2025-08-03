@@ -10,6 +10,7 @@ public class BaseItem : MonoBehaviour
     private float _time;
     private float _speed;
     public ItemData itemData;
+    AudioSource ItemSfx;
 
     public void Initialized(ItemData item)
     {
@@ -22,6 +23,12 @@ public class BaseItem : MonoBehaviour
     {
         _speed = speed;
         _curve = curve;
+
+        ItemSfx = GetComponent<AudioSource>();
+        if (ItemSfx != null && itemData != null && itemData.ClickItem != null)
+        {
+            ItemSfx.PlayOneShot(itemData.ClickItem);
+        }
     }
 
     public void Launch(QuadraticCurve curve, float speed, Action OnFinished)

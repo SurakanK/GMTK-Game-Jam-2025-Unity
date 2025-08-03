@@ -16,6 +16,10 @@ public class ItemData : BaseObject
     public int sellPrice = 0;
     public int price = 0;
 
+    [Header("SFX")]
+    public AudioClip ClickItem;
+    public AudioClip UsingItem;
+
     public InventoryItemData inventoryItemData
     {
         get

@@ -37,8 +37,8 @@ public class TownEvenrManager : MonoBehaviour
 
     private void Start()
     {
-        Banker_box = Banker.GetComponent<DialogBox>();
-        Shopkeeper_box = Shopkeeper.GetComponent<DialogBox>();
+       /* Banker_box = Banker.GetComponent<DialogBox>();
+        Shopkeeper_box = Shopkeeper.GetComponent<DialogBox>();*/
 
         Button caveButton = Cave.GetComponent<Button>();
         if (IsFirstDay) caveButton.onClick.AddListener(OnCaveButtonClicked);
@@ -57,8 +57,15 @@ public class TownEvenrManager : MonoBehaviour
 
     public void UpdateBankNoteDialog()
     {
+        if (!Banker.activeSelf)
+            Banker.SetActive(true);
+
+        if (!Banker_box.gameObject.activeSelf)
+            Banker_box.gameObject.SetActive(true);
+
         Banker_box.SetNewDialog(BankerDialogData[1]);
     }
+
 
     public void ResetAllDialog()
     {
@@ -69,7 +76,7 @@ public class TownEvenrManager : MonoBehaviour
     }
 
     public void PlayTransition()
-    {
+    {        
         this.GetComponent<Animation>().Play();
     }
 

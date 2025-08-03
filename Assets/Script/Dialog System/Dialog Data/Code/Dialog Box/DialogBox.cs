@@ -37,6 +37,10 @@ public class DialogBox : MonoBehaviour
     //need to setup instant when scene start
     public void SetNewDialog(DialogInfoSO newDialogData)
     {
+        // Ensure the GameObject is active
+        if (!this.gameObject.activeInHierarchy)
+            this.gameObject.SetActive(true);
+
         // Stop any existing typing
         if (typingCoroutine != null)
         {
