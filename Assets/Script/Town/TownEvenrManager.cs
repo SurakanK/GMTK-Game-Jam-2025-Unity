@@ -64,5 +64,11 @@ public class TownEvenrManager : MonoBehaviour
         Banker_box.SetNewDialog(BankerDialogData[0]);
         Shopkeeper_box.SetNewDialog(ShopkeeperDialogData[0]);
     }
+
+    public void PlayTransition()
+    {
+        this.GetComponent<Animation>().Play();
+    }
+
    
 }
