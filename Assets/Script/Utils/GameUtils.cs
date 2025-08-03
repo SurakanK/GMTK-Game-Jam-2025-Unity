@@ -220,6 +220,7 @@ public static class GameUtils
 
     public static void FadeIn(this SkeletonAnimation skeleton, MonoBehaviour runner, float duration = 1f)
     {
+        skeleton.Skeleton.A = 0;
         Fade(skeleton, runner, skeleton.Skeleton.A, 1f, duration);
     }
 

@@ -15,6 +15,7 @@ public class DungeonChestRoomState : DungeonBaseState
         DungeonState.chest.gameObject.SetActive(true);
 
         UIGameplayController.Instance.buttonNext.interactable = true;
+        UIGameplayController.Instance.buttonLeave.interactable = true;
         UIGameplayController.Instance.buttonLeave.gameObject.SetActive(true);
         UIGameplayController.Instance.buttonNext.gameObject.SetActive(Player.currentHealth > 0);
 
