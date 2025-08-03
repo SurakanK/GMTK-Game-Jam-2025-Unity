@@ -15,7 +15,7 @@ public class SoundManager : MonoBehaviour
     private AudioSource audioSource;
 
     void Awake()
-    {      
+    {
         // Setup AudioSource
         audioSource = GetComponent<AudioSource>();
         if (audioSource == null)
@@ -31,7 +31,7 @@ public class SoundManager : MonoBehaviour
         if (uiButton != null)
         {
             if (audioClips.Length == 1) uiButton.onClick.AddListener(PlayFirstClip);
-            else if (audioClips.Length > 1 && IsRandom) uiButton.onClick.AddListener(PlayRandomClip);           
+            else if (audioClips.Length > 1 && IsRandom) uiButton.onClick.AddListener(PlayRandomClip);
         }
     }
 
@@ -73,5 +73,13 @@ public class SoundManager : MonoBehaviour
         {
             Debug.LogWarning("SoundManager: Index out of bounds.");
         }
+    }
+
+    public void PlayClip(AudioClip clip)
+    {
+        if (clip == null)
+            return;
+        audioSource.clip = clip;
+        audioSource.Play();
     }
 }

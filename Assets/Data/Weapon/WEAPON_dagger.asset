@@ -28,6 +28,10 @@ MonoBehaviour:
   stack: 1
   sellPrice: 200
   price: 100
+  SpawnItem: {fileID: 0}
+  ClickItem: {fileID: 0}
+  UsingItem: {fileID: 0}
+  Attack: {fileID: 8300000, guid: 0884b102f686e6b45ac7a064dce86905, type: 3}
   spriteId: 
   stats:
     maxHealth: 0

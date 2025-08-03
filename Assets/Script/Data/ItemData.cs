@@ -20,6 +20,7 @@ public class ItemData : BaseObject
     public AudioClip SpawnItem;
     public AudioClip ClickItem;
     public AudioClip UsingItem;
+    public AudioClip Attack;
 
     public InventoryItemData inventoryItemData
     {

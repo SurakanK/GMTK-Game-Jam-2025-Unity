@@ -71,6 +71,12 @@ public class CharacterInventory : MonoBehaviour
         GameEvent.Instance.EventNonEquipItemChanged?.Invoke();
     }
 
+    public void Clear()
+    {
+        nonEquipItem.Clear();
+        GameEvent.Instance.EventNonEquipItemChanged?.Invoke();
+    }
+
     public void Swap(int indexA, int indexB)
     {
         List<InventoryItemData> list = nonEquipItem;

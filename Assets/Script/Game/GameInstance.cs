@@ -19,11 +19,14 @@ public class GameInstance : MonoBehaviour
     public static BaseGameRule GameRule => Instance.gameRule;
     public static Dictionary<string, ItemData> AllItems => Instance.allItems;
 
+    public static SoundManager Sound;
+
     private void Awake()
     {
         if (gameDataBase != null)
             gameDataBase.RegisterGameData(this);
         BaseGamePlay.Instance.Initialized();
+        Sound = gameObject.AddComponent<SoundManager>();
     }
 
     [Header("Gameplay Rule")]

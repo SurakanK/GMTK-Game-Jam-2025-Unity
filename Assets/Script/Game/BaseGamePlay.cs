@@ -74,6 +74,8 @@ public class BaseGamePlay : MonoBehaviour
         }
     }
 
+    public BasePlayerCharacter Player => DungeonCore.Instance.dungeon.player;
+
     public void Initialized()
     {
         if (GameInstance.Instance.gameRule == null)
@@ -100,5 +102,7 @@ public class BaseGamePlay : MonoBehaviour
         Currency = GameInstance.Instance.gameRule.StartCurrency;
         Outstanding = GameInstance.Instance.gameRule.Outstanding;
         Inventory.curSlot = GameInstance.Instance.gameRule.LimitSlot;
+        Player.ClearAllBuff();
+        Inventory.Clear();
     }
 }

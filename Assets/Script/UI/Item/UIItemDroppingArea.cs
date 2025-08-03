@@ -27,6 +27,7 @@ public class UIItemDroppingArea : UIBase, IDropHandler
                     {
                         BaseGamePlay.Inventory.RemoveItemAt(itemDrop.slotIndex);
                         bossState.PlayerAttack();
+                        GameInstance.Sound.PlayClip(itemData.Attack);
                     }
                     else
                     {
