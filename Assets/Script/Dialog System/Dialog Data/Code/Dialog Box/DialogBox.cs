@@ -187,13 +187,12 @@ public class DialogBox : MonoBehaviour
     {
         dialogText.text = "";
 
-        if (TypeSound != null)
+        if (audioSource != null && TypeSound != null)
         {
             audioSource.clip = TypeSound;
             audioSource.loop = true;
             audioSource.Play();
         }
-
         foreach (char letter in text.ToCharArray())
         {
             dialogText.text += letter;
