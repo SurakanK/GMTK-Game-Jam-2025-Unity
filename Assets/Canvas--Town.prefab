@@ -149,6 +149,7 @@ GameObject:
   - component: {fileID: 164590254552279433}
   - component: {fileID: 164590254552279428}
   - component: {fileID: 164590254552279429}
+  - component: {fileID: 1578884104}
   m_Layer: 5
   m_Name: Canvas--Town
   m_TagString: Untagged
@@ -273,13 +274,25 @@ MonoBehaviour:
   Cave: {fileID: 3169792742979849363}
   Banker_btn: {fileID: 3169792744218382228}
   Shopkeeper_btn: {fileID: 3169792742781179294}
-  BankerDialogData:
-  - {fileID: 11400000, guid: 56100846a9784db45a5103d2a2918de0, type: 2}
-  - {fileID: 11400000, guid: 2ad636ff260bfcf48879dfb91982429a, type: 2}
-  ShopkeeperDialogData:
-  - {fileID: 11400000, guid: d3ffefc7d6b4b324381e70288d624736, type: 2}
   IsFirstDay: 1
   Tutorial: {fileID: 164590254572313695}
+--- !u!114 &1578884104
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 164590254552279438}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ffe2169bf2645454ca57b2b4ded85631, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioClips:
+  - {fileID: 8300000, guid: 104d1bd9240beb14c80de3aef8ab67e3, type: 3}
+  IsLoop: 0
+  IsPlayonAwake: 1
+  IsRandom: 0
 --- !u!1 &164590254561014987
 GameObject:
   m_ObjectHideFlags: 0
@@ -677,6 +690,30 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &3169792742979849363
 GameObject:
   m_ObjectHideFlags: 0
@@ -689,6 +726,7 @@ GameObject:
   - component: {fileID: 3169792742979849455}
   - component: {fileID: 3169792742979849454}
   - component: {fileID: 3169792742979849361}
+  - component: {fileID: 1621355364}
   m_Layer: 5
   m_Name: Button-Cave
   m_TagString: Untagged
@@ -810,6 +848,23 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
+--- !u!114 &1621355364
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3169792742979849363}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ffe2169bf2645454ca57b2b4ded85631, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioClips:
+  - {fileID: 8300000, guid: 573099ebada51ad45b3746320ca94aae, type: 3}
+  IsLoop: 0
+  IsPlayonAwake: 0
+  IsRandom: 0
 --- !u!1 &3169792743001920930
 GameObject:
   m_ObjectHideFlags: 0

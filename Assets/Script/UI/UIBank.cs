@@ -31,6 +31,7 @@ public class UIBank : UIBase
         {
             if (paidAmount > CurrencyMoney)
             {
+                Debug.Log("Player have money: " + CurrencyMoney);
                 Debug.LogWarning("Player tried to pay more than they have.");
                 TMP_PaidDebt.text = "Not enough money";
                 return;
