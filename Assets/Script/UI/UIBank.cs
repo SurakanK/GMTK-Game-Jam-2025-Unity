@@ -37,14 +37,20 @@ public class UIBank : UIBase
                 return;
             }
 
+            Debug.Log("Before pay debt: " + Debt);
+            Debug.Log("Before pay CurrencyMoney: " + CurrencyMoney);
+
+
+            Debug.Log("Before pay BaseGamePlay.debt: " + BaseGamePlay.Outstanding);
+            Debug.Log("Before pay BaseGamePlay.CurrencyMoney: " + BaseGamePlay.Currency);
+
+            Debug.Log("Paid: " + paidAmount);
+
             paidAmount = Mathf.Clamp(paidAmount, 0, Mathf.Abs(Debt)); // Ensure no overpaying debt
             int previousDebt = Debt;
-
-            Debt += paidAmount; // Remember: Debt is negative, so we "add" toward zero
-            CurrencyMoney -= paidAmount;
-
-            BaseGamePlay.Outstanding = Debt;
-            BaseGamePlay.Currency = CurrencyMoney;
+          
+            BaseGamePlay.Outstanding += paidAmount;
+            BaseGamePlay.Currency -= paidAmount;
 
             AnimateDebt(previousDebt, Debt, 0.5f);
 
@@ -52,8 +58,9 @@ public class UIBank : UIBase
 
             Debug.Log("After pay debt: " + Debt);
             Debug.Log("After pay CurrencyMoney: " + CurrencyMoney);
-            Debug.Log("After pay debt (BaseGamePlay): " + Debt);
-            Debug.Log("After pay CurrencyMoney (BaseGamePlay): " + CurrencyMoney);
+
+            Debug.Log("After pay BaseGamePlay.debt: " + BaseGamePlay.Outstanding);
+            Debug.Log("After pay BaseGamePlay.CurrencyMoney: " + BaseGamePlay.Currency);
         }
         else
         {

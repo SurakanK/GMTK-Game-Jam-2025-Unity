@@ -16,13 +16,13 @@ public class UIDropSellArea : UIBase, IDropHandler
                () => OnConfirm(itemDrop.Data, itemData),
                null,
                "Item Sale",
-               $"Sell this item for {itemData.sellPrice * (int)stats.sellPriceRate} gold?");
+               $"Sell this item for {itemData.sellPrice} gold?");
         }
     }
 
     public void OnConfirm(InventoryItemData data, ItemData itemData)
     {
-        BaseGamePlay.Currency += itemData.sellPrice * (int)stats.sellPriceRate;
+        BaseGamePlay.Currency += itemData.sellPrice;
         BaseGamePlay.Inventory.RemoveItemAt(data.slotIndex);
     }
 }
