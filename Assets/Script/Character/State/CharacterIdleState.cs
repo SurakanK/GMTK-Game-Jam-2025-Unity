@@ -7,6 +7,7 @@ public class CharacterIdleState : CharacterBaseState
 
     public override void OnActive()
     {
+        Player.entity.AnimationState.SetAnimation(0, GameAnim.Idle, true);
         base.OnActive();
     }
 

@@ -1,4 +1,6 @@
+using System;
 using Cysharp.Threading.Tasks;
+using Spine;
 using UnityEngine;
 
 public class CharacterTakeDamageState : CharacterBaseState
@@ -13,9 +15,17 @@ public class CharacterTakeDamageState : CharacterBaseState
         else
             Player.currentHealth -= 1;
 
+        var anim = Player.entity.AnimationState.SetAnimation(0, GameAnim.Hit, false);
+        anim.Complete += OnFinishAnimation;
         UIGameplayController.Instance.buttonLeave.gameObject.SetActive(true);
         UIGameplayController.Instance.buttonNext.gameObject.SetActive(Player.currentHealth > 0);
         UIGameplayController.Instance.panelCharacter.ShowFace().Forget();
+    }
+
+    private void OnFinishAnimation(TrackEntry trackEntry)
+    {
+        Player.IdleState();
+        trackEntry.Complete -= OnFinishAnimation;
     }
 
     public override void Update()

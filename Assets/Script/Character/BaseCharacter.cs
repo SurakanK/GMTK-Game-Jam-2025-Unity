@@ -14,7 +14,7 @@ public abstract partial class BaseCharacter : CharacterStateMachine
     internal bool isAttacking = false;
     internal BaseEnemyCharacter Enemy => this as BaseEnemyCharacter;
     internal BasePlayerCharacter Player => this as BasePlayerCharacter;
-    internal SkeletonAnimation entity;
+    public SkeletonAnimation entity;
 
     protected void Initialize()
     {

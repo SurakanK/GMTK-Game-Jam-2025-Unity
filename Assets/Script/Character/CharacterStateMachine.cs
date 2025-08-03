@@ -9,6 +9,7 @@ public class CharacterStateMachine : StateMachine
         Idle,
         Attack,
         TakeDamage,
+        Walk,
         Dead,
     }
 
@@ -31,6 +32,7 @@ public class CharacterStateMachine : StateMachine
             PlayerStateType.Attack => new CharacterAttackState(baseCharacter),
             PlayerStateType.TakeDamage => new CharacterTakeDamageState(baseCharacter),
             PlayerStateType.Dead => new CharacterDeadState(baseCharacter),
+            PlayerStateType.Walk => new CharacterWalkState(baseCharacter),
             _ => null
         };
     }
