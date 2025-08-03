@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 2526408152927843740}
   - component: {fileID: 4361694613172384089}
   - component: {fileID: 7771264814884493854}
+  - component: {fileID: 170567460640629729}
   m_Layer: 0
   m_Name: EmptyRoom
   m_TagString: Untagged
@@ -130,3 +131,20 @@ MonoBehaviour:
   _animationName: 
   loop: 1
   timeScale: 1
+--- !u!114 &170567460640629729
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4419777497735577012}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ffe2169bf2645454ca57b2b4ded85631, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioClips:
+  - {fileID: 8300000, guid: b53735bf1e9538945910c7806d4e6deb, type: 3}
+  IsLoop: 1
+  IsPlayonAwake: 1
+  IsRandom: 0

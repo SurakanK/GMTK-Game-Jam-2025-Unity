@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 8136582924179502342}
   - component: {fileID: 7496947902315902835}
   - component: {fileID: 3383293845047545166}
+  - component: {fileID: 2004844722372610180}
   m_Layer: 0
   m_Name: MonsterRoom
   m_TagString: Untagged
@@ -131,3 +132,20 @@ MonoBehaviour:
   _animationName: 
   loop: 1
   timeScale: 1
+--- !u!114 &2004844722372610180
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8817795886769746381}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ffe2169bf2645454ca57b2b4ded85631, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioClips:
+  - {fileID: 8300000, guid: 747a0281a9b39e642909f0a90eeddb7a, type: 3}
+  IsLoop: 1
+  IsPlayonAwake: 1
+  IsRandom: 0
