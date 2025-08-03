@@ -14,6 +14,11 @@ public class CharacterData : BaseObject
     [Header("Buff")]
     public List<BaseBuff> defaultBuff;
 
+    [Header("Sound Setting")]
+    public AudioClip sfxIdle;
+    public AudioClip sfxAttack;
+    public AudioClip sfxDead;
+
     public void Apply(BaseCharacter owner)
     {
         // Apply Stats
