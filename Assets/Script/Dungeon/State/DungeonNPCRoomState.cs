@@ -11,9 +11,11 @@ public class DungeonNPCRoomState : DungeonBaseState
         base.OnActive();
         DungeonState.player.gameObject.SetActive(true);
         DungeonState.enemy.gameObject.SetActive(false);
-        DungeonState.npc.gameObject.SetActive(true);
         DungeonState.chest.gameObject.SetActive(false);
-        
+
+        DungeonState.npc.gameObject.SetActive(true);
+        DungeonState.npc.FadeIn(DungeonState, 0.2f);
+
         UIGameplayController.Instance.buttonNext.interactable = true;
         UIGameplayController.Instance.buttonLeave.interactable = true;
         UIGameplayController.Instance.buttonLeave.gameObject.SetActive(true);
@@ -39,6 +41,7 @@ public class DungeonNPCRoomState : DungeonBaseState
     public override async UniTask OnTransition()
     {
         await base.OnTransition();
+        DungeonState.npc.FadeOut(DungeonState, 0.2f);
         SpawnItemManager.Instance.Clear();
         if (TransitionController.Instance != null)
         {
@@ -52,6 +55,7 @@ public class DungeonNPCRoomState : DungeonBaseState
 
     public override void OnEnded()
     {
+        DungeonState.npc.gameObject.SetActive(false);
         base.OnEnded();
     }
 }
