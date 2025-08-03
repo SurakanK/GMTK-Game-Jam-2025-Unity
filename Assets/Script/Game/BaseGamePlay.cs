@@ -16,6 +16,17 @@ public class BaseGamePlay : MonoBehaviour
         }
     }
 
+    private static int _devel = 1;
+    public static int Day
+    {
+        get { return _devel; }
+        set
+        {
+            _devel = value;
+            GameEvent.Instance.EventDayChange?.Invoke(_devel);
+        }
+    }
+
     private static int _currency;
     public static int Currency
     {
@@ -68,14 +79,10 @@ public class BaseGamePlay : MonoBehaviour
         if (GameInstance.Instance.gameRule == null)
             return;
 
-        Level = GameInstance.Instance.gameRule.StartLevel;
-        Currency = GameInstance.Instance.gameRule.StartCurrency;
-        Outstanding = GameInstance.Instance.gameRule.Outstanding;
-        Inventory.curSlot = GameInstance.Instance.gameRule.LimitSlot;
+        RestartGame();
 
         UIGameplayController.Instance.panelInventory.Initialized();
         UIGameplayController.Instance.panelCharacter.Initialized();
-        DungeonCore.Instance.dungeon.player.InitializePlayer();
     }
 
     public async void OnClickGoToCave()
@@ -83,5 +90,15 @@ public class BaseGamePlay : MonoBehaviour
         await UniTask.Delay(TimeSpan.FromSeconds(1.2f));
         UIManager.Instance.GoToCave();
         DungeonCore.Instance.NextRoom();
+    }
+
+    public void RestartGame()
+    {
+        Day = 0;
+        DungeonCore.Instance.dungeon.player.InitializePlayer();
+        Level = GameInstance.Instance.gameRule.StartLevel;
+        Currency = GameInstance.Instance.gameRule.StartCurrency;
+        Outstanding = GameInstance.Instance.gameRule.Outstanding;
+        Inventory.curSlot = GameInstance.Instance.gameRule.LimitSlot;
     }
 }

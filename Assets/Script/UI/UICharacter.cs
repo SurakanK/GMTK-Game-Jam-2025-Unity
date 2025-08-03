@@ -49,15 +49,9 @@ public class UICharacter : UIBase
 
     public async UniTask ShowFace()
     {
-        if (DungeonCore.Instance.dungeon.player.currentHealth > 0)
-        {
+        if (DungeonCore.Instance.dungeon.player.currentHealth <= 3)
             faceImage.sprite = faceIcons[1];
-            await UniTask.Delay(TimeSpan.FromSeconds(1f));
-            faceImage.sprite = faceIcons[0];
-        }
         else
-        {
-            faceImage.sprite = faceIcons[1];
-        }
+            faceImage.sprite = faceIcons[0];
     }
 }

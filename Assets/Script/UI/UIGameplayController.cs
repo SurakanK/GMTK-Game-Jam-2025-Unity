@@ -1,3 +1,4 @@
+using System;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -10,6 +11,7 @@ public partial class UIGameplayController : MonoBehaviour
     [SerializeField] public UICharacter panelCharacter;
     [SerializeField] public UICurrency panelCurrency;
     [SerializeField] public TextMeshProUGUI textLevel;
+    [SerializeField] public TextMeshProUGUI textDay;
 
     [Header("UI Button")]
     [SerializeField] public Button buttonNext;
@@ -37,6 +39,13 @@ public partial class UIGameplayController : MonoBehaviour
     {
         GameEvent.Instance.EventLevelChange -= OnEventLevelChange;
         GameEvent.Instance.EventLevelChange += OnEventLevelChange;
+        GameEvent.Instance.EventDayChange -= OnEventDayChange;
+        GameEvent.Instance.EventDayChange += OnEventDayChange;
+    }
+
+    private void OnEventDayChange(int day)
+    {
+        textDay.text = $"Day {day}";
     }
 
     private void OnEventLevelChange(int level)

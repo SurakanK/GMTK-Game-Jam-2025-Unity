@@ -25,7 +25,14 @@ public class CharacterTakeDamageState : CharacterBaseState
     private void OnFinishAnimation(TrackEntry trackEntry)
     {
         Player.IdleState();
+        ShowSummary();
         trackEntry.Complete -= OnFinishAnimation;
+    }
+
+    public void ShowSummary()
+    {
+        if (Player.currentHealth <= 0)
+            UIGameSummary.Instance.Show();
     }
 
     public override void Update()
