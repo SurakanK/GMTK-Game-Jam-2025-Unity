@@ -10,27 +10,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5df279269eed66e44bfcf83357f2b275, type: 3}
-  m_Name: 1-1
+  m_Name: Banker 1
   m_EditorClassIdentifier: 
   DialogType: 0
   dialogEntries:
   - characterData: {fileID: 11400000, guid: 0784f58f0ecf21647ad815946102453f, type: 2}
-    text: Red one!!
-    spriteNumber: 6
-    picturePosition: 0
+    text: Thank you for paying your debt. Good luck with your next exploration.
+    spriteNumber: 3
+    picturePosition: 1
     BackgroundImage: {fileID: 0}
-    MultipleCharacter: 1
-    SupportCharacterData1: {fileID: 11400000, guid: 31256ef4d11066b44bce2fbcafa538bb, type: 2}
+    MultipleCharacter: 0
+    SupportCharacterData1: {fileID: 0}
     SupportCharacterSpriteNumber1: 0
-    SupportCharacterPicturePosition1: 2
-  - characterData: {fileID: 11400000, guid: 31256ef4d11066b44bce2fbcafa538bb, type: 2}
-    text: End
-    spriteNumber: 0
-    picturePosition: 0
-    BackgroundImage: {fileID: 0}
-    MultipleCharacter: 1
-    SupportCharacterData1: {fileID: 11400000, guid: 0784f58f0ecf21647ad815946102453f, type: 2}
-    SupportCharacterSpriteNumber1: 6
-    SupportCharacterPicturePosition1: 2
+    SupportCharacterPicturePosition1: 0
   dialogChoices: []
   CurrentDialogIndex: 0
