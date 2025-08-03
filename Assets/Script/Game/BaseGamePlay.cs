@@ -80,7 +80,7 @@ public class BaseGamePlay : MonoBehaviour
 
     public async void OnClickGoToCave()
     {
-        await UniTask.Delay(TimeSpan.FromSeconds(2f));
+        await UniTask.Delay(TimeSpan.FromSeconds(1.2f));
         UIManager.Instance.GoToCave();
         DungeonCore.Instance.NextRoom();
     }

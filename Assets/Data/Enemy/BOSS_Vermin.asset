@@ -29,7 +29,7 @@ MonoBehaviour:
     dungeonFee: 0
   defaultBuff: []
   weaponWeakness:
-  - {fileID: 11400000, guid: 77791273a12534d6e981cc3208bb55f8, type: 2}
+  - {fileID: 11400000, guid: d8538010fbb094e7899274924844c9a2, type: 2}
   itemDropData:
   - weight: 1
     minDrop: 1

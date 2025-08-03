@@ -25,4 +25,5 @@ MonoBehaviour:
   max: 1
   amount: 0
   stack: 1
-  sellPrice: 250
+  sellPrice: 125
+  price: 0
