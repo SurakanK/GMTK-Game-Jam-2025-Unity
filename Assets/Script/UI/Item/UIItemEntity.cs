@@ -29,6 +29,11 @@ public class UIItemEntity : UISelection<InventoryItemData>
     internal void SetHighlight(bool isHighlight)
     {
         if (imageSelect != null)
+        {
+            if (!Data.TryGetItemData(out ItemData ItemData))
+                return;
+            imageSelect.sprite = ItemData.iconSelect;
             imageSelect.gameObject.SetActive(isHighlight);
+        }
     }
 }

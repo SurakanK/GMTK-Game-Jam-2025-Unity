@@ -5,6 +5,7 @@ public class GameData : ScriptableObject, IIdentifiableData
 {
     public TitleFormat title;
     public Sprite icon;
+    public Sprite iconSelect;
 
     private string _objectId;
 
