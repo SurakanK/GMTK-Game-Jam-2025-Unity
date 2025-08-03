@@ -1,6 +1,7 @@
 
 public class BasePlayerCharacter : BaseCharacter
 {
+
     void Awake()
     {
         gameObject.tag = GameTag.Player;
@@ -36,6 +37,11 @@ public class BasePlayerCharacter : BaseCharacter
     public void TakeDamageState()
     {
         ChangeState(GetStateInstance(PlayerStateType.TakeDamage));
+    }
+
+    public void WalkState()
+    {
+        ChangeState(GetStateInstance(PlayerStateType.Walk));
     }
 
     public override void Dead()

@@ -33,6 +33,7 @@ public abstract class DungeonBaseState : IRoomState
     {
         base.OnActive();
         SetBgCave(RoomData.caveBg);
+        Player.IdleState();
         UIGameplayController.Instance.panelInventory.ClearHighlight();
 
         Color color = Color.green;

@@ -2468,6 +2468,7 @@ MonoBehaviour:
   ReferencePoints:
     uiCharacterTransfrom: {fileID: 0}
     arrowSpawnTransfrom: {fileID: 0}
+  entity: {fileID: 461292553}
   _status:
     maxHealth: 0
     damage: 0
@@ -3275,6 +3276,7 @@ MonoBehaviour:
   ReferencePoints:
     uiCharacterTransfrom: {fileID: 0}
     arrowSpawnTransfrom: {fileID: 0}
+  entity: {fileID: 0}
   _status:
     maxHealth: 0
     damage: 0
