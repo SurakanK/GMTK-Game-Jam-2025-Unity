@@ -1,5 +1,7 @@
+using UnityEngine;
+
 public class BaseObject : GameData
-{
+{    
     public bool IsCharacter(out CharacterData characterData)
     {
         characterData = this as CharacterData;
