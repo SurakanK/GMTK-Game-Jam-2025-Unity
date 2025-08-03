@@ -15,6 +15,7 @@ public class DungeonChestRoomState : DungeonBaseState
         DungeonState.chest.gameObject.SetActive(true);
 
         UIGameplayController.Instance.buttonNext.interactable = true;
+        UIGameplayController.Instance.buttonLeave.interactable = true;
         UIGameplayController.Instance.buttonLeave.gameObject.SetActive(true);
         UIGameplayController.Instance.buttonNext.gameObject.SetActive(Player.currentHealth > 0);
 
@@ -30,6 +31,7 @@ public class DungeonChestRoomState : DungeonBaseState
     public override async UniTask OnTransition()
     {
         await base.OnTransition();
+        SpawnItemManager.Instance.Clear();
 
         if (TransitionController.Instance != null)
         {
@@ -41,10 +43,8 @@ public class DungeonChestRoomState : DungeonBaseState
         }
     }
 
-
-
     public override void OnEnded()
     {
-        SpawnItemManager.Instance.Clear();
+        base.OnEnded();
     }
 }

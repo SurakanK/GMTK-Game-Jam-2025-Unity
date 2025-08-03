@@ -26,7 +26,7 @@ public class DungeonBossRoomState : DungeonBaseState
     public override async UniTask OnTransition()
     {
         await base.OnTransition();
-
+        SpawnItemManager.Instance.Clear();
         if (TransitionController.Instance != null)
         {
             await TransitionController.Instance.TriggerFadeOutTransition();
@@ -37,12 +37,9 @@ public class DungeonBossRoomState : DungeonBaseState
         }
     }
 
-
-
     public override void OnEnded()
     {
         base.OnEnded();
-        SpawnItemManager.Instance.Clear();
     }
 
     private void SpawnEnemy()

@@ -38,6 +38,7 @@ public class UIManager : MonoBehaviour
         entryGameCanvas.gameObject.SetActive(false);
         townCanvas.gameObject.SetActive(false);
         UIGameplayController.Instance.buttonNext.interactable = true;
+        UIGameplayController.Instance.buttonLeave.interactable = true;
     }
 
     public void GoToEntryGame()
