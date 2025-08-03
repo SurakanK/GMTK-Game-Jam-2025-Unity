@@ -1,7 +1,8 @@
 
-public class BasePlayerCharacter : BaseCharacter
-{
+using UnityEngine;
 
+public class BasePlayerCharacter : BaseCharacter
+{ 
     void Awake()
     {
         gameObject.tag = GameTag.Player;
