@@ -34,30 +34,32 @@ MonoBehaviour:
   sfxDead: {fileID: 8300000, guid: 1131f9f4c81704743a64cd71c7541708, type: 3}
   sfxGethit: {fileID: 8300000, guid: 7c843c59752ed854f90362945e12b2fd, type: 3}
   sfxSpawn: {fileID: 8300000, guid: 9a16d55f858f6df4da6486edbc860ae0, type: 3}
+  takeDamage: {fileID: 0}
+  hp: {fileID: 0}
   weaponWeakness:
   - {fileID: 11400000, guid: 637f53258b3bf4e55867b08da71eef47, type: 2}
   itemDropData:
-  - weight: 0.1
+  - weight: 0.05
     minDrop: 1
     maxDrop: 1
     itemData: {fileID: 11400000, guid: 5e9094c4ce6ee40a4b826fd2f8780b1b, type: 2}
     OverrideAmount: 0
-  - weight: 0.1
+  - weight: 0.05
     minDrop: 1
     maxDrop: 1
     itemData: {fileID: 11400000, guid: cbadeb8fd7729429ebadee325a0ce1d4, type: 2}
     OverrideAmount: 0
-  - weight: 0.1
+  - weight: 0.05
     minDrop: 1
     maxDrop: 1
     itemData: {fileID: 11400000, guid: 6b8b1775539454813b394049fba90a3a, type: 2}
     OverrideAmount: 0
-  - weight: 0.1
+  - weight: 0.05
     minDrop: 1
     maxDrop: 1
     itemData: {fileID: 11400000, guid: d54af39481528451ba6f5c866e2cbe1a, type: 2}
     OverrideAmount: 0
-  - weight: 0.1
+  - weight: 0.05
     minDrop: 1
     maxDrop: 1
     itemData: {fileID: 11400000, guid: a2eaa39fe37de462aaf5d309f2b99f7a, type: 2}
@@ -97,12 +99,12 @@ MonoBehaviour:
     maxDrop: 1
     itemData: {fileID: 11400000, guid: b6acd75b7ab9d4e9cb1f769157e74fd2, type: 2}
     OverrideAmount: 0
-  - weight: 0.05
+  - weight: 0.1
     minDrop: 1
     maxDrop: 1
     itemData: {fileID: 11400000, guid: d7ac56e2455bf45929122b54efeb7340, type: 2}
     OverrideAmount: 0
-  - weight: 0.05
+  - weight: 0.1
     minDrop: 1
     maxDrop: 1
     itemData: {fileID: 11400000, guid: ef4ca0cc871d649398a322b93211fc52, type: 2}

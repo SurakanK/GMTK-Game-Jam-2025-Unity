@@ -14,6 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _startLevel: 0
   _startCurrency: 4000
-  _outstanding: -40000
+  _outstanding: -20000
   _limitSlot: 10
   _fee: 250

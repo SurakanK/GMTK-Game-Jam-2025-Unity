@@ -57,6 +57,11 @@ public class UIManager : MonoBehaviour
         BaseGamePlay.isGameStart = false;
         DungeonCore.Instance.dungeon.ClearState();
         BaseGamePlay.Day += 1;
+
+        if (DungeonCore.Instance.dungeon.BgCave != null)
+        {
+            Destroy(DungeonCore.Instance.dungeon.BgCave.gameObject);
+        }
     }
 
     private void DisableButton()
