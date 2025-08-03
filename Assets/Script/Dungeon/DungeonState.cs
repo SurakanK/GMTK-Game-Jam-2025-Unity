@@ -6,7 +6,7 @@ using UnityEngine;
 public class DungeonState : RoomStateMachine
 {
     public SpriteRenderer caveBg;
-    public SpriteRenderer npc;
+    public SkeletonAnimation npc;
     public SpriteRenderer chest;
     public BasePlayerCharacter player;
     public BaseEnemyCharacter enemy;
