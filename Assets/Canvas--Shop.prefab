@@ -294,13 +294,14 @@ GameObject:
   - component: {fileID: 1277980984317921025}
   - component: {fileID: 1277980984317921026}
   - component: {fileID: 8397314156172706355}
+  - component: {fileID: 1749635685}
   m_Layer: 0
   m_Name: Canvas--Shop
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1277980984317921028
 RectTransform:
   m_ObjectHideFlags: 0
@@ -433,6 +434,23 @@ MonoBehaviour:
   - {fileID: -632045980, guid: 464198f522cc45a43a0e204efeb81d6e, type: 3}
   - {fileID: 1743335826, guid: 9400a3bb18726a8469177aa1e5213055, type: 3}
   slotPrice: 1500
+--- !u!114 &1749635685
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1277980984317921029}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ffe2169bf2645454ca57b2b4ded85631, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioClips:
+  - {fileID: 8300000, guid: 48ce5641f6c86734a8711b105c149d1a, type: 3}
+  IsLoop: 0
+  IsPlayonAwake: 1
+  IsRandom: 0
 --- !u!1 &1277980984320466817
 GameObject:
   m_ObjectHideFlags: 0
