@@ -1,0 +1,23 @@
+Hound.png
+size:2048,2048
+filter:Linear,Linear
+pma:true
+GMTK-EFX_CLAW_1
+bounds:982,1009,762,1018
+offsets:411,375,1600,1734
+GMTK-EFX_CLAW_2
+bounds:2,663,978,1364
+offsets:316,183,1600,1734
+Hound L arm
+bounds:1746,1484,145,543
+offsets:521,154,1024,1024
+Hound R arm
+bounds:982,860,147,542
+offsets:292,155,1024,1024
+rotate:90
+Hound body
+bounds:2,2,322,659
+offsets:323,147,1024,1024
+Hound head
+bounds:326,320,189,341
+offsets:376,536,1024,1024

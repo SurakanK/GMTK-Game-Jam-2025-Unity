@@ -1,0 +1,7 @@
+Player Arm.png
+size:1024,1024
+filter:Linear,Linear
+pma:true
+Player Arm
+bounds:2,2,758,574
+offsets:131,227,1024,1024

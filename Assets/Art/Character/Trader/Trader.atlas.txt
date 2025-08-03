@@ -1,0 +1,15 @@
+Trader.png
+size:1024,512
+filter:Linear,Linear
+pma:true
+Trader arm
+bounds:633,152,298,251
+offsets:377,483,1024,1024
+Trader body
+bounds:2,2,401,629
+offsets:312,191,1024,1024
+rotate:90
+Trader head
+bounds:633,35,115,164
+offsets:461,668,1024,1024
+rotate:90

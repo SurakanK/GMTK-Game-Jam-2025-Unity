@@ -1,0 +1,16 @@
+Vermin.png
+size:2048,1024
+filter:Linear,Linear
+pma:true
+GMTK-EFX_SPLASH_1
+bounds:2,2,952,941
+offsets:330,430,1600,1734
+Vermin body
+bounds:956,489,469,454
+offsets:296,235,1024,1024
+Vermin ears
+bounds:1427,721,256,222
+offsets:314,411,1024,1024
+Vermin head
+bounds:956,209,210,278
+offsets:266,522,1024,1024

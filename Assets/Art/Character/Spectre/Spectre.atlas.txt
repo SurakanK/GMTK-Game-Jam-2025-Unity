@@ -1,0 +1,36 @@
+Spectre.png
+size:2048,1024
+filter:Linear,Linear
+pma:true
+GMTK-EFX_SLASH3_1
+bounds:2,463,541,1445
+offsets:526,149,1600,1734
+rotate:90
+Spectre B L arm
+bounds:1449,541,148,463
+offsets:540,155,1024,1024
+Spectre B R arm
+bounds:1599,560,125,444
+offsets:349,160,1024,1024
+Spectre F L arm
+bounds:245,202,130,433
+offsets:465,164,1024,1024
+rotate:90
+Spectre F R arm
+bounds:714,369,92,431
+offsets:418,156,1024,1024
+rotate:90
+Spectre L wing
+bounds:245,2,198,283
+offsets:544,314,1024,1024
+rotate:90
+Spectre Middle arm
+bounds:245,334,127,467
+offsets:479,152,1024,1024
+rotate:90
+Spectre R wing
+bounds:1726,694,193,310
+offsets:285,294,1024,1024
+Spectre head
+bounds:2,56,241,405
+offsets:388,476,1024,1024

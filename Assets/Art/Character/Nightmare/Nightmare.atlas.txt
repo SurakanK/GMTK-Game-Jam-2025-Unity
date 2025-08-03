@@ -1,0 +1,26 @@
+Nightmare.png
+size:2048,1024
+filter:Linear,Linear
+pma:true
+GMTK-EFX_CLAW_3
+bounds:2,138,848,1023
+offsets:373,353,1600,1734
+rotate:90
+Nightmare arm
+bounds:1337,573,291,413
+offsets:409,138,1024,1024
+Nightmare body
+bounds:1027,482,308,504
+offsets:363,382,1024,1024
+Nightmare ten1
+bounds:2,2,158,134
+offsets:330,660,1024,1024
+Nightmare ten2
+bounds:1027,346,143,134
+offsets:578,660,1024,1024
+Nightmare ten3
+bounds:1337,486,163,85
+offsets:274,509,1024,1024
+Nightmare ten4
+bounds:1630,877,163,109
+offsets:593,477,1024,1024
