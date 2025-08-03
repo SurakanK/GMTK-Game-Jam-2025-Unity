@@ -35,11 +35,47 @@ public class DialogBox : MonoBehaviour
     private Coroutine typingCoroutine;
 
     //need to setup instant when scene start
-    public void SetNewDialog(DialogInfoSO dialogData)
+    public void SetNewDialog(DialogInfoSO newDialogData)
     {
-        this.dialogData = dialogData;
+        // Stop any existing typing
+        if (typingCoroutine != null)
+        {
+            StopCoroutine(typingCoroutine);
+            typingCoroutine = null;
+        }
+
+        // Stop any audio playback
+        if (audioSource != null && audioSource.isPlaying)
+        {
+            audioSource.Stop();
+        }
+
+        // Clear all UI text and state
+        dialogText.text = "";
+        characterText.text = "";
+        
+
+        // Hide dialog panels in case they're still visible
+        choicePanel.SetActive(false);
+        choiceGameObject.SetActive(false);
+        DialogPanal.SetActive(false);  // Optional: hide dialog panel before it reappears
+
+        // Reset internal state
+        dialogData = newDialogData;
         currentDialogIndex = 0;
+
+        // Re-display the first dialog only if the new data is valid
+        if (dialogData != null && dialogData.DialogType == DialogType.Boxtype)
+        {
+            DialogPanal.SetActive(true);  // Show dialog panel again
+            DisplayDialog(currentDialogIndex);
+        }
+        else
+        {
+            Debug.LogWarning("New dialog data is null or not of type Box.");
+        }
     }
+
 
     void Awake()
     {
@@ -187,17 +223,11 @@ public class DialogBox : MonoBehaviour
             StopCoroutine(typingCoroutine);
             typingCoroutine = null;
 
-            if (audioSource.isPlaying)
+            // Prevent audio overlap
+            if (audioSource != null && audioSource.isPlaying)
                 audioSource.Stop();
-
-            // Optionally resume background music
-            if (BackgroundMusic != null)
-            {
-                audioSource.clip = BackgroundMusic;
-                audioSource.loop = true;
-                audioSource.Play();
-            }
         }
+
 
         currentDialogIndex++;
         if (currentDialogIndex < dialogData.dialogEntries.Count)
@@ -216,10 +246,9 @@ public class DialogBox : MonoBehaviour
             else
             {
                 Debug.Log("End of dialog.");
-                DialogPanal.SetActive(false);
-
-                //SceneManager.LoadScene(0); // To go Back into Minimap Scene
-
+                dialogText.text = "";
+                characterText.text = "";
+                this.gameObject.SetActive(false);
             }
         }
     }

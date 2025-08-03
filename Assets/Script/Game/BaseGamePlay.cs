@@ -1,3 +1,5 @@
+using Cysharp.Threading.Tasks;
+using System;
 using UnityEngine;
 
 public class BaseGamePlay : MonoBehaviour
@@ -76,8 +78,9 @@ public class BaseGamePlay : MonoBehaviour
         DungeonCore.Instance.dungeon.player.InitializePlayer();
     }
 
-    public void OnClickGoToCave()
+    public async void OnClickGoToCave()
     {
+        await UniTask.Delay(TimeSpan.FromSeconds(2f));
         UIManager.Instance.GoToCave();
         DungeonCore.Instance.NextRoom();
     }
