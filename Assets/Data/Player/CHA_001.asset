@@ -34,5 +34,7 @@ MonoBehaviour:
   sfxDead: {fileID: 0}
   sfxGethit: {fileID: 0}
   sfxSpawn: {fileID: 0}
+  takeDamage: {fileID: 8300000, guid: 0fd693f19bfdde449804cd834220fee3, type: 3}
+  hp: {fileID: 8300000, guid: fa41645d6af7aa845a22f86397a8fa02, type: 3}
   playerDebug:
     itemsStartData: []

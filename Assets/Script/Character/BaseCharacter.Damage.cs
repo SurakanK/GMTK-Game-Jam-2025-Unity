@@ -10,6 +10,19 @@ public partial class BaseCharacter
         set { _target = value; }
     }
 
+    private SoundManager _sound;
+    public SoundManager Sound
+    {
+        get
+        {
+            if (_sound == null)
+            {
+                _sound = gameObject.AddComponent<SoundManager>();
+            }
+            return _sound;
+        }
+    }
+
     public void Attack()
     {
         if (Target == null)
@@ -24,7 +37,7 @@ public partial class BaseCharacter
     {
         if (damage <= 0)
             return;
-            
+
         ApplyDamage(attacker, damage);
     }
 
@@ -35,7 +48,7 @@ public partial class BaseCharacter
 
     protected virtual void ApplyDamage(BaseCharacter attacker, float damage)
     {
-        
+
     }
 
     public bool CanAttack()

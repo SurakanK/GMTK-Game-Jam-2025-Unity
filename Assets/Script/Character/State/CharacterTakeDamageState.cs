@@ -13,7 +13,10 @@ public class CharacterTakeDamageState : CharacterBaseState
         if (Player.TryToGetBuff(out BuffBlockDamage buff))
             Player.RemoveBuff(buff);
         else
+        {
             Player.currentHealth -= 1;
+            BaseCharacter.Sound.PlayClip(Player.defaultData.takeDamage);
+        }
 
         var anim = Player.entity.AnimationState.SetAnimation(0, GameAnim.Hit, false);
         anim.Complete += OnFinishAnimation;
