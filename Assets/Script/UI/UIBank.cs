@@ -29,7 +29,7 @@ public class UIBank : UIBase
 
         if (int.TryParse(TMP_PaidDebt.text, out int paidAmount))
         {
-            if (paidAmount > CurrencyMoney)
+            if (paidAmount > BaseGamePlay.Currency)
             {
                 Debug.Log("Player have money: " + CurrencyMoney);
                 Debug.LogWarning("Player tried to pay more than they have.");
